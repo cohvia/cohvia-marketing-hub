@@ -50,13 +50,14 @@ const Index = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 opacity-0 animate-fade-in-up animation-delay-100">
-            Customer Success,{" "}
-            <span className="text-primary">finally clear</span>
+            Put the human back{" "}
+            <span className="text-primary">into Customer Success</span>
           </h1>
 
           <p className="text-lg md:text-xl text-secondary-foreground max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
-            From the moment a deal closes to every renewal that follows — Cohvia
-            gives CS teams a single source of truth powered by AI.
+            AI handles the context. Your team handles the relationship.
+            Cohvia gives CSMs everything they need to know about every account — 
+            so they can spend time with customers, not searching for answers.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-up animation-delay-300">
@@ -117,12 +118,12 @@ const Index = () => {
               The solution
             </p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Cohvia makes handover the starting line, not the finish line
+              Cohvia turns handover into a head start
             </h2>
             <p className="text-lg text-secondary-foreground max-w-3xl mx-auto leading-relaxed">
               Give AEs a structured, fast way to capture what they know at close.
               Then AI enriches that handover with data from your CRM, call recordings,
-              and emails — building a living account narrative the CSM can trust from day one.
+              and emails — so the CSM walks into the relationship already understanding the customer.
             </p>
           </div>
 
@@ -174,12 +175,12 @@ const Index = () => {
             And then it keeps going
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-            From onboarding to renewal — and everything in between
+            Less time searching. More time with customers.
           </h2>
           <p className="text-lg text-secondary-foreground leading-relaxed max-w-3xl mx-auto">
-            Handover is just the beginning. Cohvia auto-generates success plans, 
-            surfaces risk signals before renewals, and gives your customers a branded
-            portal — so your entire post-sale motion runs on clarity, not guesswork.
+            Handover is just the start. As the relationship grows, Cohvia keeps your team 
+            informed — auto-generating success plans, flagging risk before renewals, and 
+            giving customers a portal that makes them feel seen.
           </p>
         </div>
       </section>
@@ -233,7 +234,7 @@ const Index = () => {
               Trusted by
             </p>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              CS leaders who refuse to fly blind
+              Built for CS teams who care deeply about their customers
             </h2>
           </div>
 
