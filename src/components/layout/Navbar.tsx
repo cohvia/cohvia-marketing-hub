@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import cohviaLogo from "@/assets/cohvia-wordmark-color.svg";
+import cohviaLogo from "@/assets/cohvia-wordmark-white.svg";
 
 const navLinks = [
   { label: "Features", to: "/features" },
@@ -30,7 +30,7 @@ const Navbar = () => {
               className={`text-sm font-medium transition-colors hover:text-foreground ${
                 location.pathname === link.to
                   ? "text-foreground"
-                  : "text-secondary-foreground"
+                  : "text-muted-foreground"
               }`}
             >
               {link.label}
@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#waitlist"
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
+            className="inline-flex items-center justify-center rounded-lg gradient-brand-bg px-4 py-2 text-sm font-semibold text-foreground transition-all hover:brightness-110"
           >
             Request Early Access
           </a>
@@ -65,14 +65,14 @@ const Navbar = () => {
               key={link.to}
               to={link.to}
               onClick={() => setMobileOpen(false)}
-              className="block text-sm font-medium text-secondary-foreground hover:text-foreground transition-colors"
+              className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
             </Link>
           ))}
           <a
             href="#waitlist"
-            className="block w-full text-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+            className="block w-full text-center rounded-lg gradient-brand-bg px-4 py-2 text-sm font-semibold text-foreground"
           >
             Request Early Access
           </a>

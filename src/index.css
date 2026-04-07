@@ -8,54 +8,54 @@
   :root {
     --font-sans: 'Figtree', sans-serif;
 
-    /* Light mode surfaces */
-    --background: 220 20% 97%;
-    --foreground: 228 32% 11%;
+    /* Dark mode surfaces */
+    --background: 226 30% 6%;       /* #0B0E17 midnight */
+    --foreground: 0 0% 100%;        /* #FFFFFF */
 
-    --card: 0 0% 100%;
-    --card-foreground: 228 32% 11%;
+    --card: 226 28% 11%;            /* #131827 navy */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 228 32% 11%;
+    --popover: 226 28% 11%;
+    --popover-foreground: 0 0% 100%;
 
     /* Brand accent — teal */
-    --primary: 174 70% 36%;
+    --primary: 174 70% 36%;         /* #1a9e8f */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary */
-    --secondary: 220 16% 93%;
-    --secondary-foreground: 224 14% 40%;
+    /* Secondary — slate surfaces */
+    --secondary: 226 24% 16%;       /* #1C2236 */
+    --secondary-foreground: 222 16% 73%; /* #B0B8C9 */
 
-    --muted: 220 16% 93%;
-    --muted-foreground: 224 14% 50%;
+    --muted: 226 24% 16%;
+    --muted-foreground: 224 14% 56%; /* #808AA0 */
 
-    --accent: 220 16% 93%;
-    --accent-foreground: 228 30% 16%;
+    --accent: 226 24% 16%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 6 74% 57%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 16% 88%;
-    --input: 220 16% 88%;
+    --border: 226 22% 22%;          /* #2A3048 */
+    --input: 226 24% 16%;
     --ring: 174 70% 36%;
 
     --radius: 0.75rem;
 
     /* Semantic */
-    --success: 160 70% 37%;
-    --warning: 37 77% 54%;
-    --danger: 6 74% 57%;
+    --success: 160 70% 37%;         /* #1D9E75 */
+    --warning: 37 77% 54%;          /* #E5A530 */
+    --danger: 6 74% 57%;            /* #E74C3C */
 
     --teal-tint: 174 72% 36%;
 
     /* Sidebar (shadcn compat) */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 228 32% 11%;
+    --sidebar-background: 226 28% 11%;
+    --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 174 70% 36%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 16% 93%;
-    --sidebar-accent-foreground: 228 30% 16%;
-    --sidebar-border: 220 16% 88%;
+    --sidebar-accent: 226 24% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 226 22% 22%;
     --sidebar-ring: 174 70% 36%;
   }
 }
@@ -76,41 +76,38 @@
 }
 
 @layer utilities {
-  .text-secondary-body {
-    color: hsl(224 14% 40%);
-  }
-
-  .text-tertiary {
-    color: hsl(224 14% 50%);
-  }
-
   .surface-card {
     background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
   }
 
   .surface-elevated {
-    background: hsl(220 16% 93%);
+    background: hsl(var(--secondary));
   }
 
   .gradient-teal-glow {
-    background: radial-gradient(ellipse at 50% 0%, hsl(174 70% 36% / 0.06) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 50% 0%, hsl(174 70% 36% / 0.08) 0%, transparent 60%);
   }
 
   .gradient-hero {
-    background: radial-gradient(ellipse at 30% -20%, hsl(200 60% 22% / 0.08) 0%, transparent 40%),
-                radial-gradient(ellipse at 70% -10%, hsl(170 60% 45% / 0.06) 0%, transparent 40%);
+    background: radial-gradient(ellipse at 30% -20%, hsl(200 40% 20% / 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% -10%, hsl(174 50% 40% / 0.15) 0%, transparent 50%);
   }
 
+  /* Brand gradient — matches knot mark: #1B3A4F → #2A7B8A → #6ECFC0 */
   .gradient-brand {
-    background: linear-gradient(135deg, hsl(200 70% 15%), hsl(180 60% 30%), hsl(168 55% 45%));
+    background: linear-gradient(to top right, #1B3A4F, #2A7B8A, #6ECFC0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gradient-brand-bg {
-    background: linear-gradient(135deg, hsl(200 70% 15%), hsl(180 60% 30%), hsl(168 55% 45%));
+    background: linear-gradient(to top right, #1B3A4F, #2A7B8A, #6ECFC0);
+  }
+
+  .gradient-brand-border {
+    background: linear-gradient(to top right, #1B3A4F, #2A7B8A, #6ECFC0);
   }
 }
 
