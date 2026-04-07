@@ -95,8 +95,9 @@
   }
 
   /* Brand gradient — matches knot mark: #1B3A4F → #2A7B8A → #6ECFC0 */
+  /* Gradient for text — brighter range, no dark stop */
   .gradient-brand {
-    background: linear-gradient(to top right, #1B3A4F, #2A7B8A, #6ECFC0);
+    background: linear-gradient(to right, #2A7B8A, #6ECFC0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
