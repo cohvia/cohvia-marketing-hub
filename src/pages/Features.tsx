@@ -1,7 +1,20 @@
 import Layout from "@/components/layout/Layout";
-import { BookOpen, Users, Shield, MessageSquare, Sparkles } from "lucide-react";
+import { ArrowRightLeft, BookOpen, Users, Shield, MessageSquare, Sparkles } from "lucide-react";
 
 const features = [
+  {
+    id: "handover",
+    icon: ArrowRightLeft,
+    title: "Sales → CS Handover",
+    subtitle: "Structured. Fast. Complete.",
+    description:
+      "AEs capture what they know at close — why the customer bought, what was promised, what success looks like — in a structured flow that takes minutes, not hours. No more context lost in CRM notes or rushed Slack summaries.",
+    details: [
+      "Guided capture flow for AEs at deal close",
+      "Structured data the CSM can actually use",
+      "Automatic enrichment with CRM and call data",
+    ],
+  },
   {
     id: "narratives",
     icon: BookOpen,
@@ -88,13 +101,13 @@ const Features = () => {
 
       <section className="pb-20 md:pb-28">
         <div className="mx-auto max-w-6xl px-6 space-y-12">
-          {features.map((feature, i) => (
+          {features.map((feature) => (
             <div
               key={feature.id}
               className="surface-card rounded-xl p-8 md:p-12 flex flex-col lg:flex-row gap-8 items-start transition-all hover:border-primary/30"
             >
               <div className="flex-1">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style={{ background: "rgba(26, 158, 143, 0.08)" }}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-primary/10">
                   <feature.icon size={22} className="text-primary" />
                 </div>
                 <p className="text-sm font-medium text-primary mb-1">{feature.subtitle}</p>

@@ -84,7 +84,7 @@ const Pricing = () => {
               >
                 {tier.highlighted && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                    <span className="rounded-full gradient-brand-bg px-3 py-1 text-xs font-semibold text-foreground">
                       Most Popular
                     </span>
                   </div>
@@ -111,7 +111,7 @@ const Pricing = () => {
                   href="#waitlist"
                   className={`w-full text-center rounded-lg px-4 py-3 text-sm font-semibold transition-all ${
                     tier.highlighted
-                      ? "bg-primary text-primary-foreground hover:brightness-110"
+                      ? "gradient-brand-bg text-foreground hover:brightness-110"
                       : "border border-border text-secondary-foreground hover:bg-secondary hover:text-foreground"
                   }`}
                 >
