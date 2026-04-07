@@ -42,16 +42,17 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="gradient-hero absolute inset-0 pointer-events-none" />
         <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-36 md:pb-32 text-center relative">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 mb-8 opacity-0 animate-fade-in-up">
-            <Sparkles size={14} className="text-primary" />
-            <span className="text-xs font-medium text-secondary-foreground">
+          <div className="relative inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 opacity-0 animate-fade-in-up bg-card">
+            <div className="absolute inset-0 rounded-full p-px gradient-brand-bg opacity-20" />
+            <Sparkles size={14} className="text-primary relative" />
+            <span className="text-xs font-medium text-secondary-foreground relative">
               AI-native Customer Success Platform
             </span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 opacity-0 animate-fade-in-up animation-delay-100">
             Put the human back{" "}
-            <span className="text-primary">into Customer Success</span>
+            <span className="gradient-brand">into Customer Success</span>
           </h1>
 
           <p className="text-lg md:text-xl text-secondary-foreground max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
