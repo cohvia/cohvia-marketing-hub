@@ -8,35 +8,35 @@
   :root {
     --font-sans: 'Figtree', sans-serif;
 
-    /* Surfaces */
-    --background: 228 34% 7%;
-    --foreground: 0 0% 100%;
+    /* Light mode surfaces */
+    --background: 220 20% 97%;
+    --foreground: 228 32% 11%;
 
-    --card: 228 32% 11%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 228 32% 11%;
 
-    --popover: 228 32% 11%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 32% 11%;
 
     /* Brand accent — teal */
     --primary: 174 70% 36%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary surface (slate) */
-    --secondary: 228 30% 16%;
-    --secondary-foreground: 222 18% 74%;
+    /* Secondary */
+    --secondary: 220 16% 93%;
+    --secondary-foreground: 224 14% 40%;
 
-    --muted: 228 30% 16%;
-    --muted-foreground: 224 14% 56%;
+    --muted: 220 16% 93%;
+    --muted-foreground: 224 14% 50%;
 
-    --accent: 228 30% 16%;
-    --accent-foreground: 222 18% 74%;
+    --accent: 220 16% 93%;
+    --accent-foreground: 228 30% 16%;
 
     --destructive: 6 74% 57%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 228 27% 22%;
-    --input: 228 27% 22%;
+    --border: 220 16% 88%;
+    --input: 220 16% 88%;
     --ring: 174 70% 36%;
 
     --radius: 0.75rem;
@@ -46,17 +46,16 @@
     --warning: 37 77% 54%;
     --danger: 6 74% 57%;
 
-    /* Teal tint for AI backgrounds */
     --teal-tint: 174 72% 36%;
 
-    /* Sidebar (unused but needed for shadcn) */
-    --sidebar-background: 228 34% 7%;
-    --sidebar-foreground: 0 0% 100%;
+    /* Sidebar (shadcn compat) */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 228 32% 11%;
     --sidebar-primary: 174 70% 36%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 228 30% 16%;
-    --sidebar-accent-foreground: 222 18% 74%;
-    --sidebar-border: 228 27% 22%;
+    --sidebar-accent: 220 16% 93%;
+    --sidebar-accent-foreground: 228 30% 16%;
+    --sidebar-border: 220 16% 88%;
     --sidebar-ring: 174 70% 36%;
   }
 }
@@ -78,28 +77,28 @@
 
 @layer utilities {
   .text-secondary-body {
-    color: hsl(222 18% 74%);
+    color: hsl(224 14% 40%);
   }
 
   .text-tertiary {
-    color: hsl(224 14% 56%);
+    color: hsl(224 14% 50%);
   }
 
   .surface-card {
-    background: hsl(228 32% 11%);
-    border: 1px solid hsl(228 27% 22%);
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
   }
 
   .surface-elevated {
-    background: hsl(228 30% 16%);
+    background: hsl(220 16% 93%);
   }
 
   .gradient-teal-glow {
-    background: radial-gradient(ellipse at 50% 0%, hsl(174 70% 36% / 0.12) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 50% 0%, hsl(174 70% 36% / 0.06) 0%, transparent 60%);
   }
 
   .gradient-hero {
-    background: radial-gradient(ellipse at 50% -20%, hsl(174 70% 36% / 0.15) 0%, transparent 50%);
+    background: radial-gradient(ellipse at 50% -20%, hsl(174 70% 36% / 0.08) 0%, transparent 50%);
   }
 }
 

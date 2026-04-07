@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import cohviaLogo from "@/assets/cohvia-wordmark-white.svg";
+import cohviaLogo from "@/assets/cohvia-wordmark-color.svg";
 
 const Footer = () => {
   return (
