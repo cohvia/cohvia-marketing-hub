@@ -42,9 +42,10 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="gradient-hero absolute inset-0 pointer-events-none" />
         <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-36 md:pb-32 text-center relative">
-          <div className="inline-flex items-center gap-2 rounded-full border border-transparent bg-card px-4 py-1.5 mb-8 opacity-0 animate-fade-in-up" style={{ borderImage: "linear-gradient(135deg, hsl(174 70% 36% / 0.3), hsl(17 74% 64% / 0.3)) 1" }}>
-            <Sparkles size={14} className="text-primary" />
-            <span className="text-xs font-medium text-secondary-foreground">
+          <div className="relative inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 opacity-0 animate-fade-in-up bg-card">
+            <div className="absolute inset-0 rounded-full p-px gradient-brand-bg opacity-20" />
+            <Sparkles size={14} className="text-primary relative" />
+            <span className="text-xs font-medium text-secondary-foreground relative">
               AI-native Customer Success Platform
             </span>
           </div>
