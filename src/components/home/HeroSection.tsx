@@ -18,9 +18,10 @@ const HeroSection = () => (
       </h1>
 
       <p className="text-lg md:text-xl text-secondary-foreground max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
-        AI handles the context. Your team handles the relationship.
-        Cohvia gives CSMs everything they need to know about every account — 
-        so they can spend time with customers, not searching for answers.
+        Your CRM knows what happened. Your call tool knows when. But nobody's
+        capturing why — why they chose you, why they stay, why they're frustrated,
+        what makes them tick. Cohvia is the library for that context, so your whole
+        team understands the why behind every customer relationship.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-up animation-delay-300">
