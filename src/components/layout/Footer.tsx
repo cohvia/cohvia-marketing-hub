@@ -7,9 +7,15 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <img src={cohviaLogo} alt="Cohvia" className="h-5 mb-4" />
-            <p className="text-sm text-secondary-foreground leading-relaxed">
-              The Customer Context Platform for B2B SaaS teams.
+            <img src={cohviaLogo} alt="Cohvia" className="h-5 mb-3" />
+            <p className="text-sm text-secondary-foreground leading-relaxed mb-4">
+              Customer Context Platform
+            </p>
+            <p className="text-xs text-secondary-foreground leading-relaxed italic">
+              Cohvia is inspired by Irish Gaelic roots — <em>cothú</em>, meaning
+              to nurture and cultivate growth, and <em>comh</em> and{" "}
+              <em>beatha</em>, meaning together and life. Together, they reflect
+              a simple belief: Customer success works best when it's mutual.
             </p>
           </div>
 

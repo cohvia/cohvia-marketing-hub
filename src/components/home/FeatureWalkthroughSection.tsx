@@ -3,41 +3,46 @@ import { ArrowRightLeft, BookOpen, Users, Shield, MessageSquare } from "lucide-r
 const features = [
   {
     icon: ArrowRightLeft,
-    title: "Sales → CS Handover",
+    label: "Sales Handover",
+    title: "No more lost context.",
     description:
-      "AEs capture what they know at close — why the customer bought, what was promised, what success looks like — in a structured, fast flow. No more context lost in CRM notes.",
+      "AEs capture what they know at close. AI enriches it from every connected source. The CSM gets a complete picture on day one — not a Slack message.",
   },
   {
     icon: BookOpen,
-    title: "Account Narratives",
+    label: "Account Narratives",
+    title: "A living story for every account.",
     description:
-      "AI enriches every handover with CRM data, call recordings, and emails to build a living account narrative the CSM can trust from day one — and that stays current as the relationship evolves.",
+      "Eight structured sections — why they bought, what success looks like, where things stand — built from real data, updated automatically, owned by your team.",
   },
   {
     icon: Users,
-    title: "Success Plans",
+    label: "Success Plans",
+    title: "Grow together, visibly.",
     description:
-      "Auto-generated, collaborative plans with milestones your team and your customers can track together. Everyone stays aligned on what 'success' actually looks like.",
+      "Collaborative plans with shared milestones and goals. Customers see progress, check off actions, and co-own outcomes through their own branded portal. Aligned, supported, and continuously progressing — together.",
   },
   {
     icon: Shield,
-    title: "Risk Signals",
+    label: "Risk Signals",
+    title: "See problems before renewals.",
     description:
-      "AI monitors engagement, sentiment, and usage to surface churn risk before renewals — so your team can act while there's still time.",
+      "AI surfaces declining engagement, negative sentiment, support spikes, and stalled plans — so your team can act while there's still time.",
   },
   {
     icon: MessageSquare,
-    title: "Customer Portal",
+    label: "Customer Portal",
+    title: "Give every customer a home.",
     description:
-      "A branded, self-service portal where customers see their success plan, track milestones, and stay connected to their CS team — no more one-way reporting.",
+      "A branded space where customers see their plan, their goals, their team, and their progress. Not a login to your internal tools. A shared space where the relationship lives.",
   },
 ];
 
 const FeatureWalkthroughSection = () => (
-  <section className="py-20 md:py-28">
+  <section className="py-24 md:py-32">
     <div className="mx-auto max-w-6xl px-6">
       <div className="text-center mb-16">
-        <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
+        <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
           Features
         </p>
         <h2 className="text-3xl md:text-4xl font-bold leading-tight">
@@ -45,25 +50,25 @@ const FeatureWalkthroughSection = () => (
         </h2>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-6">
         {features.map((feature, i) => (
           <div
             key={i}
-            className="surface-card rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-start gap-6 transition-all hover:border-primary/30"
+            className="surface-card rounded-xl p-8 md:p-10 transition-all hover:border-primary/30"
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-primary/10">
-              <feature.icon size={22} className="text-primary" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-secondary-foreground leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-            <div className="w-full md:w-80 h-44 rounded-lg bg-secondary border border-border flex items-center justify-center shrink-0">
-              <span className="text-xs text-muted-foreground">
-                Screenshot coming soon
-              </span>
+            <div className="flex flex-col md:flex-row items-start gap-6">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-primary/10">
+                <feature.icon size={22} className="text-primary" />
+              </div>
+              <div className="flex-1">
+                <p className="text-xs font-medium text-primary uppercase tracking-[0.15em] mb-1">
+                  {feature.label}
+                </p>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-secondary-foreground leading-relaxed max-w-2xl">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           </div>
         ))}

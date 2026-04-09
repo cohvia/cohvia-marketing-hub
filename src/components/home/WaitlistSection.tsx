@@ -1,13 +1,14 @@
 const WaitlistSection = () => (
-  <section id="waitlist" className="py-20 md:py-28 relative">
+  <section id="waitlist" className="py-24 md:py-32 relative">
     <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
-    <div className="mx-auto max-w-3xl px-6 text-center relative">
+    <div className="mx-auto max-w-[680px] px-6 text-center relative">
       <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-        Ready to bring clarity to your CS team?
+        Customer Success should be mutual.
       </h2>
       <p className="text-lg text-secondary-foreground mb-10 leading-relaxed">
-        Cohvia is currently in early access. Join the waitlist to be among
-        the first to experience the Customer Context Platform.
+        Cohvia is in early access. We're building this with CS teams who believe
+        the best customer relationships aren't managed — they're nurtured. If
+        that sounds like your team, we should talk.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
         <input

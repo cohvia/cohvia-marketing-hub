@@ -1,29 +1,27 @@
 const ProblemSection = () => (
-  <section className="py-20 md:py-28">
-    <div className="mx-auto max-w-4xl px-6">
-      <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4 text-center">
+  <section className="py-24 md:py-32">
+    <div className="mx-auto max-w-[680px] px-6">
+      <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4 text-center">
         The problem
       </p>
       <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight text-center">
-        When deals close, critical context dies
+        Deals close. Context disappears.
       </h2>
 
-      <div className="space-y-6 text-lg text-secondary-foreground leading-relaxed max-w-3xl mx-auto">
+      <div className="space-y-6 text-lg text-secondary-foreground leading-relaxed">
         <p>
-          Your AE just closed a six-figure deal. They know{" "}
-          <span className="text-foreground font-medium">why</span> the customer bought,{" "}
-          <span className="text-foreground font-medium">what</span> was promised, and{" "}
-          <span className="text-foreground font-medium">what success looks like</span>.
+          Your AE knows everything — why they bought, what was promised, what
+          matters most. But when the deal closes, that knowledge doesn't follow.
+          The CSM starts the relationship half-blind, re-asking questions the
+          customer already answered.
         </p>
         <p>
-          But that knowledge? It dies in a CRM notes field. Or a rushed 15-minute
-          Slack summary. Or worse — it lives only in the AE's head.
+          From there, it's 40 accounts, six tools, and never enough time to be
+          truly present for any of them.
         </p>
         <p>
-          The CSM starts every new relationship{" "}
-          <span className="text-foreground font-medium">half-blind</span>. Re-asking
-          questions the customer already answered. Missing context that changes
-          everything. Starting from zero when they should be starting from trust.
+          Customer Success was supposed to be about growing together. Somewhere
+          along the way, it became about tabs and spreadsheets.
         </p>
       </div>
     </div>
