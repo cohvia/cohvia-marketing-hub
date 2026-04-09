@@ -2,8 +2,9 @@ import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
 import ProblemSection from "@/components/home/ProblemSection";
 import SolutionSection from "@/components/home/SolutionSection";
-import BeyondHandoverSection from "@/components/home/BeyondHandoverSection";
 import FeatureWalkthroughSection from "@/components/home/FeatureWalkthroughSection";
+import HowItWorksSection from "@/components/home/HowItWorksSection";
+import IntegrationsSection from "@/components/home/IntegrationsSection";
 import SocialProofSection from "@/components/home/SocialProofSection";
 import WaitlistSection from "@/components/home/WaitlistSection";
 
@@ -13,8 +14,9 @@ const Index = () => {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
-      <BeyondHandoverSection />
       <FeatureWalkthroughSection />
+      <HowItWorksSection />
+      <IntegrationsSection />
       <SocialProofSection />
       <WaitlistSection />
     </Layout>
