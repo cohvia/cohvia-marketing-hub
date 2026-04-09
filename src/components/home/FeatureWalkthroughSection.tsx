@@ -4,16 +4,16 @@ const features = [
   {
     icon: ArrowRightLeft,
     label: "Sales Handover",
-    title: "No more lost context.",
+    title: "The why starts at close.",
     description:
-      "AEs capture what they know at close. AI enriches it from every connected source. The CSM gets a complete picture on day one — not a Slack message.",
+      "AEs capture why the customer bought, what was promised, and what success looks like. AI enriches it from every connected source. The CSM inherits understanding, not a Slack message.",
   },
   {
     icon: BookOpen,
     label: "Account Narratives",
-    title: "A living story for every account.",
+    title: "A living record of why.",
     description:
-      "Eight structured sections — why they bought, what success looks like, where things stand — built from real data, updated automatically, owned by your team.",
+      "Eight structured sections — why they bought, what success looks like, where things stand, what you're worried about — built from real data, updated automatically, owned by your team. The whole story, always current.",
   },
   {
     icon: Users,
@@ -25,9 +25,9 @@ const features = [
   {
     icon: Shield,
     label: "Risk Signals",
-    title: "See problems before renewals.",
+    title: "Know why before it's too late.",
     description:
-      "AI surfaces declining engagement, negative sentiment, support spikes, and stalled plans — so your team can act while there's still time.",
+      "AI surfaces declining engagement, negative sentiment, support spikes, and stalled plans. You see the warning signs while there's still time to act — and the narrative gives you the context to understand what's actually going wrong.",
   },
   {
     icon: MessageSquare,
