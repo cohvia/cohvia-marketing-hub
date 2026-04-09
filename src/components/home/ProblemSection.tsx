@@ -11,7 +11,10 @@ const ProblemSection = () => (
       <p className="text-lg text-secondary-foreground leading-relaxed">
         Why did they choose you over everyone else? Why do they keep renewing —
         or why are they quietly pulling away? Why does this metric matter to
-        them this quarter? You can't make your customer a superstar if you
+        them this quarter?
+      </p>
+      <p className="text-lg text-secondary-foreground leading-relaxed mt-6">
+        You can't make your customer a superstar if you
         don't understand what drives them.
       </p>
     </div>
