@@ -7,7 +7,7 @@ const WaitlistSection = () => (
       </h2>
       <p className="text-lg text-secondary-foreground mb-10 leading-relaxed">
         Cohvia is currently in early access. Join the waitlist to be among
-        the first to experience AI-native Customer Success.
+        the first to experience the Customer Context Platform.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
         <input
