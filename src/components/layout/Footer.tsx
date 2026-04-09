@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <img src={cohviaLogo} alt="Cohvia" className="h-5 mb-4" />
             <p className="text-sm text-secondary-foreground leading-relaxed">
-              AI-native Customer Success for B2B SaaS teams.
+              The Customer Context Platform for B2B SaaS teams.
             </p>
           </div>
 

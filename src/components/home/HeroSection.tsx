@@ -8,7 +8,7 @@ const HeroSection = () => (
       <div className="relative inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 opacity-0 animate-fade-in-up border border-border bg-card">
         <Sparkles size={14} className="text-primary" />
         <span className="text-xs font-medium text-secondary-foreground">
-          AI-native Customer Success Platform
+          Customer Context Platform
         </span>
       </div>
 
