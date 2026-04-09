@@ -1,7 +1,7 @@
 const ProblemSolutionSection = () => (
   <section className="py-24 md:py-32">
     <div className="mx-auto max-w-6xl px-6">
-      <div className="grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-border">
+      <div className="relative grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-border">
         {/* Problem side */}
         <div className="relative p-10 md:p-12 bg-background">
           {/* Subtle warm/warning radial glow */}
