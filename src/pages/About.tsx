@@ -16,8 +16,23 @@ const About = () => {
         </div>
       </section>
 
+      {/* Name origin */}
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="surface-card rounded-xl p-8 md:p-12">
+            <h2 className="text-2xl font-bold mb-4">Where the name comes from</h2>
+            <p className="text-secondary-foreground leading-relaxed italic">
+              Cohvia is inspired by Irish Gaelic roots — <em>cothú</em>, meaning
+              to nurture and cultivate growth, and <em>comh</em> and{" "}
+              <em>beatha</em>, meaning together and life. Together, they reflect
+              a simple belief: Customer success works best when it's mutual.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Mission */}
-      <section className="py-20 md:py-28">
+      <section className="pb-20 md:pb-28">
         <div className="mx-auto max-w-4xl px-6">
           <div className="surface-card rounded-xl p-8 md:p-12">
             <h2 className="text-2xl font-bold mb-4">Our mission</h2>
