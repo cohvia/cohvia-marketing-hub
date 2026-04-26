@@ -26,6 +26,16 @@ const solutionsByRole = [
     to: "/solutions/csms",
     description: "Know every account like it's your only one.",
   },
+  {
+    label: "For AEs",
+    to: "/solutions/aes",
+    description: "Make sure your handover context actually lands.",
+  },
+  {
+    label: "For Customers",
+    to: "/solutions/customers",
+    description: "A branded portal where you can finally see progress.",
+  },
 ];
 
 const solutionsByUseCase = [
