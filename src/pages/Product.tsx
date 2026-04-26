@@ -314,7 +314,6 @@ const Product = () => {
                 </div>
               </div>
             }
-            }
           >
             <p>
               Not a log. Not a timeline. Definitely not a notes field someone typed into at 11pm
