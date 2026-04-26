@@ -11,7 +11,11 @@ import {
 const TeamOfOne = () => (
   <SolutionPage
     chip="For Teams of One"
-    headline="You are the CS team. Cohvia is your second pair of hands."
+    headline={
+      <>
+        You <em className="italic underline decoration-primary decoration-2 underline-offset-4">are</em> the CS team. Cohvia is your second pair of hands.
+      </>
+    }
     subheadline="No CS Leader above you. No CSM below you. Just you, your accounts, and a product that holds the understanding you don't have time to maintain yourself. Whether your title says Director, Head of CS, or just 'the person who handles customers,' you're running the whole function solo."
     pain={{
       headline: "You're doing the job of four people. And your customers feel it.",
