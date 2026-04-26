@@ -623,264 +623,190 @@ const Product = () => {
         </div>
       </section>
 
-          {/* Risk */}
-          <FeatureBlock
-            tone="tinted"
-            label="Safeguard"
-            title="See risk in context, not in a vacuum."
-            icon={Shield}
-            visual={
-              <MockFrame>
-                <div className="space-y-3">
-                  <div className="rounded-lg border border-destructive/40 bg-destructive/5 p-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-destructive" />
-                        <p className="text-sm font-semibold">Stakeholder transition</p>
-                      </div>
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-destructive/20 text-destructive font-semibold uppercase tracking-wider">
-                        Critical
-                      </span>
-                    </div>
-                    <p className="text-xs text-secondary-foreground leading-relaxed mb-2">
-                      Champion Sarah Chen announced departure on LinkedIn. No identified successor
-                      in current Narrative.
-                    </p>
-                    <p className="text-[11px] text-muted-foreground flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      Source: LinkedIn signal · Gong call (Apr 18)
-                    </p>
-                  </div>
-                  <div className="rounded-lg border border-warning/40 bg-warning/5 p-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-warning" />
-                        <p className="text-sm font-semibold">Support ticket spike</p>
-                      </div>
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-warning/20 text-warning font-semibold uppercase tracking-wider">
-                        Warning
-                      </span>
-                    </div>
-                    <p className="text-xs text-secondary-foreground leading-relaxed">
-                      14 tickets in the last 7 days vs. 3 baseline. Mostly integration-related.
-                    </p>
-                  </div>
-                </div>
-              </MockFrame>
-            }
-          >
-            <p>Signals detected from ingested data, flagged manually by CSMs, or both.</p>
-            <p>
-              <span className="text-foreground font-medium">Auto-detected:</span> stakeholder
-              transitions, ticket spikes, negative call sentiment, engagement drops, competitor
-              mentions, renewals without a plan.
-            </p>
-            <p>
-              <span className="text-foreground font-medium">Manual:</span> budget pressure, internal
-              politics, executive misalignment (the fun ones).
-            </p>
-            <p>
-              Signals live inside the Narrative. You don't just see that an account is at risk — you
-              see it next to the context that explains why.
-            </p>
-          </FeatureBlock>
-
-          {/* AI Fields */}
-          <FeatureBlock
-            tone="plain"
-            layout="wide-visual"
-            label="Surface"
-            title="Structured answers without the data entry."
-            icon={Layers}
-            reverse
-            visual={
-              <MockFrame>
-                <p className="text-xs font-semibold text-primary uppercase tracking-[0.15em] mb-3">
-                  Portfolio · AI Fields
+          {/* Run the book — bento cluster: Risk, AI Fields, Portal, Needs Attention */}
+          <section className="py-20 md:py-28 bg-secondary/30">
+            <div className="mx-auto max-w-6xl px-6">
+              <div className="max-w-3xl mb-14">
+                <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-4">
+                  Run the book
                 </p>
-                <div className="overflow-hidden rounded-lg border border-border">
-                  <div className="grid grid-cols-[1.2fr_1fr_0.8fr_0.8fr] gap-3 px-3 py-2 bg-secondary/60 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                    <span>Account</span>
-                    <span>Champion</span>
-                    <span>Use case</span>
-                    <span>Sentiment</span>
-                  </div>
-                  {[
-                    { a: "Acme Corp", c: "Sarah Chen", u: "Handover", s: "Positive", color: "bg-success" },
-                    { a: "Globex", c: "Tim Park", u: "Reporting", s: "Neutral", color: "bg-warning" },
-                    { a: "Initech", c: "Mia Lopez", u: "QBRs", s: "Positive", color: "bg-success" },
-                    { a: "Umbra", c: "—", u: "Adoption", s: "Negative", color: "bg-destructive" },
-                  ].map((r) => (
-                    <div
-                      key={r.a}
-                      className="grid grid-cols-[1.2fr_1fr_0.8fr_0.8fr] gap-3 px-3 py-2.5 text-xs border-t border-border items-center"
-                    >
-                      <span className="font-medium">{r.a}</span>
-                      <span className="text-secondary-foreground">{r.c}</span>
-                      <span className="text-secondary-foreground">{r.u}</span>
-                      <span className="flex items-center gap-1.5">
-                        <span className={`w-1.5 h-1.5 rounded-full ${r.color}`} />
-                        <span className="text-secondary-foreground">{r.s}</span>
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </MockFrame>
-            }
-          >
-            <p>
-              Define fields in plain language. AI fills them from transcripts, emails, tickets, and
-              CRM notes. Every value cited to its source.
-            </p>
-            <p>
-              Primary use case. Champion name. Competitors mentioned. Decision timeline. Sentiment.
-              All extracted automatically, all sortable and filterable in the Portfolio.
-            </p>
-            <p className="text-muted-foreground italic">
-              No spreadsheet. No CSM remembering to update a custom field after every call. (They
-              never did anyway.)
-            </p>
-          </FeatureBlock>
+                <h2 className="text-3xl md:text-5xl font-bold leading-[1.05]">
+                  Everything else CSMs spend their day on.{" "}
+                  <span className="gradient-brand">In one place.</span>
+                </h2>
+              </div>
 
-          {/* Portal */}
-          <FeatureBlock
-            tone="tinted"
-            label="Share"
-            title="Give every customer a home."
-            icon={Globe}
-            visual={
-              <MockFrame>
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-border">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-md gradient-brand-bg flex items-center justify-center text-[10px] font-bold text-foreground">
-                      AC
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold">Acme × Vendor</p>
-                      <p className="text-[10px] text-muted-foreground">acme.vendor.com</p>
-                    </div>
-                  </div>
-                  <span className="text-[10px] text-muted-foreground">Customer view</span>
-                </div>
-                <p className="text-xs font-semibold text-primary uppercase tracking-[0.15em] mb-3">
-                  Shared goals
-                </p>
-                <div className="space-y-2">
-                  {[
-                    { g: "Reduce onboarding time by 30%", done: true },
-                    { g: "Reach 80% feature adoption", done: false },
-                    { g: "Launch in EU region by Q3", done: false },
-                  ].map((g) => (
-                    <div
-                      key={g.g}
-                      className="flex items-center gap-3 p-2.5 rounded-md bg-secondary/40"
-                    >
-                      <div
-                        className={`w-4 h-4 rounded border-2 flex items-center justify-center ${
-                          g.done ? "bg-primary border-primary" : "border-border"
-                        }`}
-                      >
-                        {g.done && <span className="text-[10px] text-primary-foreground">✓</span>}
+              <div className="grid md:grid-cols-6 gap-5">
+                {/* Risk Signals — wide left (col-span-4) */}
+                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors">
+                  <div className="grid sm:grid-cols-[1fr_1fr] h-full">
+                    <div className="p-7 md:p-8 flex flex-col justify-center">
+                      <div className="inline-flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Shield size={16} className="text-primary" />
+                        </div>
+                        <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                          Safeguard
+                        </p>
                       </div>
-                      <span
-                        className={`text-sm ${
-                          g.done ? "line-through text-muted-foreground" : "text-foreground"
-                        }`}
-                      >
-                        {g.g}
-                      </span>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                        Risk in context, not in a vacuum.
+                      </h3>
+                      <p className="text-secondary-foreground leading-relaxed">
+                        Auto-detected: stakeholder transitions, ticket spikes, sentiment drops.
+                        Manual: budget pressure, internal politics. Every signal lives inside the
+                        Narrative, next to the context that explains why.
+                      </p>
                     </div>
-                  ))}
-                </div>
-              </MockFrame>
-            }
-          >
-            <p>
-              A branded workspace on your subdomain. Your logo, your colors, your favicon. Customers
-              see their Overview, shared Plans, and History.
-            </p>
-            <p>
-              Magic link access: no password, no friction. Customers manage who in their org sees
-              each plan.
-            </p>
-            <p>
-              They never see the Narrative, health scores, ARR, or anything internal. Just their
-              relationship with you, presented beautifully.
-            </p>
-          </FeatureBlock>
-
-          {/* Needs Attention */}
-          <FeatureBlock
-            tone="plain"
-            label="Focus"
-            title="Every account that needs you. One view."
-            icon={Bell}
-            reverse
-            visual={
-              <MockFrame>
-                <div className="flex items-center justify-between mb-4">
-                  <p className="text-xs font-semibold text-primary uppercase tracking-[0.15em]">
-                    Needs Attention
-                  </p>
-                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-destructive/20 text-destructive font-semibold">
-                    7 accounts
-                  </span>
-                </div>
-                <div className="space-y-3">
-                  {[
-                    {
-                      a: "Acme Corp",
-                      sev: "Critical",
-                      sigs: ["Stakeholder transition", "Ticket spike"],
-                      border: "border-l-destructive",
-                    },
-                    {
-                      a: "Globex",
-                      sev: "Critical",
-                      sigs: ["Renewal in 30d, no plan", "Engagement drop"],
-                      border: "border-l-destructive",
-                    },
-                    {
-                      a: "Initech",
-                      sev: "Warning",
-                      sigs: ["Stalled milestone (12d)"],
-                      border: "border-l-warning",
-                    },
-                  ].map((acc) => (
-                    <div
-                      key={acc.a}
-                      className={`rounded-lg bg-secondary/40 border border-border border-l-4 ${acc.border} p-3`}
-                    >
-                      <div className="flex items-center justify-between mb-1.5">
-                        <p className="text-sm font-semibold">{acc.a}</p>
-                        <span className="text-[10px] text-muted-foreground">{acc.sev}</span>
-                      </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {acc.sigs.map((s) => (
-                          <span
-                            key={s}
-                            className="text-[10px] px-2 py-0.5 rounded bg-card text-secondary-foreground border border-border"
-                          >
-                            {s}
+                    <div className="p-5 md:p-6 bg-secondary/40 sm:border-l border-border space-y-2">
+                      <div className="rounded-lg border border-destructive/40 bg-destructive/5 p-3">
+                        <div className="flex items-center justify-between mb-1.5">
+                          <div className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-destructive" />
+                            <p className="text-xs font-semibold">Stakeholder transition</p>
+                          </div>
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-destructive/20 text-destructive font-semibold uppercase tracking-wider">
+                            Critical
                           </span>
-                        ))}
+                        </div>
+                        <p className="text-[11px] text-secondary-foreground leading-relaxed">
+                          Champion Sarah Chen announced departure on LinkedIn.
+                        </p>
+                      </div>
+                      <div className="rounded-lg border border-warning/40 bg-warning/5 p-3">
+                        <div className="flex items-center justify-between mb-1.5">
+                          <div className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-warning" />
+                            <p className="text-xs font-semibold">Ticket spike</p>
+                          </div>
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-warning/20 text-warning font-semibold uppercase tracking-wider">
+                            Warning
+                          </span>
+                        </div>
+                        <p className="text-[11px] text-secondary-foreground leading-relaxed">
+                          14 tickets in 7 days vs. 3 baseline.
+                        </p>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </MockFrame>
-            }
-          >
-            <p>
-              Multiple signals per account roll up into a single card. Stalled plans, overdue
-              milestones, approaching renewals, risk signals, unassigned accounts.
-            </p>
-            <p>
-              Critical: red. Warning: amber. Sorted by severity. The sidebar badge is the number of
-              accounts that need you, not the number of signals that exist.
-            </p>
-            <p className="text-muted-foreground italic">A small but important difference.</p>
-          </FeatureBlock>
+                  </div>
+                </article>
+
+                {/* Needs Attention — narrow right (col-span-2) */}
+                <article className="surface-card rounded-2xl p-7 md:p-8 md:col-span-2 hover:border-primary/30 transition-colors flex flex-col">
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Bell size={16} className="text-primary" />
+                    </div>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                      Focus
+                    </p>
+                  </div>
+                  <div className="text-5xl md:text-6xl font-bold gradient-brand mb-2 leading-none">
+                    7
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider font-medium">
+                    accounts need you today
+                  </p>
+                  <p className="text-secondary-foreground leading-relaxed text-sm">
+                    Stalled plans, overdue milestones, approaching renewals, unassigned accounts.
+                    Rolled up per account. Sorted by severity. The sidebar badge is your morning
+                    check-in.
+                  </p>
+                </article>
+
+                {/* AI Fields — narrow left (col-span-2) */}
+                <article className="surface-card rounded-2xl p-7 md:p-8 md:col-span-2 relative overflow-hidden hover:border-primary/30 transition-colors">
+                  <div className="absolute -top-12 -right-12 w-40 h-40 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
+                  <div className="relative">
+                    <div className="inline-flex items-center gap-2 mb-4">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Layers size={16} className="text-primary" />
+                      </div>
+                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                        Surface
+                      </p>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                      Structured answers, no data entry.
+                    </h3>
+                    <p className="text-secondary-foreground leading-relaxed text-sm">
+                      Define fields in plain language. AI fills them from transcripts, emails, and
+                      tickets. Sortable in the Portfolio. Cited to source.
+                    </p>
+                  </div>
+                </article>
+
+                {/* Portal — wide right (col-span-4) */}
+                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors">
+                  <div className="grid sm:grid-cols-[1fr_1fr] h-full">
+                    <div className="p-5 md:p-6 bg-secondary/40 sm:border-r border-border order-2 sm:order-1">
+                      <div className="surface-card rounded-lg p-4">
+                        <div className="flex items-center justify-between pb-2 mb-3 border-b border-border">
+                          <div className="flex items-center gap-2">
+                            <div className="w-6 h-6 rounded-md gradient-brand-bg flex items-center justify-center text-[9px] font-bold text-foreground">
+                              AC
+                            </div>
+                            <div>
+                              <p className="text-xs font-semibold">Acme × Vendor</p>
+                              <p className="text-[9px] text-muted-foreground">acme.vendor.com</p>
+                            </div>
+                          </div>
+                          <span className="text-[9px] text-muted-foreground">Customer view</span>
+                        </div>
+                        <p className="text-[10px] font-semibold text-primary uppercase tracking-wider mb-2">
+                          Shared goals
+                        </p>
+                        <div className="space-y-1.5">
+                          {[
+                            { g: "Reduce onboarding by 30%", done: true },
+                            { g: "Reach 80% adoption", done: false },
+                            { g: "Launch EU by Q3", done: false },
+                          ].map((g) => (
+                            <div
+                              key={g.g}
+                              className="flex items-center gap-2 p-1.5 rounded bg-secondary/40"
+                            >
+                              <div
+                                className={`w-3 h-3 rounded-sm border flex items-center justify-center ${
+                                  g.done ? "bg-primary border-primary" : "border-border"
+                                }`}
+                              >
+                                {g.done && <span className="text-[8px] text-primary-foreground">✓</span>}
+                              </div>
+                              <span
+                                className={`text-[11px] ${
+                                  g.done ? "line-through text-muted-foreground" : "text-foreground"
+                                }`}
+                              >
+                                {g.g}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-7 md:p-8 flex flex-col justify-center order-1 sm:order-2">
+                      <div className="inline-flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Globe size={16} className="text-primary" />
+                        </div>
+                        <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                          Share
+                        </p>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                        Give every customer a home.
+                      </h3>
+                      <p className="text-secondary-foreground leading-relaxed">
+                        A branded workspace on your subdomain. Magic link access. They see Plans,
+                        Goals, History. They never see the Narrative, ARR, or anything internal.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
       </>
 
       {/* Integrations */}
