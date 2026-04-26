@@ -124,7 +124,7 @@ const Navbar = () => {
                         className="block rounded-md px-3 py-2.5 hover:bg-secondary/60 transition-colors"
                       >
                         <p className="text-sm font-medium text-foreground">{item.label}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                        <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed line-clamp-2">
                           {item.description}
                         </p>
                       </Link>
