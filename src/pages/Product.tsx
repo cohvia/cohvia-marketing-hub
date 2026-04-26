@@ -718,8 +718,7 @@ const Product = () => {
             </p>
             <p className="text-muted-foreground italic">A small but important difference.</p>
           </FeatureBlock>
-        </div>
-      </section>
+      </>
 
       {/* Integrations */}
       <section className="py-20 md:py-24 border-t border-border">
