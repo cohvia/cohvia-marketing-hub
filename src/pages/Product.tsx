@@ -283,6 +283,7 @@ const Product = () => {
 
           {/* Ask Cohvia */}
           <FeatureBlock
+            tone="tinted"
             label="Ask"
             title="Your smartest colleague who actually read every transcript."
             icon={MessageSquare}
@@ -344,6 +345,8 @@ const Product = () => {
 
           {/* Handover */}
           <FeatureBlock
+            tone="plain"
+            layout="stacked"
             label="Handover"
             title="Context that actually transfers."
             icon={ArrowRightLeft}
@@ -399,6 +402,7 @@ const Product = () => {
 
           {/* Plans */}
           <FeatureBlock
+            tone="glow"
             label="Execute"
             title="Plans your customers can actually see."
             icon={Target}
@@ -467,6 +471,7 @@ const Product = () => {
 
           {/* Risk */}
           <FeatureBlock
+            tone="tinted"
             label="Safeguard"
             title="See risk in context, not in a vacuum."
             icon={Shield}
@@ -528,6 +533,8 @@ const Product = () => {
 
           {/* AI Fields */}
           <FeatureBlock
+            tone="plain"
+            layout="wide-visual"
             label="Surface"
             title="Structured answers without the data entry."
             icon={Layers}
@@ -583,6 +590,7 @@ const Product = () => {
 
           {/* Portal */}
           <FeatureBlock
+            tone="tinted"
             label="Share"
             title="Give every customer a home."
             icon={Globe}
@@ -649,6 +657,7 @@ const Product = () => {
 
           {/* Needs Attention */}
           <FeatureBlock
+            tone="plain"
             label="Focus"
             title="Every account that needs you. One view."
             icon={Bell}
