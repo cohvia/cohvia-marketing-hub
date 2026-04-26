@@ -23,7 +23,7 @@ export type Block = {
 
 type SolutionPageProps = {
   chip: string;
-  headline: string;
+  headline: ReactNode;
   subheadline: string;
   pain: { headline: string; body: ReactNode };
   helpLabel?: string;
