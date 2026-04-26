@@ -5,11 +5,17 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="col-span-2 md:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="col-span-2 md:col-span-2">
             <img src={cohviaLogo} alt="Cohvia" className="h-5 mb-3" />
-            <p className="text-sm text-secondary-foreground leading-relaxed">
+            <p className="text-sm text-secondary-foreground leading-relaxed mb-4">
               Customer Context Platform
+            </p>
+            <p className="text-xs italic text-secondary-foreground leading-relaxed max-w-md">
+              Cohvia is inspired by Irish Gaelic roots — <em>cothú</em>, meaning
+              to nurture and cultivate growth, and <em>comh</em> and{" "}
+              <em>beatha</em>, meaning together and life. Together, they reflect
+              a simple belief: Customer success works best when it's mutual.
             </p>
           </div>
 
