@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import cohviaLogo from "@/assets/cohvia-wordmark-white.svg";
 
 const navLinks = [
-  { label: "Features", to: "/features" },
+  { label: "Product", to: "/product" },
   { label: "Pricing", to: "/pricing" },
   { label: "About", to: "/about" },
   { label: "Blog", to: "/blog" },
