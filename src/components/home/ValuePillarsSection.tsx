@@ -241,73 +241,177 @@ const pillars: (Pillar & { icon: React.ElementType; label: string })[] = [
   },
 ];
 
-const ValuePillarsSection = () => (
-  <>
-    <section className="pt-24 md:pt-32 pb-12 md:pb-16">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="text-center max-w-3xl mx-auto">
-          <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
-            What you get
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Built for how CS teams actually work
-          </h2>
-        </div>
-      </div>
-    </section>
+const ValuePillarsSection = () => {
+  const [hero, ...rest] = pillars;
+  const HeroIcon = hero.icon;
 
-    {pillars.map((pillar, i) => {
-      const Icon = pillar.icon;
-      const reverse = i % 2 === 1;
-      const tone = i % 2 === 0 ? "" : "bg-secondary/40";
-      // Insert a punctuation band after pillar 2
-      return (
-        <Fragment key={pillar.title}>
-          <section className={`py-16 md:py-24 ${tone}`}>
-            <div className="mx-auto max-w-6xl px-6">
-              <div
-                className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center ${
-                  reverse ? "md:[&>div:first-child]:order-2" : ""
-                }`}
-              >
-                <div>{pillar.visual}</div>
-                <div>
+  return (
+    <>
+      <section className="pt-24 md:pt-32 pb-12 md:pb-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
+              What you get
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold leading-[1.1]">
+              Built for how CS teams{" "}
+              <span className="gradient-brand">actually work.</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-24 md:pb-32">
+        <div className="mx-auto max-w-6xl px-6">
+          {/* Hero card — full width with copy + visual side by side */}
+          <article className="surface-card rounded-2xl overflow-hidden border-primary/20 shadow-xl mb-6">
+            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-0">
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 mb-5">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <HeroIcon size={18} className="text-primary" />
+                  </div>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                    {hero.label}
+                  </p>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                  {hero.title}
+                </h3>
+                <p className="text-lg text-secondary-foreground leading-relaxed max-w-md">
+                  {hero.description}
+                </p>
+              </div>
+              <div className="p-6 md:p-8 bg-secondary/30 border-t lg:border-t-0 lg:border-l border-border">
+                {hero.visual}
+              </div>
+            </div>
+          </article>
+
+          {/* Bento — 4 cards in an asymmetric 6-col grid */}
+          <div className="grid md:grid-cols-6 gap-6">
+            {(() => {
+              const p = rest[0];
+              const Icon = p.icon;
+              return (
+                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors">
+                  <div className="grid sm:grid-cols-[1fr_1fr] h-full">
+                    <div className="p-7 md:p-8 flex flex-col justify-center">
+                      <div className="inline-flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Icon size={16} className="text-primary" />
+                        </div>
+                        <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                          {p.label}
+                        </p>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                        {p.title}
+                      </h3>
+                      <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
+                    </div>
+                    <div className="p-5 md:p-6 bg-secondary/30 border-t sm:border-t-0 sm:border-l border-border flex items-center">
+                      {p.visual}
+                    </div>
+                  </div>
+                </article>
+              );
+            })()}
+
+            {(() => {
+              const p = rest[1];
+              const Icon = p.icon;
+              return (
+                <article className="surface-card rounded-2xl p-7 md:p-8 md:col-span-2 relative overflow-hidden hover:border-primary/30 transition-colors">
+                  <div className="absolute -top-12 -right-12 w-40 h-40 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
+                  <div className="relative">
+                    <div className="inline-flex items-center gap-2 mb-4">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Icon size={16} className="text-primary" />
+                      </div>
+                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                        {p.label}
+                      </p>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                      {p.title}
+                    </h3>
+                    <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
+                  </div>
+                </article>
+              );
+            })()}
+
+            {(() => {
+              const p = rest[2];
+              const Icon = p.icon;
+              return (
+                <article className="surface-card rounded-2xl p-7 md:p-8 md:col-span-2 hover:border-primary/30 transition-colors">
                   <div className="inline-flex items-center gap-2 mb-4">
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
                       <Icon size={16} className="text-primary" />
                     </div>
-                    <p className="text-xs font-medium text-primary uppercase tracking-[0.2em]">
-                      {pillar.label}
+                    <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                      {p.label}
                     </p>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-lg text-secondary-foreground leading-relaxed max-w-md">
-                    {pillar.description}
+                  <div className="text-5xl md:text-6xl font-bold gradient-brand mb-2 leading-none">
+                    45
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider font-medium">
+                    accounts per CSM
                   </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          {i === 1 && (
-            <section className="py-20 md:py-28 border-y border-border bg-card relative overflow-hidden">
-              <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
-              <div className="mx-auto max-w-3xl px-6 relative">
-                <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
-                  The shift
-                </p>
-                <blockquote className="text-2xl md:text-4xl font-bold leading-tight tracking-tight text-center">
-                  Customer Success isn't a dashboard problem.{" "}
-                  <span className="gradient-brand">It's an understanding problem.</span>
-                </blockquote>
-              </div>
-            </section>
-          )}
-        </Fragment>
-      );
-    })}
-  </>
-);
+                  <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
+                </article>
+              );
+            })()}
+
+            {(() => {
+              const p = rest[3];
+              const Icon = p.icon;
+              return (
+                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors">
+                  <div className="grid sm:grid-cols-[1fr_1fr] h-full">
+                    <div className="p-5 md:p-6 bg-secondary/30 sm:border-r border-border flex items-center order-2 sm:order-1">
+                      {p.visual}
+                    </div>
+                    <div className="p-7 md:p-8 flex flex-col justify-center order-1 sm:order-2">
+                      <div className="inline-flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Icon size={16} className="text-primary" />
+                        </div>
+                        <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                          {p.label}
+                        </p>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                        {p.title}
+                      </h3>
+                      <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })()}
+          </div>
+        </div>
+      </section>
+
+      {/* Pull-quote band */}
+      <section className="py-20 md:py-28 border-y border-border bg-card relative overflow-hidden">
+        <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
+        <div className="mx-auto max-w-4xl px-6 relative">
+          <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
+            The shift
+          </p>
+          <blockquote className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight text-center">
+            Customer Success isn't a dashboard problem.{" "}
+            <span className="gradient-brand">It's an understanding problem.</span>
+          </blockquote>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default ValuePillarsSection;
