@@ -234,39 +234,86 @@ const Product = () => {
             title="A living strategic document for every account."
             icon={BookOpen}
             visual={
-              <MockFrame>
-                <div className="flex items-center justify-between mb-4">
-                  <p className="text-xs font-semibold text-primary uppercase tracking-[0.15em]">
-                    Account Narrative
-                  </p>
-                  <span className="text-[10px] text-muted-foreground">Updated 2h ago</span>
+              <div className="relative">
+                {/* Decorative glow */}
+                <div className="absolute -inset-6 bg-primary/5 blur-3xl rounded-full pointer-events-none" />
+
+                <div className="relative">
+                  <MockFrame>
+                    <div className="flex items-center justify-between mb-4">
+                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.15em]">
+                        Account Narrative
+                      </p>
+                      <span className="text-[10px] text-muted-foreground">Updated 2h ago</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-5">
+                      {narrativeSections.map((s) => (
+                        <span
+                          key={s}
+                          className="text-[11px] px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="space-y-3 text-sm">
+                      <p className="font-semibold text-foreground">Why they bought</p>
+                      <p className="text-secondary-foreground leading-relaxed">
+                        Acme switched from Gainsight after their RevOps lead determined the new CS
+                        motion required tighter sales→CS context transfer
+                        <span className="inline-flex items-center justify-center w-4 h-4 rounded text-[9px] font-bold bg-primary/20 text-primary ml-1 align-middle">
+                          1
+                        </span>
+                        .
+                      </p>
+                      <div className="border-t border-border pt-3 flex items-center gap-2 text-[11px] text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        Source: Gong call · Discovery · Mar 14
+                      </div>
+                    </div>
+                  </MockFrame>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {narrativeSections.map((s) => (
-                    <span
-                      key={s}
-                      className="text-[11px] px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium"
-                    >
-                      {s}
-                    </span>
-                  ))}
+
+                {/* Annotation: 8 sections */}
+                <div className="hidden lg:flex absolute -left-8 top-12 items-center gap-2 -translate-x-full">
+                  <div className="surface-card rounded-lg px-3 py-2 shadow-md whitespace-nowrap">
+                    <div className="text-[9px] uppercase tracking-wider text-primary font-semibold">
+                      8 sections
+                    </div>
+                    <div className="text-[11px] font-medium">Strategic, not chronological</div>
+                  </div>
+                  <svg width="32" height="2" className="text-primary/40">
+                    <line x1="0" y1="1" x2="32" y2="1" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
+                  </svg>
                 </div>
-                <div className="space-y-3 text-sm">
-                  <p className="font-semibold text-foreground">Why they bought</p>
-                  <p className="text-secondary-foreground leading-relaxed">
-                    Acme switched from Gainsight after their RevOps lead determined the new CS
-                    motion required tighter sales→CS context transfer
-                    <span className="inline-flex items-center justify-center w-4 h-4 rounded text-[9px] font-bold bg-primary/20 text-primary ml-1 align-middle">
-                      1
-                    </span>
-                    .
-                  </p>
-                  <div className="border-t border-border pt-3 flex items-center gap-2 text-[11px] text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Source: Gong call · Discovery · Mar 14
+
+                {/* Annotation: cited claim */}
+                <div className="hidden lg:flex absolute -right-8 top-1/2 items-center gap-2 translate-x-full">
+                  <svg width="32" height="2" className="text-primary/40">
+                    <line x1="0" y1="1" x2="32" y2="1" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
+                  </svg>
+                  <div className="surface-card rounded-lg px-3 py-2 shadow-md whitespace-nowrap border-primary/30">
+                    <div className="text-[9px] uppercase tracking-wider text-primary font-semibold">
+                      Every claim cited
+                    </div>
+                    <div className="text-[11px] font-medium">Click to verify the source</div>
                   </div>
                 </div>
-              </MockFrame>
+
+                {/* Annotation: live source */}
+                <div className="hidden lg:flex absolute -right-8 -bottom-2 items-center gap-2 translate-x-full">
+                  <svg width="32" height="2" className="text-primary/40">
+                    <line x1="0" y1="1" x2="32" y2="1" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
+                  </svg>
+                  <div className="surface-card rounded-lg px-3 py-2 shadow-md whitespace-nowrap">
+                    <div className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold">
+                      Source
+                    </div>
+                    <div className="text-[11px] font-medium">Gong · Mar 14</div>
+                  </div>
+                </div>
+              </div>
+            }
             }
           >
             <p>
