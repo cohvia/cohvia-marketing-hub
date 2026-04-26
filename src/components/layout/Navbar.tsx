@@ -19,7 +19,7 @@ const solutionsByRole = [
   {
     label: "For CS Leaders",
     to: "/solutions/cs-leaders",
-    description: "Visibility across your book without dashboards.",
+    description: "Visibility across the book of business through understanding, not spreadsheets.",
   },
   {
     label: "For CSMs",
