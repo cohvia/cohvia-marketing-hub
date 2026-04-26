@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   BookOpen,
   ArrowRightLeft,
@@ -261,7 +262,7 @@ const ValuePillarsSection = () => (
       const tone = i % 2 === 0 ? "" : "bg-secondary/40";
       // Insert a punctuation band after pillar 2
       return (
-        <span key={pillar.title} className="contents">
+        <Fragment key={pillar.title}>
           <section className={`py-16 md:py-24 ${tone}`}>
             <div className="mx-auto max-w-6xl px-6">
               <div
@@ -303,7 +304,7 @@ const ValuePillarsSection = () => (
               </div>
             </section>
           )}
-        </span>
+        </Fragment>
       );
     })}
   </>
