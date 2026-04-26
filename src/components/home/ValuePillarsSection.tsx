@@ -246,22 +246,28 @@ const ValuePillarsSection = () => {
 
   return (
     <>
-      <section className="pt-24 md:pt-32 pb-12 md:pb-16">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
-              What you get
+      <section className="pt-24 md:pt-32 pb-20 md:pb-28 relative">
+        <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
+        <div className="mx-auto max-w-6xl px-6 relative">
+          {/* Section header — anchored to the grid below with a connector */}
+          <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-end mb-10 md:mb-14">
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 mb-5">
+                <span className="h-px w-8 bg-primary/60" />
+                <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                  What you get
+                </p>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold leading-[1.05] tracking-tight">
+                Built for how CS teams{" "}
+                <span className="gradient-brand">actually work.</span>
+              </h2>
+            </div>
+            <p className="text-base md:text-lg text-secondary-foreground leading-relaxed lg:pb-2 lg:max-w-md lg:justify-self-end">
+              Five capabilities that turn scattered context into a living understanding of every account — from first call to renewal.
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold leading-[1.1]">
-              Built for how CS teams{" "}
-              <span className="gradient-brand">actually work.</span>
-            </h2>
           </div>
-        </div>
-      </section>
 
-      <section className="pb-24 md:pb-32">
-        <div className="mx-auto max-w-6xl px-6">
           {/* Hero card — full width with copy + visual side by side */}
           <article className="surface-card rounded-2xl overflow-hidden border-primary/20 shadow-xl mb-6">
             <div className="grid lg:grid-cols-[1fr_1.1fr] gap-0">
