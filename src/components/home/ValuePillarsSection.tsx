@@ -241,51 +241,72 @@ const pillars: (Pillar & { icon: React.ElementType; label: string })[] = [
 ];
 
 const ValuePillarsSection = () => (
-  <section className="py-24 md:py-32">
-    <div className="mx-auto max-w-6xl px-6">
-      <div className="text-center mb-20">
-        <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
-          What you get
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-          Built for how CS teams actually work
-        </h2>
+  <>
+    <section className="pt-24 md:pt-32 pb-12 md:pb-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
+            What you get
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+            Built for how CS teams actually work
+          </h2>
+        </div>
       </div>
+    </section>
 
-      <div className="space-y-24 md:space-y-32">
-        {pillars.map((pillar, i) => {
-          const Icon = pillar.icon;
-          const reverse = i % 2 === 1;
-          return (
-            <div
-              key={pillar.title}
-              className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center ${
-                reverse ? "md:[&>div:first-child]:order-2" : ""
-              }`}
-            >
-              <div>{pillar.visual}</div>
-              <div>
-                <div className="inline-flex items-center gap-2 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Icon size={16} className="text-primary" />
+    {pillars.map((pillar, i) => {
+      const Icon = pillar.icon;
+      const reverse = i % 2 === 1;
+      const tone = i % 2 === 0 ? "" : "bg-secondary/40";
+      // Insert a punctuation band after pillar 2
+      return (
+        <span key={pillar.title} className="contents">
+          <section className={`py-16 md:py-24 ${tone}`}>
+            <div className="mx-auto max-w-6xl px-6">
+              <div
+                className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center ${
+                  reverse ? "md:[&>div:first-child]:order-2" : ""
+                }`}
+              >
+                <div>{pillar.visual}</div>
+                <div>
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Icon size={16} className="text-primary" />
+                    </div>
+                    <p className="text-xs font-medium text-primary uppercase tracking-[0.2em]">
+                      {pillar.label}
+                    </p>
                   </div>
-                  <p className="text-xs font-medium text-primary uppercase tracking-[0.2em]">
-                    {pillar.label}
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-lg text-secondary-foreground leading-relaxed max-w-md">
+                    {pillar.description}
                   </p>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-                  {pillar.title}
-                </h3>
-                <p className="text-lg text-secondary-foreground leading-relaxed max-w-md">
-                  {pillar.description}
-                </p>
               </div>
             </div>
-          );
-        })}
-      </div>
-    </div>
-  </section>
+          </section>
+          {i === 1 && (
+            <section className="py-20 md:py-28 border-y border-border bg-card relative overflow-hidden">
+              <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
+              <div className="mx-auto max-w-3xl px-6 relative">
+                <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
+                  The shift
+                </p>
+                <blockquote className="text-2xl md:text-4xl font-bold leading-tight tracking-tight text-center">
+                  Customer Success isn't a dashboard problem.{" "}
+                  <span className="gradient-brand">It's an understanding problem.</span>
+                </blockquote>
+              </div>
+            </section>
+          )}
+        </span>
+      );
+    })}
+  </>
 );
 
 export default ValuePillarsSection;
