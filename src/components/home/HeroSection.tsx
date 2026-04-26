@@ -32,7 +32,7 @@ const HeroSection = () => (
           <ArrowRight size={16} />
         </a>
         <Link
-          to="/features"
+          to="/product"
           className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-secondary-foreground transition-all hover:bg-secondary hover:text-foreground"
         >
           See how it works
