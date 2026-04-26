@@ -165,7 +165,7 @@ const Product = () => {
             </div>
           </div>
 
-          <p className="text-center text-secondary-foreground max-w-2xl mx-auto">
+          <p className="text-secondary-foreground max-w-[680px] mx-auto text-left">
             Nobody else connects the strategic story to the tactical execution. That's the whole
             point.
           </p>
