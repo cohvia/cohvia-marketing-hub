@@ -308,6 +308,26 @@ export const KeyPeopleRead = () => (
   </MockFrame>
 );
 
+export const PlansHistory = () => (
+  <MockFrame>
+    <div className="space-y-3">
+      <p className="text-xs text-primary uppercase tracking-wider font-semibold">Plans</p>
+      <div className="surface-elevated rounded-lg p-3 border-l-2 border-success">
+        <p className="text-sm text-foreground font-medium">Q2 Expansion · Active</p>
+        <p className="text-xs text-muted-foreground mt-1">4 of 7 milestones complete</p>
+      </div>
+      <div className="surface-elevated rounded-lg p-3 border-l-2 border-success">
+        <p className="text-sm text-foreground font-medium">Onboarding · Active</p>
+        <p className="text-xs text-muted-foreground mt-1">6 of 6 milestones complete · awaiting close</p>
+      </div>
+      <div className="surface-elevated rounded-lg p-3 opacity-60">
+        <p className="text-sm text-foreground">Q1 Pilot · Archived</p>
+        <p className="text-xs text-muted-foreground mt-1">Outcome: expanded to 3 teams</p>
+      </div>
+    </div>
+  </MockFrame>
+);
+
 // ============= AE visuals =============
 export const AENarrativeAutoDraft = () => (
   <MockFrame>
