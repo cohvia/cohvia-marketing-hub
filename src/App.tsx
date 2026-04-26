@@ -31,6 +31,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/solutions/team-of-one" element={<TeamOfOne />} />
           <Route path="/solutions/cs-leaders" element={<ForCSLeaders />} />
           <Route path="/solutions/csms" element={<ForCSMs />} />
           <Route path="/solutions/aes" element={<ForAEs />} />
