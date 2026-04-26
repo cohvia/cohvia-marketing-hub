@@ -12,8 +12,11 @@ import ForCSLeaders from "./pages/solutions/ForCSLeaders.tsx";
 import ForCSMs from "./pages/solutions/ForCSMs.tsx";
 import ForAEs from "./pages/solutions/ForAEs.tsx";
 import ForCustomers from "./pages/solutions/ForCustomers.tsx";
-import SalesHandover from "./pages/solutions/SalesHandover.tsx";
-import AccountTransfers from "./pages/solutions/AccountTransfers.tsx";
+import RelationshipIntelligence from "./pages/solutions/RelationshipIntelligence.tsx";
+import Handovers from "./pages/solutions/Handovers.tsx";
+import PlanningExecution from "./pages/solutions/PlanningExecution.tsx";
+import BookHealth from "./pages/solutions/BookHealth.tsx";
+import ScalingLeverage from "./pages/solutions/ScalingLeverage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
