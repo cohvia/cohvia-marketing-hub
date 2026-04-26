@@ -308,21 +308,132 @@ export const KeyPeopleRead = () => (
   </MockFrame>
 );
 
-export const PlansHistory = () => (
+// ============= AE visuals =============
+export const AENarrativeAutoDraft = () => (
   <MockFrame>
     <div className="space-y-3">
-      <p className="text-xs text-primary uppercase tracking-wider font-semibold">Plans</p>
-      <div className="surface-elevated rounded-lg p-3 border-l-2 border-success">
-        <p className="text-sm text-foreground font-medium">Q2 Expansion · Active</p>
-        <p className="text-xs text-muted-foreground mt-1">4 of 7 milestones complete</p>
+      <div className="flex items-center gap-2 text-xs text-primary font-semibold uppercase tracking-wider">
+        <Sparkles size={12} /> Auto-generated · Acme Corp
       </div>
-      <div className="surface-elevated rounded-lg p-3 border-l-2 border-success">
-        <p className="text-sm text-foreground font-medium">Onboarding · Active</p>
-        <p className="text-xs text-muted-foreground mt-1">6 of 6 milestones complete · awaiting close</p>
+      <div className="surface-elevated rounded-lg p-3">
+        <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-1">Why they bought</p>
+        <p className="text-sm text-foreground leading-relaxed">
+          Replacing a fragmented stack after a failed Salesforce rollout. CFO sponsored personally; promised the board a 6-month payback.
+        </p>
+        <p className="text-xs text-muted-foreground mt-2">14 calls · 3 email threads · CRM history</p>
       </div>
-      <div className="surface-elevated rounded-lg p-3 opacity-60">
-        <p className="text-sm text-foreground">Q1 Pilot · Archived</p>
-        <p className="text-xs text-muted-foreground mt-1">Outcome: expanded to 3 teams</p>
+      <div className="surface-elevated rounded-lg p-3">
+        <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-1">Key people</p>
+        <p className="text-sm text-foreground">Sarah Kim · CFO · Champion</p>
+        <p className="text-sm text-foreground">Mark Liu · VP Eng · Skeptic</p>
+      </div>
+    </div>
+  </MockFrame>
+);
+
+export const AEReviewQueue = () => (
+  <MockFrame>
+    <div className="space-y-3">
+      <div className="flex items-center gap-2">
+        <Inbox size={16} className="text-primary" />
+        <p className="text-sm font-semibold text-foreground">Pending your review</p>
+        <span className="text-xs px-2 py-0.5 rounded-full bg-primary/15 text-primary font-semibold ml-auto">2</span>
+      </div>
+      {[
+        { name: "Acme Corp", closed: "Closed Mar 18", status: "Narrative ready" },
+        { name: "Northwind", closed: "Closed Mar 21", status: "Narrative ready" },
+      ].map((a) => (
+        <div key={a.name} className="surface-elevated rounded-lg p-3 flex items-center justify-between">
+          <div>
+            <p className="text-sm font-medium text-foreground">{a.name}</p>
+            <p className="text-xs text-muted-foreground mt-0.5">{a.closed} · {a.status}</p>
+          </div>
+          <ArrowRight size={14} className="text-primary" />
+        </div>
+      ))}
+      <p className="text-xs text-muted-foreground italic pt-1">Once enriched, accounts move to the CSM and leave your queue.</p>
+    </div>
+  </MockFrame>
+);
+
+// ============= Customer portal visuals =============
+export const CustomerPortalOverview = () => (
+  <MockFrame>
+    <div className="space-y-3">
+      <div className="flex items-center justify-between border-b border-border pb-3">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded gradient-brand-bg" />
+          <p className="text-sm font-semibold text-foreground">Vendor Portal</p>
+        </div>
+        <span className="text-xs text-muted-foreground">acme.vendor.com</span>
+      </div>
+      <p className="text-xs text-primary uppercase tracking-wider font-semibold">Welcome back, Sarah</p>
+      <div className="grid grid-cols-2 gap-3">
+        <div className="surface-elevated rounded-lg p-3">
+          <p className="text-2xl font-bold text-foreground">3</p>
+          <p className="text-xs text-muted-foreground">Active plans</p>
+        </div>
+        <div className="surface-elevated rounded-lg p-3">
+          <p className="text-2xl font-bold text-success">68%</p>
+          <p className="text-xs text-muted-foreground">Goals on track</p>
+        </div>
+      </div>
+      <div className="surface-elevated rounded-lg p-3">
+        <p className="text-xs text-muted-foreground mb-1">Next milestone</p>
+        <p className="text-sm text-foreground">Executive review · Apr 12</p>
+      </div>
+    </div>
+  </MockFrame>
+);
+
+export const CustomerSharedPlan = () => (
+  <MockFrame>
+    <div className="space-y-3">
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-semibold text-foreground">Q2 Expansion Plan</p>
+        <span className="text-xs text-success">Shared with you</span>
+      </div>
+      <div className="surface-elevated rounded-lg p-3">
+        <div className="flex items-center gap-2 mb-2">
+          <Target size={14} className="text-primary" />
+          <p className="text-sm font-medium text-foreground">Goal: Roll out to 3 new teams by end of Q2</p>
+        </div>
+        <p className="text-xs text-muted-foreground">Edited by you · 2d ago</p>
+      </div>
+      {[
+        { task: "Identify pilot teams", done: true, owner: "You" },
+        { task: "Schedule kickoff sessions", done: true, owner: "Vendor" },
+        { task: "Provision team accounts", done: false, owner: "You" },
+      ].map((t) => (
+        <div key={t.task} className="flex items-center gap-3 surface-elevated rounded-lg p-3">
+          {t.done ? <CheckCircle2 size={16} className="text-success" /> : <Circle size={16} className="text-muted-foreground" />}
+          <span className={`text-sm flex-1 ${t.done ? "text-muted-foreground line-through" : "text-foreground"}`}>{t.task}</span>
+          <span className="text-xs text-muted-foreground">{t.owner}</span>
+        </div>
+      ))}
+    </div>
+  </MockFrame>
+);
+
+export const CustomerMagicLink = () => (
+  <MockFrame>
+    <div className="space-y-4">
+      <div className="flex items-center gap-2 text-xs text-primary font-semibold uppercase tracking-wider">
+        <Link2 size={12} /> Magic link sign-in
+      </div>
+      <div className="surface-elevated rounded-lg p-4 space-y-2">
+        <p className="text-sm text-foreground">From: Vendor &lt;hello@vendor.com&gt;</p>
+        <p className="text-sm text-foreground">Subject: Your portal is ready</p>
+        <div className="border-t border-border pt-3 mt-2">
+          <p className="text-sm text-foreground mb-3">Click below to access your account.</p>
+          <button className="rounded-lg gradient-brand-bg px-4 py-2 text-sm font-semibold text-foreground inline-flex items-center gap-2">
+            Open portal <ArrowRight size={14} />
+          </button>
+        </div>
+      </div>
+      <div className="flex items-start gap-2 text-xs text-muted-foreground">
+        <Lock size={12} className="mt-0.5" />
+        <span>No password. No account creation. Just click and you're in.</span>
       </div>
     </div>
   </MockFrame>
