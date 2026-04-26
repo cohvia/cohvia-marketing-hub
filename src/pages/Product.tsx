@@ -343,6 +343,25 @@ const Product = () => {
             <p className="text-foreground font-medium">Grounded in your data. Cited to the source.</p>
           </FeatureBlock>
 
+      {/* Stat strip — breather after the first two blocks */}
+      <section className="py-12 md:py-16 border-y border-border bg-secondary/40">
+        <div className="mx-auto max-w-5xl px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+          {[
+            { v: "8", l: "Narrative sections" },
+            { v: "12+", l: "Native integrations" },
+            { v: "1", l: "Branded customer portal" },
+            { v: "0", l: "Spreadsheets to maintain" },
+          ].map((s) => (
+            <div key={s.l}>
+              <div className="text-3xl md:text-4xl font-bold gradient-brand mb-2">{s.v}</div>
+              <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground font-medium">
+                {s.l}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
           {/* Handover */}
           <FeatureBlock
             tone="plain"
@@ -468,6 +487,19 @@ const Product = () => {
               who in their org has access. You stop chasing updates over email. It's nice.
             </p>
           </FeatureBlock>
+
+      {/* Pull-quote band */}
+      <section className="py-20 md:py-28 border-y border-border bg-card">
+        <div className="mx-auto max-w-3xl px-6">
+          <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
+            The point
+          </p>
+          <blockquote className="text-2xl md:text-4xl font-bold leading-tight tracking-tight text-center">
+            Everyone else is automating the relationship away.{" "}
+            <span className="gradient-brand">We're deepening it.</span>
+          </blockquote>
+        </div>
+      </section>
 
           {/* Risk */}
           <FeatureBlock
