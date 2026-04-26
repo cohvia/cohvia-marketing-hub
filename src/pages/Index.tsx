@@ -1,21 +1,25 @@
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
-import ProblemSolutionSection from "@/components/home/ProblemSolutionSection";
-import FeatureWalkthroughSection from "@/components/home/FeatureWalkthroughSection";
+import ProblemSection from "@/components/home/ProblemSection";
+import SharpEdgeSection from "@/components/home/SharpEdgeSection";
+import ValuePillarsSection from "@/components/home/ValuePillarsSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
+import WhyNowSection from "@/components/home/WhyNowSection";
 import IntegrationsSection from "@/components/home/IntegrationsSection";
-import SocialProofSection from "@/components/home/SocialProofSection";
+import FounderSection from "@/components/home/FounderSection";
 import WaitlistSection from "@/components/home/WaitlistSection";
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
-      <ProblemSolutionSection />
-      <FeatureWalkthroughSection />
+      <ProblemSection />
+      <SharpEdgeSection />
+      <ValuePillarsSection />
       <HowItWorksSection />
+      <WhyNowSection />
       <IntegrationsSection />
-      <SocialProofSection />
+      <FounderSection />
       <WaitlistSection />
     </Layout>
   );
