@@ -268,9 +268,9 @@ const ValuePillarsSection = () => {
             </p>
           </div>
 
-          {/* Hero card — full width with copy + visual side by side */}
+          {/* Hero card — copy on top, mock flows beneath in the same surface */}
           <article className="surface-card rounded-2xl overflow-hidden border-primary/20 shadow-xl mb-6">
-            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-0">
+            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-0 items-stretch">
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 mb-5">
                   <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -287,7 +287,7 @@ const ValuePillarsSection = () => {
                   {hero.description}
                 </p>
               </div>
-              <div className="p-6 md:p-8 bg-secondary/30 border-t lg:border-t-0 lg:border-l border-border">
+              <div className="relative p-6 md:p-8 bg-gradient-to-br from-secondary/40 to-transparent">
                 {hero.visual}
               </div>
             </div>
@@ -299,25 +299,23 @@ const ValuePillarsSection = () => {
               const p = rest[0];
               const Icon = p.icon;
               return (
-                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors">
-                  <div className="grid sm:grid-cols-[1fr_1fr] h-full">
-                    <div className="p-7 md:p-8 flex flex-col justify-center">
-                      <div className="inline-flex items-center gap-2 mb-4">
-                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <Icon size={16} className="text-primary" />
-                        </div>
-                        <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                          {p.label}
-                        </p>
+                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors flex flex-col">
+                  <div className="p-7 md:p-8">
+                    <div className="inline-flex items-center gap-2 mb-4">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Icon size={16} className="text-primary" />
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
-                        {p.title}
-                      </h3>
-                      <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
+                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                        {p.label}
+                      </p>
                     </div>
-                    <div className="p-5 md:p-6 bg-secondary/30 border-t sm:border-t-0 sm:border-l border-border flex items-center">
-                      {p.visual}
-                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                      {p.title}
+                    </h3>
+                    <p className="text-secondary-foreground leading-relaxed max-w-lg">{p.description}</p>
+                  </div>
+                  <div className="px-7 md:px-8 pb-7 md:pb-8 mt-auto">
+                    <div className="relative -mb-2">{p.visual}</div>
                   </div>
                 </article>
               );
@@ -375,25 +373,23 @@ const ValuePillarsSection = () => {
               const p = rest[3];
               const Icon = p.icon;
               return (
-                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors">
-                  <div className="grid sm:grid-cols-[1fr_1fr] h-full">
-                    <div className="p-5 md:p-6 bg-secondary/30 sm:border-r border-border flex items-center order-2 sm:order-1">
-                      {p.visual}
-                    </div>
-                    <div className="p-7 md:p-8 flex flex-col justify-center order-1 sm:order-2">
-                      <div className="inline-flex items-center gap-2 mb-4">
-                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <Icon size={16} className="text-primary" />
-                        </div>
-                        <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                          {p.label}
-                        </p>
+                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors flex flex-col">
+                  <div className="p-7 md:p-8">
+                    <div className="inline-flex items-center gap-2 mb-4">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Icon size={16} className="text-primary" />
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
-                        {p.title}
-                      </h3>
-                      <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
+                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                        {p.label}
+                      </p>
                     </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
+                      {p.title}
+                    </h3>
+                    <p className="text-secondary-foreground leading-relaxed max-w-lg">{p.description}</p>
+                  </div>
+                  <div className="px-7 md:px-8 pb-7 md:pb-8 mt-auto">
+                    <div className="relative -mb-2">{p.visual}</div>
                   </div>
                 </article>
               );
