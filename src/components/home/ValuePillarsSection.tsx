@@ -2,18 +2,11 @@ import {
   BookOpen,
   ArrowRightLeft,
   Database,
-  Users,
   Handshake,
   CheckCircle2,
   Sparkles,
   Circle,
 } from "lucide-react";
-
-type Pillar = {
-  title: string;
-  description: string;
-  visual: React.ReactNode;
-};
 
 const NarrativeMock = () => (
   <div className="surface-card rounded-xl overflow-hidden">
@@ -112,44 +105,6 @@ const TeamMemoryMock = () => (
   </div>
 );
 
-const DashboardMock = () => (
-  <div className="surface-card rounded-xl overflow-hidden">
-    <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-secondary/40">
-      <div className="w-2.5 h-2.5 rounded-full bg-muted" />
-      <div className="w-2.5 h-2.5 rounded-full bg-muted" />
-      <div className="w-2.5 h-2.5 rounded-full bg-muted" />
-      <div className="ml-3 text-[10px] text-muted-foreground font-mono">cohvia / my book</div>
-    </div>
-    <div className="p-6">
-      <div className="flex items-center justify-between mb-4">
-        <div className="text-xs font-semibold text-foreground">45 accounts</div>
-        <div className="text-[10px] text-muted-foreground">All current</div>
-      </div>
-      <div className="grid grid-cols-9 gap-1.5">
-        {Array.from({ length: 45 }).map((_, i) => {
-          const variant = i % 7 === 0 ? "warning" : i % 11 === 0 ? "danger" : "primary";
-          const colorMap: Record<string, string> = {
-            primary: "bg-primary/30 border-primary/50",
-            warning: "bg-warning/30 border-warning/50",
-            danger: "bg-danger/30 border-danger/50",
-          };
-          return (
-            <div
-              key={i}
-              className={`aspect-square rounded border ${colorMap[variant]}`}
-            />
-          );
-        })}
-      </div>
-      <div className="flex items-center gap-4 mt-4 text-[10px] text-muted-foreground">
-        <span className="flex items-center gap-1.5"><Circle size={8} className="fill-primary text-primary" /> Healthy</span>
-        <span className="flex items-center gap-1.5"><Circle size={8} className="fill-warning text-warning" /> Watch</span>
-        <span className="flex items-center gap-1.5"><Circle size={8} className="fill-danger text-danger" /> Risk</span>
-      </div>
-    </div>
-  </div>
-);
-
 const PortalMock = () => (
   <div className="surface-card rounded-xl overflow-hidden">
     <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-secondary/40">
@@ -198,7 +153,7 @@ const PortalMock = () => (
   </div>
 );
 
-const pillars: (Pillar & { icon: React.ElementType; label: string })[] = [
+const features: { icon: React.ElementType; label: string; title: string; description: string; visual: React.ReactNode }[] = [
   {
     icon: BookOpen,
     label: "The narrative",
@@ -224,13 +179,6 @@ const pillars: (Pillar & { icon: React.ElementType; label: string })[] = [
     visual: <TeamMemoryMock />,
   },
   {
-    icon: Users,
-    label: "Scale",
-    title: "Relationship depth at scale.",
-    description: "A CSM with 45 accounts can know each one like they know 10.",
-    visual: <DashboardMock />,
-  },
-  {
     icon: Handshake,
     label: "Customer portal",
     title: "Mutual, not one-sided.",
@@ -240,166 +188,132 @@ const pillars: (Pillar & { icon: React.ElementType; label: string })[] = [
   },
 ];
 
-const ValuePillarsSection = () => {
-  const [hero, ...rest] = pillars;
-  const HeroIcon = hero.icon;
-
+const FeatureRow = ({
+  index,
+  feature,
+  reversed,
+}: {
+  index: number;
+  feature: (typeof features)[number];
+  reversed: boolean;
+}) => {
+  const Icon = feature.icon;
   return (
-    <>
-      <section className="pt-24 md:pt-32 pb-20 md:pb-28 relative">
-        <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
-        <div className="mx-auto max-w-6xl px-6 relative">
-          {/* Section header — anchored to the grid below with a connector */}
-          <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-end mb-10 md:mb-14">
-            <div className="max-w-xl">
-              <div className="inline-flex items-center gap-2 mb-5">
-                <span className="h-px w-8 bg-primary/60" />
-                <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                  What you get
-                </p>
+    <div className="relative grid lg:grid-cols-[auto_1fr] gap-6 lg:gap-12">
+      {/* Left rail with number + connector */}
+      <div className="hidden lg:flex flex-col items-center pt-2">
+        <div className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center text-xs font-mono text-primary">
+          0{index + 1}
+        </div>
+        <div className="flex-1 w-px bg-gradient-to-b from-border to-transparent mt-3" />
+      </div>
+
+      {/* Content card */}
+      <article className="surface-card rounded-2xl overflow-hidden hover:border-primary/30 transition-colors">
+        <div
+          className={`grid md:grid-cols-2 items-stretch ${
+            reversed ? "md:[&>*:first-child]:order-2" : ""
+          }`}
+        >
+          {/* Copy side */}
+          <div className="p-7 md:p-10 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Icon size={16} className="text-primary" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold leading-[1.05] tracking-tight">
-                Built for how CS teams{" "}
-                <span className="gradient-brand">actually work.</span>
-              </h2>
+              <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                {feature.label}
+              </p>
+              <span className="lg:hidden text-xs font-mono text-muted-foreground">
+                · 0{index + 1}
+              </span>
             </div>
-            <p className="text-base md:text-lg text-secondary-foreground leading-relaxed lg:pb-2 lg:max-w-md lg:justify-self-end">
-              Five capabilities that turn scattered context into a living understanding of every account — from first call to renewal.
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight tracking-tight">
+              {feature.title}
+            </h3>
+            <p className="text-base md:text-lg text-secondary-foreground leading-relaxed">
+              {feature.description}
             </p>
           </div>
 
-          {/* Hero card — copy on top, mock flows beneath in the same surface */}
-          <article className="surface-card rounded-2xl overflow-hidden border-primary/20 shadow-xl mb-6">
-            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-0 items-stretch">
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <div className="inline-flex items-center gap-2 mb-5">
-                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <HeroIcon size={18} className="text-primary" />
-                  </div>
-                  <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                    {hero.label}
-                  </p>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                  {hero.title}
-                </h3>
-                <p className="text-lg text-secondary-foreground leading-relaxed max-w-md">
-                  {hero.description}
-                </p>
-              </div>
-              <div className="relative p-6 md:p-8 bg-gradient-to-br from-secondary/40 to-transparent">
-                {hero.visual}
-              </div>
-            </div>
-          </article>
-
-          {/* Bento — 4 cards in an asymmetric 6-col grid */}
-          <div className="grid md:grid-cols-6 gap-6">
-            {(() => {
-              const p = rest[0];
-              const Icon = p.icon;
-              return (
-                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors flex flex-col">
-                  <div className="p-7 md:p-8">
-                    <div className="inline-flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Icon size={16} className="text-primary" />
-                      </div>
-                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                        {p.label}
-                      </p>
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
-                      {p.title}
-                    </h3>
-                    <p className="text-secondary-foreground leading-relaxed max-w-lg">{p.description}</p>
-                  </div>
-                  <div className="px-7 md:px-8 pb-7 md:pb-8 mt-auto">
-                    <div className="relative -mb-2">{p.visual}</div>
-                  </div>
-                </article>
-              );
-            })()}
-
-            {(() => {
-              const p = rest[1];
-              const Icon = p.icon;
-              return (
-                <article className="surface-card rounded-2xl p-7 md:p-8 md:col-span-2 relative overflow-hidden hover:border-primary/30 transition-colors">
-                  <div className="absolute -top-12 -right-12 w-40 h-40 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
-                  <div className="relative">
-                    <div className="inline-flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Icon size={16} className="text-primary" />
-                      </div>
-                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                        {p.label}
-                      </p>
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
-                      {p.title}
-                    </h3>
-                    <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
-                  </div>
-                </article>
-              );
-            })()}
-
-            {(() => {
-              const p = rest[2];
-              const Icon = p.icon;
-              return (
-                <article className="surface-card rounded-2xl p-7 md:p-8 md:col-span-2 hover:border-primary/30 transition-colors">
-                  <div className="inline-flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Icon size={16} className="text-primary" />
-                    </div>
-                    <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                      {p.label}
-                    </p>
-                  </div>
-                  <div className="text-5xl md:text-6xl font-bold gradient-brand mb-2 leading-none">
-                    45
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider font-medium">
-                    accounts per CSM
-                  </p>
-                  <p className="text-secondary-foreground leading-relaxed">{p.description}</p>
-                </article>
-              );
-            })()}
-
-            {(() => {
-              const p = rest[3];
-              const Icon = p.icon;
-              return (
-                <article className="surface-card rounded-2xl overflow-hidden md:col-span-4 hover:border-primary/30 transition-colors flex flex-col">
-                  <div className="p-7 md:p-8">
-                    <div className="inline-flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Icon size={16} className="text-primary" />
-                      </div>
-                      <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
-                        {p.label}
-                      </p>
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
-                      {p.title}
-                    </h3>
-                    <p className="text-secondary-foreground leading-relaxed max-w-lg">{p.description}</p>
-                  </div>
-                  <div className="px-7 md:px-8 pb-7 md:pb-8 mt-auto">
-                    <div className="relative -mb-2">{p.visual}</div>
-                  </div>
-                </article>
-              );
-            })()}
+          {/* Visual side */}
+          <div className="p-6 md:p-8 bg-gradient-to-br from-secondary/30 via-transparent to-transparent flex items-center">
+            {feature.visual}
           </div>
         </div>
-      </section>
+      </article>
+    </div>
+  );
+};
+
+const ValuePillarsSection = () => {
+  return (
+    <section className="pt-24 md:pt-32 pb-24 md:pb-32 relative">
+      <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
+      <div className="mx-auto max-w-6xl px-6 relative">
+        {/* Section header */}
+        <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-end mb-14 md:mb-20">
+          <div className="max-w-xl">
+            <div className="inline-flex items-center gap-2 mb-5">
+              <span className="h-px w-8 bg-primary/60" />
+              <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                What you get
+              </p>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold leading-[1.05] tracking-tight">
+              Built for how CS teams{" "}
+              <span className="gradient-brand">actually work.</span>
+            </h2>
+          </div>
+          <p className="text-base md:text-lg text-secondary-foreground leading-relaxed lg:pb-2 lg:max-w-md lg:justify-self-end">
+            Four capabilities that turn scattered context into a living understanding of every account — from first call to renewal.
+          </p>
+        </div>
+
+        {/* Feature stack — first two rows */}
+        <div className="space-y-10 md:space-y-12">
+          <FeatureRow index={0} feature={features[0]} reversed={false} />
+          <FeatureRow index={1} feature={features[1]} reversed={true} />
+        </div>
+
+        {/* Stat band — Book Coverage */}
+        <div className="my-16 md:my-20 relative">
+          <div className="surface-card rounded-2xl overflow-hidden border-primary/30 relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-72 h-72 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
+            <div className="relative grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 p-8 md:p-12 items-center">
+              <div className="flex flex-col">
+                <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-3">
+                  Book coverage
+                </p>
+                <div className="text-7xl md:text-8xl font-bold gradient-brand leading-none tracking-tight">
+                  2×
+                </div>
+              </div>
+              <div className="md:border-l md:border-border md:pl-12">
+                <p className="text-xl md:text-2xl font-semibold leading-snug max-w-xl">
+                  Double the book of business{" "}
+                  <span className="text-secondary-foreground font-normal">
+                    without doubling churn.
+                  </span>
+                </p>
+                <p className="mt-4 text-base text-secondary-foreground leading-relaxed max-w-lg">
+                  Cohvia holds the understanding so your team can hold the relationship.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature stack — last two rows */}
+        <div className="space-y-10 md:space-y-12">
+          <FeatureRow index={2} feature={features[2]} reversed={false} />
+          <FeatureRow index={3} feature={features[3]} reversed={true} />
+        </div>
+      </div>
 
       {/* Pull-quote band */}
-      <section className="py-20 md:py-28 border-y border-border bg-card relative overflow-hidden">
+      <div className="mt-24 md:mt-32 py-20 md:py-28 border-y border-border bg-card relative overflow-hidden">
         <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
         <div className="mx-auto max-w-4xl px-6 relative">
           <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
@@ -410,8 +324,8 @@ const ValuePillarsSection = () => {
             <span className="gradient-brand">It's an understanding problem.</span>
           </blockquote>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
