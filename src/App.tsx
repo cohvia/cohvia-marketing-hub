@@ -10,6 +10,8 @@ import About from "./pages/About.tsx";
 import Blog from "./pages/Blog.tsx";
 import ForCSLeaders from "./pages/solutions/ForCSLeaders.tsx";
 import ForCSMs from "./pages/solutions/ForCSMs.tsx";
+import ForAEs from "./pages/solutions/ForAEs.tsx";
+import ForCustomers from "./pages/solutions/ForCustomers.tsx";
 import SalesHandover from "./pages/solutions/SalesHandover.tsx";
 import AccountTransfers from "./pages/solutions/AccountTransfers.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/product" element={<Product />} />
           <Route path="/solutions/cs-leaders" element={<ForCSLeaders />} />
           <Route path="/solutions/csms" element={<ForCSMs />} />
+          <Route path="/solutions/aes" element={<ForAEs />} />
+          <Route path="/solutions/customers" element={<ForCustomers />} />
           <Route path="/solutions/sales-handover" element={<SalesHandover />} />
           <Route path="/solutions/account-transfers" element={<AccountTransfers />} />
           <Route path="/pricing" element={<Pricing />} />
