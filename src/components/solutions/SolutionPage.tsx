@@ -65,11 +65,11 @@ const SolutionPage = ({
 
       {/* Pain */}
       <section className="border-y border-border/60 bg-secondary/20">
-        <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
+        <div className="mx-auto max-w-3xl px-6 py-20">
+          <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center">
             {pain.headline}
           </h2>
-          <div className="text-lg text-secondary-foreground leading-relaxed space-y-4">
+          <div className="text-lg text-secondary-foreground leading-relaxed space-y-4 text-left max-w-[680px] mx-auto">
             {pain.body}
           </div>
         </div>
