@@ -225,10 +225,11 @@ const Product = () => {
       </section>
 
       {/* Feature blocks */}
-      <section className="pb-20 md:pb-28">
-        <div className="mx-auto max-w-6xl px-6 space-y-28 md:space-y-32">
+      {/* Feature blocks — each block is its own section, tones alternate */}
+      <>
           {/* Narrative */}
           <FeatureBlock
+            tone="plain"
             label="Understand"
             title="A living strategic document for every account."
             icon={BookOpen}
