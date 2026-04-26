@@ -34,8 +34,11 @@ const App = () => (
           <Route path="/solutions/csms" element={<ForCSMs />} />
           <Route path="/solutions/aes" element={<ForAEs />} />
           <Route path="/solutions/customers" element={<ForCustomers />} />
-          <Route path="/solutions/sales-handover" element={<SalesHandover />} />
-          <Route path="/solutions/account-transfers" element={<AccountTransfers />} />
+          <Route path="/solutions/relationship-intelligence" element={<RelationshipIntelligence />} />
+          <Route path="/solutions/handovers" element={<Handovers />} />
+          <Route path="/solutions/planning-execution" element={<PlanningExecution />} />
+          <Route path="/solutions/book-health" element={<BookHealth />} />
+          <Route path="/solutions/scaling-leverage" element={<ScalingLeverage />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
