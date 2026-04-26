@@ -2,18 +2,11 @@ import {
   BookOpen,
   ArrowRightLeft,
   Database,
-  Users,
   Handshake,
   CheckCircle2,
   Sparkles,
   Circle,
 } from "lucide-react";
-
-type Pillar = {
-  title: string;
-  description: string;
-  visual: React.ReactNode;
-};
 
 const NarrativeMock = () => (
   <div className="surface-card rounded-xl overflow-hidden">
