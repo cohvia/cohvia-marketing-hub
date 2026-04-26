@@ -105,44 +105,6 @@ const TeamMemoryMock = () => (
   </div>
 );
 
-const DashboardMock = () => (
-  <div className="surface-card rounded-xl overflow-hidden">
-    <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-secondary/40">
-      <div className="w-2.5 h-2.5 rounded-full bg-muted" />
-      <div className="w-2.5 h-2.5 rounded-full bg-muted" />
-      <div className="w-2.5 h-2.5 rounded-full bg-muted" />
-      <div className="ml-3 text-[10px] text-muted-foreground font-mono">cohvia / my book</div>
-    </div>
-    <div className="p-6">
-      <div className="flex items-center justify-between mb-4">
-        <div className="text-xs font-semibold text-foreground">45 accounts</div>
-        <div className="text-[10px] text-muted-foreground">All current</div>
-      </div>
-      <div className="grid grid-cols-9 gap-1.5">
-        {Array.from({ length: 45 }).map((_, i) => {
-          const variant = i % 7 === 0 ? "warning" : i % 11 === 0 ? "danger" : "primary";
-          const colorMap: Record<string, string> = {
-            primary: "bg-primary/30 border-primary/50",
-            warning: "bg-warning/30 border-warning/50",
-            danger: "bg-danger/30 border-danger/50",
-          };
-          return (
-            <div
-              key={i}
-              className={`aspect-square rounded border ${colorMap[variant]}`}
-            />
-          );
-        })}
-      </div>
-      <div className="flex items-center gap-4 mt-4 text-[10px] text-muted-foreground">
-        <span className="flex items-center gap-1.5"><Circle size={8} className="fill-primary text-primary" /> Healthy</span>
-        <span className="flex items-center gap-1.5"><Circle size={8} className="fill-warning text-warning" /> Watch</span>
-        <span className="flex items-center gap-1.5"><Circle size={8} className="fill-danger text-danger" /> Risk</span>
-      </div>
-    </div>
-  </div>
-);
-
 const PortalMock = () => (
   <div className="surface-card rounded-xl overflow-hidden">
     <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-secondary/40">
