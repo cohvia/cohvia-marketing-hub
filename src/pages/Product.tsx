@@ -39,6 +39,9 @@ const integrations = [
   "Pylon",
 ];
 
+type Tone = "plain" | "tinted" | "glow";
+type LayoutKind = "side" | "stacked" | "wide-visual";
+
 type FeatureBlockProps = {
   label: string;
   title: string;
@@ -46,15 +49,28 @@ type FeatureBlockProps = {
   visual: React.ReactNode;
   reverse?: boolean;
   icon: React.ElementType;
+  tone?: Tone;
+  layout?: LayoutKind;
 };
 
-const FeatureBlock = ({ label, title, children, visual, reverse, icon: Icon }: FeatureBlockProps) => (
-  <div
-    className={`flex flex-col gap-10 lg:gap-16 items-center ${
-      reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-    }`}
-  >
-    <div className="flex-1 max-w-xl">
+const toneClass: Record<Tone, string> = {
+  plain: "",
+  tinted: "bg-secondary/30",
+  glow: "relative overflow-hidden",
+};
+
+const FeatureBlock = ({
+  label,
+  title,
+  children,
+  visual,
+  reverse,
+  icon: Icon,
+  tone = "plain",
+  layout = "side",
+}: FeatureBlockProps) => {
+  const Header = (
+    <>
       <div className="flex items-center gap-3 mb-5">
         <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-primary/10">
           <Icon size={18} className="text-primary" />
@@ -65,10 +81,46 @@ const FeatureBlock = ({ label, title, children, visual, reverse, icon: Icon }: F
       </div>
       <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">{title}</h2>
       <div className="space-y-4 text-secondary-foreground leading-relaxed">{children}</div>
-    </div>
-    <div className="flex-1 w-full">{visual}</div>
-  </div>
-);
+    </>
+  );
+
+  let inner: React.ReactNode;
+  if (layout === "stacked") {
+    inner = (
+      <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mb-12">{Header}</div>
+        <div className="w-full">{visual}</div>
+      </div>
+    );
+  } else if (layout === "wide-visual") {
+    inner = (
+      <div className="grid lg:grid-cols-[1.6fr_1fr] gap-10 lg:gap-16 items-center">
+        <div className="order-2 lg:order-1 w-full">{visual}</div>
+        <div className="order-1 lg:order-2 max-w-xl">{Header}</div>
+      </div>
+    );
+  } else {
+    inner = (
+      <div
+        className={`flex flex-col gap-10 lg:gap-16 items-center ${
+          reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+        }`}
+      >
+        <div className="flex-1 max-w-xl">{Header}</div>
+        <div className="flex-1 w-full">{visual}</div>
+      </div>
+    );
+  }
+
+  return (
+    <section className={`py-20 md:py-28 ${toneClass[tone]}`}>
+      {tone === "glow" && (
+        <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
+      )}
+      <div className="mx-auto max-w-6xl px-6 relative">{inner}</div>
+    </section>
+  );
+};
 
 const MockFrame = ({ children }: { children: React.ReactNode }) => (
   <div className="surface-card rounded-xl overflow-hidden shadow-lg">
