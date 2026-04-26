@@ -1,48 +1,98 @@
+import { X, Check } from "lucide-react";
+
 const WhyNowSection = () => (
-  <section className="relative py-32 md:py-48 overflow-hidden">
-    {/* Backdrop */}
-    <div className="absolute inset-0 pointer-events-none">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,hsl(var(--primary)/0.10),transparent_60%)]" />
-      <div className="absolute inset-0 bg-secondary/30" />
-    </div>
+  <section className="relative py-24 md:py-32 overflow-hidden border-y border-border">
+    <div className="absolute inset-0 bg-secondary/20 pointer-events-none" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
 
-    {/* Massive faded number watermark */}
-    <div
-      aria-hidden
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none text-[28rem] md:text-[40rem] font-bold leading-none text-primary/[0.04] tracking-tighter"
-    >
-      03
-    </div>
-
-    <div className="mx-auto max-w-5xl px-6 relative">
+    <div className="mx-auto max-w-6xl px-6 relative">
+      {/* Eyebrow */}
       <div className="flex items-center gap-3 mb-10">
-        <span className="text-xs font-mono text-primary">03 ·</span>
+        <span className="h-px w-8 bg-primary/60" />
         <p className="text-xs font-semibold text-primary uppercase tracking-[0.25em]">
           Why now
         </p>
-        <span className="flex-1 h-px bg-border" />
       </div>
 
-      <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-12">
-        Everyone else is{" "}
-        <span className="text-muted-foreground/60 line-through decoration-2 decoration-muted-foreground/40">
-          automating
-        </span>{" "}
-        the relationship away.
-      </h2>
-
-      <div className="grid md:grid-cols-[auto_1fr] gap-x-8 gap-y-4 items-start max-w-3xl">
-        <span className="text-3xl md:text-4xl font-bold gradient-brand leading-none">→</span>
-        <p className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
-          Cohvia uses AI to do the opposite: deepen human understanding so your team can be more
-          present, not less.
+      {/* Headline */}
+      <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 mb-14 md:mb-20 items-end">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
+          The industry is using AI to{" "}
+          <span className="gradient-brand">remove humans</span> from Customer Success.
+        </h2>
+        <p className="text-lg text-secondary-foreground leading-relaxed max-w-md lg:justify-self-end lg:text-right">
+          We think that's the wrong move. AI should make your team{" "}
+          <span className="text-foreground font-medium">more present</span>, not absent.
         </p>
       </div>
 
-      <p className="mt-12 text-base text-secondary-foreground leading-relaxed max-w-2xl">
-        AI chatbots. Auto-generated QBRs. Automated check-in emails. The industry is using AI to
-        remove humans from Customer Success. We think that's the wrong move.
-      </p>
+      {/* Contrast cards */}
+      <div className="grid md:grid-cols-2 gap-5">
+        {/* What everyone else does */}
+        <article className="surface-card rounded-2xl p-7 md:p-8 relative">
+          <div className="flex items-center gap-2 mb-5">
+            <div className="w-8 h-8 rounded-lg bg-muted-foreground/10 flex items-center justify-center">
+              <X size={16} className="text-muted-foreground" />
+            </div>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-[0.2em]">
+              The industry approach
+            </p>
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold mb-4 text-muted-foreground">
+            Automate the relationship.
+          </h3>
+          <ul className="space-y-2.5">
+            {[
+              "AI chatbots replacing CSMs",
+              "Auto-generated QBR decks",
+              "Templated check-in emails",
+              "Health scores in place of judgment",
+            ].map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-2.5 text-sm text-muted-foreground"
+              >
+                <span className="mt-2 w-1 h-1 rounded-full bg-muted-foreground/50 shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </article>
+
+        {/* What Cohvia does */}
+        <article className="surface-card rounded-2xl p-7 md:p-8 relative border-primary/30 shadow-xl overflow-hidden">
+          <div className="absolute -top-16 -right-16 w-48 h-48 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
+          <div className="relative">
+            <div className="flex items-center gap-2 mb-5">
+              <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
+                <Check size={16} className="text-primary" />
+              </div>
+              <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                The Cohvia approach
+              </p>
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold mb-4">
+              Automate the busywork. <span className="gradient-brand">Deepen the relationship.</span>
+            </h3>
+            <ul className="space-y-2.5">
+              {[
+                "AI surfaces context, humans build trust",
+                "Narratives that capture the why, not just the what",
+                "Plans tailored to each account, not templates",
+                "Your team shows up sharper, every conversation",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 text-sm text-foreground"
+                >
+                  <Check size={14} className="text-primary mt-1 shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 );
