@@ -35,15 +35,13 @@ type RevealProps = {
   children: React.ReactNode;
   delay?: number;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
 };
 
 /** Wrap any block to fade + slide-up when it enters the viewport. */
-export const Reveal = ({ children, delay = 0, className = "", as: As = "div" }: RevealProps) => {
+export const Reveal = ({ children, delay = 0, className = "" }: RevealProps) => {
   const { ref, inView } = useInView<HTMLDivElement>();
   return (
-    // @ts-expect-error generic intrinsic element ref typing
-    <As
+    <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
       className={`transition-all duration-700 ease-out ${
@@ -51,6 +49,6 @@ export const Reveal = ({ children, delay = 0, className = "", as: As = "div" }: 
       } ${className}`}
     >
       {children}
-    </As>
+    </div>
   );
 };
