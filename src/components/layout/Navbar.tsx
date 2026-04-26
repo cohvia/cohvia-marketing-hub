@@ -104,7 +104,7 @@ const Navbar = () => {
             <DropdownMenuContent
               align="start"
               sideOffset={12}
-              className="w-[480px] p-0 surface-card"
+              className="w-[620px] p-0 surface-card"
             >
               <div className="grid grid-cols-2 gap-0">
                 <div className="p-5 border-r border-border">
