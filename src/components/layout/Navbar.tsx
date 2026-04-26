@@ -17,6 +17,11 @@ const navLinks = [
 
 const solutionsByRole = [
   {
+    label: "For Teams of One",
+    to: "/solutions/team-of-one",
+    description: "You are the CS team. Cohvia is your second pair of hands.",
+  },
+  {
     label: "For CS Leaders",
     to: "/solutions/cs-leaders",
     description: "Visibility across the book of business through understanding, not spreadsheets.",
