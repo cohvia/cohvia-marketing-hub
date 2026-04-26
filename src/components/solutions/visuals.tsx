@@ -1,5 +1,5 @@
 import { MockFrame } from "./SolutionPage";
-import { CheckCircle2, AlertTriangle, MessageSquare, User, Sparkles, ArrowRight, Circle } from "lucide-react";
+import { CheckCircle2, AlertTriangle, MessageSquare, User, Sparkles, ArrowRight, Circle, Inbox, Link2, Lock, Target } from "lucide-react";
 
 export const PortfolioByCSM = () => (
   <MockFrame>
