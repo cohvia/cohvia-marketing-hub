@@ -39,6 +39,9 @@ const integrations = [
   "Pylon",
 ];
 
+type Tone = "plain" | "tinted" | "glow";
+type LayoutKind = "side" | "stacked" | "wide-visual";
+
 type FeatureBlockProps = {
   label: string;
   title: string;
@@ -46,15 +49,28 @@ type FeatureBlockProps = {
   visual: React.ReactNode;
   reverse?: boolean;
   icon: React.ElementType;
+  tone?: Tone;
+  layout?: LayoutKind;
 };
 
-const FeatureBlock = ({ label, title, children, visual, reverse, icon: Icon }: FeatureBlockProps) => (
-  <div
-    className={`flex flex-col gap-10 lg:gap-16 items-center ${
-      reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-    }`}
-  >
-    <div className="flex-1 max-w-xl">
+const toneClass: Record<Tone, string> = {
+  plain: "",
+  tinted: "bg-secondary/30",
+  glow: "relative overflow-hidden",
+};
+
+const FeatureBlock = ({
+  label,
+  title,
+  children,
+  visual,
+  reverse,
+  icon: Icon,
+  tone = "plain",
+  layout = "side",
+}: FeatureBlockProps) => {
+  const Header = (
+    <>
       <div className="flex items-center gap-3 mb-5">
         <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-primary/10">
           <Icon size={18} className="text-primary" />
@@ -65,10 +81,46 @@ const FeatureBlock = ({ label, title, children, visual, reverse, icon: Icon }: F
       </div>
       <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">{title}</h2>
       <div className="space-y-4 text-secondary-foreground leading-relaxed">{children}</div>
-    </div>
-    <div className="flex-1 w-full">{visual}</div>
-  </div>
-);
+    </>
+  );
+
+  let inner: React.ReactNode;
+  if (layout === "stacked") {
+    inner = (
+      <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mb-12">{Header}</div>
+        <div className="w-full">{visual}</div>
+      </div>
+    );
+  } else if (layout === "wide-visual") {
+    inner = (
+      <div className="grid lg:grid-cols-[1.6fr_1fr] gap-10 lg:gap-16 items-center">
+        <div className="order-2 lg:order-1 w-full">{visual}</div>
+        <div className="order-1 lg:order-2 max-w-xl">{Header}</div>
+      </div>
+    );
+  } else {
+    inner = (
+      <div
+        className={`flex flex-col gap-10 lg:gap-16 items-center ${
+          reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+        }`}
+      >
+        <div className="flex-1 max-w-xl">{Header}</div>
+        <div className="flex-1 w-full">{visual}</div>
+      </div>
+    );
+  }
+
+  return (
+    <section className={`py-20 md:py-28 ${toneClass[tone]}`}>
+      {tone === "glow" && (
+        <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
+      )}
+      <div className="mx-auto max-w-6xl px-6 relative">{inner}</div>
+    </section>
+  );
+};
 
 const MockFrame = ({ children }: { children: React.ReactNode }) => (
   <div className="surface-card rounded-xl overflow-hidden shadow-lg">
@@ -173,10 +225,11 @@ const Product = () => {
       </section>
 
       {/* Feature blocks */}
-      <section className="pb-20 md:pb-28">
-        <div className="mx-auto max-w-6xl px-6 space-y-28 md:space-y-32">
+      {/* Feature blocks — each block is its own section, tones alternate */}
+      <>
           {/* Narrative */}
           <FeatureBlock
+            tone="plain"
             label="Understand"
             title="A living strategic document for every account."
             icon={BookOpen}
@@ -230,6 +283,7 @@ const Product = () => {
 
           {/* Ask Cohvia */}
           <FeatureBlock
+            tone="tinted"
             label="Ask"
             title="Your smartest colleague who actually read every transcript."
             icon={MessageSquare}
@@ -289,8 +343,29 @@ const Product = () => {
             <p className="text-foreground font-medium">Grounded in your data. Cited to the source.</p>
           </FeatureBlock>
 
+      {/* Stat strip — breather after the first two blocks */}
+      <section className="py-12 md:py-16 border-y border-border bg-secondary/40">
+        <div className="mx-auto max-w-5xl px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+          {[
+            { v: "8", l: "Narrative sections" },
+            { v: "12+", l: "Native integrations" },
+            { v: "1", l: "Branded customer portal" },
+            { v: "0", l: "Spreadsheets to maintain" },
+          ].map((s) => (
+            <div key={s.l}>
+              <div className="text-3xl md:text-4xl font-bold gradient-brand mb-2">{s.v}</div>
+              <div className="text-xs uppercase tracking-[0.15em] text-muted-foreground font-medium">
+                {s.l}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
           {/* Handover */}
           <FeatureBlock
+            tone="plain"
+            layout="stacked"
             label="Handover"
             title="Context that actually transfers."
             icon={ArrowRightLeft}
@@ -346,6 +421,7 @@ const Product = () => {
 
           {/* Plans */}
           <FeatureBlock
+            tone="glow"
             label="Execute"
             title="Plans your customers can actually see."
             icon={Target}
@@ -412,8 +488,22 @@ const Product = () => {
             </p>
           </FeatureBlock>
 
+      {/* Pull-quote band */}
+      <section className="py-20 md:py-28 border-y border-border bg-card">
+        <div className="mx-auto max-w-3xl px-6">
+          <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
+            The point
+          </p>
+          <blockquote className="text-2xl md:text-4xl font-bold leading-tight tracking-tight text-center">
+            Everyone else is automating the relationship away.{" "}
+            <span className="gradient-brand">We're deepening it.</span>
+          </blockquote>
+        </div>
+      </section>
+
           {/* Risk */}
           <FeatureBlock
+            tone="tinted"
             label="Safeguard"
             title="See risk in context, not in a vacuum."
             icon={Shield}
@@ -475,6 +565,8 @@ const Product = () => {
 
           {/* AI Fields */}
           <FeatureBlock
+            tone="plain"
+            layout="wide-visual"
             label="Surface"
             title="Structured answers without the data entry."
             icon={Layers}
@@ -530,6 +622,7 @@ const Product = () => {
 
           {/* Portal */}
           <FeatureBlock
+            tone="tinted"
             label="Share"
             title="Give every customer a home."
             icon={Globe}
@@ -596,6 +689,7 @@ const Product = () => {
 
           {/* Needs Attention */}
           <FeatureBlock
+            tone="plain"
             label="Focus"
             title="Every account that needs you. One view."
             icon={Bell}
@@ -665,8 +759,7 @@ const Product = () => {
             </p>
             <p className="text-muted-foreground italic">A small but important difference.</p>
           </FeatureBlock>
-        </div>
-      </section>
+      </>
 
       {/* Integrations */}
       <section className="py-20 md:py-24 border-t border-border">
