@@ -8,6 +8,10 @@ import Product from "./pages/Product.tsx";
 import Pricing from "./pages/Pricing.tsx";
 import About from "./pages/About.tsx";
 import Blog from "./pages/Blog.tsx";
+import ForCSLeaders from "./pages/solutions/ForCSLeaders.tsx";
+import ForCSMs from "./pages/solutions/ForCSMs.tsx";
+import SalesHandover from "./pages/solutions/SalesHandover.tsx";
+import AccountTransfers from "./pages/solutions/AccountTransfers.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -21,6 +25,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/solutions/cs-leaders" element={<ForCSLeaders />} />
+          <Route path="/solutions/csms" element={<ForCSMs />} />
+          <Route path="/solutions/sales-handover" element={<SalesHandover />} />
+          <Route path="/solutions/account-transfers" element={<AccountTransfers />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
