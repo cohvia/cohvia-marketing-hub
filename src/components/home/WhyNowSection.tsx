@@ -9,14 +9,14 @@ const WhyNowSection = () => (
       <div className="absolute inset-0 bg-secondary/20" />
     </div>
 
-    <div className="mx-auto max-w-3xl px-6 relative text-center">
-      <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
+    <div className="mx-auto max-w-3xl px-6 relative">
+      <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4 text-center">
         Why now
       </p>
-      <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+      <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight text-center">
         Everyone else is automating the relationship away.
       </h2>
-      <div className="space-y-6 text-lg text-secondary-foreground leading-relaxed">
+      <div className="space-y-6 text-lg text-secondary-foreground leading-relaxed text-left max-w-[680px] mx-auto">
         <p>
           AI chatbots. Auto-generated QBRs. Automated check-in emails. The
           industry is using AI to remove humans from Customer Success.

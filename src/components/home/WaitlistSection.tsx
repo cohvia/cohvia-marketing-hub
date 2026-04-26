@@ -1,11 +1,11 @@
 const WaitlistSection = () => (
   <section id="waitlist" className="py-24 md:py-32 relative">
     <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
-    <div className="mx-auto max-w-[680px] px-6 text-center relative">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+    <div className="mx-auto max-w-[680px] px-6 relative">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-center">
         Customer Success should be mutual.
       </h2>
-      <p className="text-lg text-secondary-foreground mb-10 leading-relaxed">
+      <p className="text-lg text-secondary-foreground mb-10 leading-relaxed text-left">
         Cohvia is in early access. We're building this with CS teams who believe
         the best customer relationships aren't managed — they're nurtured. If
         that sounds like your team, we should talk.

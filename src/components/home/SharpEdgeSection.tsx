@@ -114,7 +114,7 @@ const SharpEdgeSection = () => (
         </div>
       </div>
 
-      <p className="text-center text-secondary-foreground max-w-2xl mx-auto leading-relaxed">
+      <p className="text-secondary-foreground max-w-[680px] mx-auto leading-relaxed text-left">
         The incumbents help you get up to speed on customer data quickly. Cohvia
         helps you get up to speed on a customer{" "}
         <span className="text-foreground font-medium">relationship</span> quickly.
