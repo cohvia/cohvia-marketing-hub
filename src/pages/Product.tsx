@@ -408,62 +408,138 @@ const Product = () => {
         </div>
       </section>
 
-          {/* Handover */}
-          <FeatureBlock
-            tone="plain"
-            layout="stacked"
-            label="Handover"
-            title="Context that actually transfers."
-            icon={ArrowRightLeft}
-            visual={
-              <MockFrame>
-                <div className="flex items-center justify-between mb-4">
-                  <p className="text-xs font-semibold text-primary uppercase tracking-[0.15em]">
-                    AE Handover Review
+          {/* Handover — sticky scroll moment */}
+          <section className="py-20 md:py-28">
+            <div className="mx-auto max-w-6xl px-6">
+              <div className="max-w-2xl mb-16">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-primary/10">
+                    <ArrowRightLeft size={18} className="text-primary" />
+                  </div>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em]">
+                    Handover
                   </p>
-                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
-                    Draft
-                  </span>
                 </div>
-                <div className="space-y-3">
+                <h2 className="text-3xl md:text-5xl font-bold leading-[1.05] mb-5">
+                  Context that{" "}
+                  <span className="gradient-brand">actually transfers.</span>
+                </h2>
+                <p className="text-lg text-secondary-foreground leading-relaxed">
+                  No handover call. No Slack novel nobody reads. Four stages, fully automated up to
+                  the point where a human should weigh in.
+                </p>
+              </div>
+
+              <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-start">
+                {/* Sticky visual */}
+                <div className="lg:sticky lg:top-24">
+                  <MockFrame>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-[0.15em] mb-4">
+                      Handover pipeline · Acme Corp
+                    </p>
+                    <ol className="space-y-3">
+                      {[
+                        {
+                          n: "01",
+                          label: "Ingest",
+                          desc: "Calls, emails, CRM history",
+                          state: "done",
+                        },
+                        {
+                          n: "02",
+                          label: "AI drafts Narrative",
+                          desc: "Why they bought, success criteria",
+                          state: "done",
+                        },
+                        {
+                          n: "03",
+                          label: "AE reviews & enriches",
+                          desc: "Adds verbal commitments, politics",
+                          state: "active",
+                        },
+                        {
+                          n: "04",
+                          label: "CSM inherits",
+                          desc: "Day one with full understanding",
+                          state: "pending",
+                        },
+                      ].map((s) => (
+                        <li
+                          key={s.n}
+                          className={`flex items-start gap-3 p-3 rounded-lg border ${
+                            s.state === "active"
+                              ? "border-primary/40 bg-primary/5"
+                              : s.state === "done"
+                                ? "border-border bg-secondary/40"
+                                : "border-dashed border-border"
+                          }`}
+                        >
+                          <span
+                            className={`text-[10px] font-mono w-7 h-7 rounded-md flex items-center justify-center shrink-0 ${
+                              s.state === "active"
+                                ? "bg-primary text-primary-foreground"
+                                : s.state === "done"
+                                  ? "bg-primary/20 text-primary"
+                                  : "bg-secondary text-muted-foreground"
+                            }`}
+                          >
+                            {s.state === "done" ? "✓" : s.n}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-semibold">{s.label}</p>
+                            <p className="text-xs text-muted-foreground">{s.desc}</p>
+                          </div>
+                          {s.state === "active" && (
+                            <span className="text-[9px] px-1.5 py-0.5 rounded bg-primary/10 text-primary font-semibold uppercase tracking-wider">
+                              Now
+                            </span>
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+                  </MockFrame>
+                </div>
+
+                {/* Scrolling copy stages */}
+                <div className="space-y-16 lg:space-y-32">
                   {[
-                    { label: "Why they bought", value: "Sales→CS context transfer", auto: true },
-                    { label: "Promised outcomes", value: "30% faster onboarding", auto: true },
-                    { label: "Champion", value: "Sarah Chen, VP CustomerOps", auto: true },
-                    { label: "Watch out for", value: "Legacy Gainsight workflows", auto: false },
-                  ].map((f) => (
-                    <div
-                      key={f.label}
-                      className="flex items-start justify-between gap-3 py-2 border-b border-border last:border-0"
-                    >
-                      <div>
-                        <p className="text-[11px] text-muted-foreground mb-0.5">{f.label}</p>
-                        <p className="text-sm text-foreground">{f.value}</p>
+                    {
+                      n: "01",
+                      title: "Deal closes. Cohvia ingests everything.",
+                      body: "Call recordings, email threads, CRM history. Automatically. The AE doesn't write a single sentence yet.",
+                    },
+                    {
+                      n: "02",
+                      title: "AI drafts the first Narrative.",
+                      body: "Why they bought, what success looks like, who the key people are. Eight sections, every claim cited to the source it came from.",
+                    },
+                    {
+                      n: "03",
+                      title: "The AE reviews and enriches.",
+                      body: "Adds what AI couldn't know: verbal commitments, politics, the real reason the champion pushed. Five minutes, not thirty. (Replaces the handover call that always got rescheduled twice.)",
+                    },
+                    {
+                      n: "04",
+                      title: "The CSM starts with the full picture.",
+                      body: "Day one. Strategic understanding. Suggested plans pre-populated from sales conversations. No Slack archaeology.",
+                    },
+                  ].map((stage) => (
+                    <div key={stage.n}>
+                      <div className="text-6xl md:text-7xl font-bold text-primary/20 leading-none mb-4 font-mono">
+                        {stage.n}
                       </div>
-                      {f.auto && (
-                        <span className="text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary font-medium shrink-0 mt-1">
-                          AI
-                        </span>
-                      )}
+                      <h3 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+                        {stage.title}
+                      </h3>
+                      <p className="text-lg text-secondary-foreground leading-relaxed">
+                        {stage.body}
+                      </p>
                     </div>
                   ))}
                 </div>
-              </MockFrame>
-            }
-          >
-            <p>
-              Deal closes. Cohvia ingests call recordings, emails, CRM history. AI generates the
-              first Narrative draft and suggests initial Plans.
-            </p>
-            <p>
-              The AE reviews and enriches it before the CSM ever sees the account. No handover
-              call. No Slack novel nobody reads.
-            </p>
-            <p>
-              The CSM opens a complete strategic understanding on day one. When accounts transfer
-              between CSMs, same thing: the new CSM reads the Narrative. The story continues.
-            </p>
-          </FeatureBlock>
+              </div>
+            </div>
+          </section>
 
           {/* Plans */}
           <FeatureBlock
