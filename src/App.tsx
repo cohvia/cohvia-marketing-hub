@@ -8,6 +8,7 @@ import Product from "./pages/Product.tsx";
 import Pricing from "./pages/Pricing.tsx";
 import About from "./pages/About.tsx";
 import Blog from "./pages/Blog.tsx";
+import TeamOfOne from "./pages/solutions/TeamOfOne.tsx";
 import ForCSLeaders from "./pages/solutions/ForCSLeaders.tsx";
 import ForCSMs from "./pages/solutions/ForCSMs.tsx";
 import ForAEs from "./pages/solutions/ForAEs.tsx";
