@@ -40,14 +40,29 @@ const solutionsByRole = [
 
 const solutionsByUseCase = [
   {
-    label: "Sales Handover",
-    to: "/solutions/sales-handover",
-    description: "No more lost context at close.",
+    label: "Relationship Intelligence",
+    to: "/solutions/relationship-intelligence",
+    description: "Understand the why behind every customer relationship.",
   },
   {
-    label: "Account Transfers",
-    to: "/solutions/account-transfers",
-    description: "The story continues without interruption.",
+    label: "Handovers",
+    to: "/solutions/handovers",
+    description: "Sales to CS, CSM to CSM, context that transfers completely.",
+  },
+  {
+    label: "Planning & Execution",
+    to: "/solutions/planning-execution",
+    description: "Shared plans for every stage of the relationship.",
+  },
+  {
+    label: "Book Health",
+    to: "/solutions/book-health",
+    description: "See across the book. Act before things break.",
+  },
+  {
+    label: "Scaling & Leverage",
+    to: "/solutions/scaling-leverage",
+    description: "Do more with fewer people without losing quality.",
   },
 ];
 
@@ -89,7 +104,7 @@ const Navbar = () => {
             <DropdownMenuContent
               align="start"
               sideOffset={12}
-              className="w-[480px] p-0 surface-card"
+              className="w-[620px] p-0 surface-card"
             >
               <div className="grid grid-cols-2 gap-0">
                 <div className="p-5 border-r border-border">
