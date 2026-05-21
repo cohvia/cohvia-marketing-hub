@@ -17,12 +17,12 @@ const WhyNowSection = () => (
       {/* Headline */}
       <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 mb-14 md:mb-20 items-end">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
-          The industry is using AI to{" "}
-          <span className="gradient-brand">remove humans</span> from Customer Success.
+          The industry wants AI to replace your CS team.{" "}
+          <span className="gradient-brand">We're doing the opposite.</span>
         </h2>
         <p className="text-lg text-secondary-foreground leading-relaxed max-w-md lg:justify-self-end lg:text-right">
-          We think that's the wrong move. AI should make your team{" "}
-          <span className="text-foreground font-medium">more present</span>, not absent.
+          AI should make your team{" "}
+          <span className="text-foreground font-medium">more present</span>, not absent. We automate the busywork so humans can do the human work.
         </p>
       </div>
 
