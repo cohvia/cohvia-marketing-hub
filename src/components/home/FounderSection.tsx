@@ -1,5 +1,5 @@
 const FounderSection = () => (
-  <section className="py-12 md:py-16">
+  <section className="pt-10 pb-10 md:pt-12 md:pb-12">
     <div className="mx-auto max-w-3xl px-6">
       <div className="text-center mb-10 md:mb-12">
         <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
