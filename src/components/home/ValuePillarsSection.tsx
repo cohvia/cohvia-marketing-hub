@@ -313,7 +313,7 @@ const ValuePillarsSection = () => {
       </div>
 
       {/* Pull-quote band */}
-      <div className="mt-24 md:mt-32 py-20 md:py-28 border-y border-border bg-card relative overflow-hidden">
+      <div className="mt-12 md:mt-16 py-14 md:py-20 border-y border-border bg-card relative overflow-hidden">
         <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
         <div className="mx-auto max-w-4xl px-6 relative">
           <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">

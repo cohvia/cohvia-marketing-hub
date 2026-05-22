@@ -1,5 +1,5 @@
 const SocialProofSection = () => (
-  <section className="py-24 md:py-32">
+  <section className="py-16 md:py-24">
     <div className="mx-auto max-w-6xl px-6">
       <div className="text-center mb-16">
         <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">

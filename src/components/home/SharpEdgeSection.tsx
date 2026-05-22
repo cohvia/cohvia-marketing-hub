@@ -1,7 +1,7 @@
 import { User, Mail, Phone, Building2, Calendar, Sparkles } from "lucide-react";
 
 const SharpEdgeSection = () => (
-  <section className="py-24 md:py-32 relative overflow-hidden">
+  <section className="py-16 md:py-24 relative overflow-hidden">
     <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
     <div className="mx-auto max-w-6xl px-6 relative">
       <div className="text-center mb-16 max-w-3xl mx-auto">

@@ -1,5 +1,5 @@
 const WaitlistSection = () => (
-  <section id="waitlist" className="py-24 md:py-32 relative">
+  <section id="waitlist" className="py-16 md:py-24 relative">
     <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
     <div className="mx-auto max-w-[680px] px-6 relative">
       <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-center">
