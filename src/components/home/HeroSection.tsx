@@ -73,7 +73,7 @@ const NarrativePreview = () => (
     </div>
 
     {/* Floating callout: source citation */}
-    <div className="hidden md:flex absolute left-3 top-32 items-center gap-2 surface-card rounded-lg px-3 py-2 shadow-lg animate-fade-in animation-delay-300">
+    <div className="hidden lg:flex absolute -left-10 top-32 items-center gap-2 surface-card rounded-lg px-3 py-2 shadow-lg animate-fade-in animation-delay-300">
       <Quote size={12} className="text-primary shrink-0" />
       <div className="text-left">
         <div className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold">
@@ -84,7 +84,7 @@ const NarrativePreview = () => (
     </div>
 
     {/* Floating callout: AI-proposed edit */}
-    <div className="hidden md:flex absolute right-3 bottom-20 items-center gap-2 surface-card rounded-lg px-3 py-2 shadow-lg border-primary/30 animate-fade-in animation-delay-500">
+    <div className="hidden lg:flex absolute -right-8 bottom-20 items-center gap-2 surface-card rounded-lg px-3 py-2 shadow-lg border-primary/30 animate-fade-in animation-delay-500">
       <div className="w-6 h-6 rounded-md gradient-brand-bg flex items-center justify-center shrink-0">
         <Sparkles size={11} className="text-foreground" />
       </div>
@@ -105,7 +105,7 @@ const HeroSection = () => (
     {/* Subtle grid backdrop */}
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none [background-image:linear-gradient(hsl(var(--primary))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary))_1px,transparent_1px)] [background-size:48px_48px]" />
 
-    <div className="mx-auto max-w-7xl px-6 pt-20 pb-24 md:pt-28 md:pb-36 relative">
+    <div className="mx-auto max-w-7xl px-6 pt-20 pb-16 md:pt-28 md:pb-20 relative">
       <div className="grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center">
         {/* Copy column */}
         <div className="text-left max-w-2xl">
