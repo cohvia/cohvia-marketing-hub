@@ -105,7 +105,7 @@ const HeroSection = () => (
     {/* Subtle grid backdrop */}
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none [background-image:linear-gradient(hsl(var(--primary))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary))_1px,transparent_1px)] [background-size:48px_48px]" />
 
-    <div className="mx-auto max-w-7xl px-6 pt-20 pb-24 md:pt-28 md:pb-36 relative">
+    <div className="mx-auto max-w-7xl px-6 pt-20 pb-16 md:pt-28 md:pb-20 relative">
       <div className="grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center">
         {/* Copy column */}
         <div className="text-left max-w-2xl">
