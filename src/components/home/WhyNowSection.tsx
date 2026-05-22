@@ -1,7 +1,7 @@
 import { X, Check } from "lucide-react";
 
 const WhyNowSection = () => (
-  <section className="relative py-24 md:py-32 overflow-hidden border-y border-border">
+  <section className="relative py-16 md:py-24 overflow-hidden border-y border-border">
     <div className="absolute inset-0 bg-secondary/20 pointer-events-none" />
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
 

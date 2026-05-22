@@ -1,5 +1,5 @@
 const ProblemSolutionSection = () => (
-  <section className="py-24 md:py-32">
+  <section className="py-16 md:py-24">
     <div className="mx-auto max-w-6xl px-6">
       <div className="relative grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-border">
         {/* Problem side */}
