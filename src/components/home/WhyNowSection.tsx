@@ -1,13 +1,13 @@
 import { X, Check } from "lucide-react";
 
 const WhyNowSection = () => (
-  <section className="relative pt-10 pb-12 md:pt-12 md:pb-16 overflow-hidden border-y border-border">
+  <section className="relative pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden border-y border-border">
     <div className="absolute inset-0 bg-secondary/20 pointer-events-none" />
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
 
     <div className="mx-auto max-w-6xl px-6 relative">
       {/* Eyebrow */}
-      <div className="flex items-center gap-3 mb-8 md:mb-10">
+      <div className="flex items-center gap-3 mb-6 md:mb-8">
         <span className="h-px w-8 bg-primary/60" />
         <p className="text-xs font-semibold text-primary uppercase tracking-[0.25em]">
           Why now
@@ -15,7 +15,7 @@ const WhyNowSection = () => (
       </div>
 
       {/* Headline */}
-      <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 mb-10 md:mb-12 items-end">
+      <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 mb-8 md:mb-10 items-end">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
           The industry wants AI to replace your CS team.{" "}
           <span className="gradient-brand">We're doing the opposite.</span>
