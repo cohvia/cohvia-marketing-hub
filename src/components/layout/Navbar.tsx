@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
-import cohviaLogo from "@/assets/cohvia-wordmark-white.svg";
+import cohviaLogo from "@/assets/cohvia-wordmark-color.svg";
 import {
   DropdownMenu,
   DropdownMenuContent,
