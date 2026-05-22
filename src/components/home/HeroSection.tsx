@@ -2,7 +2,7 @@ import { ArrowRight, Sparkles, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NarrativePreview = () => (
-  <div className="relative">
+  <div className="relative max-w-[640px]">
     {/* Glow under the card */}
     <div className="absolute -inset-8 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
 
@@ -33,9 +33,20 @@ const NarrativePreview = () => (
         </div>
 
         <div>
-          <p className="text-[11px] uppercase tracking-[0.15em] text-muted-foreground font-medium mb-2">
-            Why they bought
-          </p>
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <p className="text-[11px] uppercase tracking-[0.15em] text-muted-foreground font-medium">
+              Why they bought
+            </p>
+            <div className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary/50 px-2.5 py-1">
+              <Quote size={12} className="text-primary shrink-0" />
+              <div className="text-left leading-none">
+                <div className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold">
+                  Source
+                </div>
+                <div className="text-[11px] font-medium text-foreground">Gong call · Mar 14</div>
+              </div>
+            </div>
+          </div>
           <p className="text-sm text-foreground leading-relaxed">
             Switched from Gainsight after RevOps determined the new motion needed tighter sales→CS
             context transfer
@@ -57,6 +68,17 @@ const NarrativePreview = () => (
             </span>
             .
           </p>
+          <div className="mt-3 inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2">
+            <div className="w-6 h-6 rounded-md gradient-brand-bg flex items-center justify-center shrink-0">
+              <Sparkles size={11} className="text-foreground" />
+            </div>
+            <div className="text-left leading-tight">
+              <div className="text-[9px] uppercase tracking-wider text-primary font-semibold">
+                AI proposed edit
+              </div>
+              <div className="text-[11px] font-medium text-foreground">+ Add Sarah Chen as champion</div>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border">
@@ -72,29 +94,6 @@ const NarrativePreview = () => (
       </div>
     </div>
 
-    {/* Floating callout: source citation */}
-    <div className="hidden lg:flex absolute -left-10 top-32 items-center gap-2 surface-card rounded-lg px-3 py-2 shadow-lg animate-fade-in animation-delay-300">
-      <Quote size={12} className="text-primary shrink-0" />
-      <div className="text-left">
-        <div className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold">
-          Source
-        </div>
-        <div className="text-[11px] font-medium">Gong call · Mar 14</div>
-      </div>
-    </div>
-
-    {/* Floating callout: AI-proposed edit */}
-    <div className="hidden lg:flex absolute -right-8 bottom-20 items-center gap-2 surface-card rounded-lg px-3 py-2 shadow-lg border-primary/30 animate-fade-in animation-delay-500">
-      <div className="w-6 h-6 rounded-md gradient-brand-bg flex items-center justify-center shrink-0">
-        <Sparkles size={11} className="text-foreground" />
-      </div>
-      <div className="text-left">
-        <div className="text-[9px] uppercase tracking-wider text-primary font-semibold">
-          AI proposed edit
-        </div>
-        <div className="text-[11px] font-medium">+ Add Sarah Chen as champion</div>
-      </div>
-    </div>
   </div>
 );
 
