@@ -248,11 +248,11 @@ const FeatureRow = ({
 
 const ValuePillarsSection = () => {
   return (
-    <section className="pt-24 md:pt-32 pb-24 md:pb-32 relative">
+    <section className="py-14 md:py-20 relative">
       <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
       <div className="mx-auto max-w-6xl px-6 relative">
         {/* Section header */}
-        <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-end mb-14 md:mb-20">
+        <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-end mb-12 md:mb-16">
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 mb-5">
               <span className="h-px w-8 bg-primary/60" />
@@ -271,13 +271,13 @@ const ValuePillarsSection = () => {
         </div>
 
         {/* Feature stack — first two rows */}
-        <div className="space-y-10 md:space-y-12">
+        <div className="space-y-8 md:space-y-10">
           <FeatureRow index={0} feature={features[0]} reversed={false} />
           <FeatureRow index={1} feature={features[1]} reversed={true} />
         </div>
 
         {/* Stat band — Book Coverage */}
-        <div className="my-16 md:my-20 relative">
+        <div className="my-12 md:my-16 relative">
           <div className="surface-card rounded-2xl overflow-hidden border-primary/30 relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
             <div className="absolute -top-24 -right-24 w-72 h-72 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
@@ -306,14 +306,14 @@ const ValuePillarsSection = () => {
         </div>
 
         {/* Feature stack — last two rows */}
-        <div className="space-y-10 md:space-y-12">
+        <div className="space-y-8 md:space-y-10">
           <FeatureRow index={2} feature={features[2]} reversed={false} />
           <FeatureRow index={3} feature={features[3]} reversed={true} />
         </div>
       </div>
 
       {/* Pull-quote band */}
-      <div className="mt-12 md:mt-16 py-14 md:py-20 border-y border-border bg-card relative overflow-hidden">
+      <div className="mt-10 md:mt-12 py-12 md:py-14 border-y border-border bg-card relative overflow-hidden">
         <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
         <div className="mx-auto max-w-4xl px-6 relative">
           <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
