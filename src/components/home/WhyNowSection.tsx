@@ -1,7 +1,7 @@
 import { X, Check } from "lucide-react";
 
 const WhyNowSection = () => (
-  <section className="relative py-16 md:py-24 overflow-hidden border-y border-border">
+  <section className="relative py-14 md:py-20 overflow-hidden border-y border-border">
     <div className="absolute inset-0 bg-secondary/20 pointer-events-none" />
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
 
@@ -15,7 +15,7 @@ const WhyNowSection = () => (
       </div>
 
       {/* Headline */}
-      <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 mb-14 md:mb-20 items-end">
+      <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 mb-12 md:mb-16 items-end">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight max-w-2xl">
           The industry wants AI to replace your CS team.{" "}
           <span className="gradient-brand">We're doing the opposite.</span>

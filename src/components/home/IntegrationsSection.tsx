@@ -14,7 +14,7 @@ const integrations = [
 ];
 
 const IntegrationsSection = () => (
-  <section className="py-16 md:py-24">
+  <section className="py-14 md:py-20">
     <div className="mx-auto max-w-4xl px-6 text-center">
       <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
         Integrations
