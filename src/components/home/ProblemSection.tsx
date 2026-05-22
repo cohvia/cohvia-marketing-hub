@@ -1,5 +1,5 @@
 const ProblemSection = () => (
-  <section className="pt-10 pb-12 md:pt-12 md:pb-16">
+  <section className="pt-8 pb-10 md:pt-10 md:pb-12">
     <div className="mx-auto max-w-[680px] px-6">
       <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4 text-center">
         The problem

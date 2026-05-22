@@ -248,7 +248,7 @@ const FeatureRow = ({
 
 const ValuePillarsSection = () => {
   return (
-    <section className="py-12 md:py-16 relative">
+    <section className="pt-10 pb-10 md:pt-12 md:pb-12 relative">
       <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
       <div className="mx-auto max-w-6xl px-6 relative">
         {/* Section header */}

@@ -1,10 +1,10 @@
 import { User, Mail, Phone, Building2, Calendar, Sparkles } from "lucide-react";
 
 const SharpEdgeSection = () => (
-  <section className="py-12 md:py-16 relative overflow-hidden">
+  <section className="pt-10 pb-10 md:pt-12 md:pb-12 relative overflow-hidden">
     <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
     <div className="mx-auto max-w-6xl px-6 relative">
-      <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+      <div className="text-center mb-8 md:mb-10 max-w-3xl mx-auto">
         <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
           The sharp edge
         </p>
