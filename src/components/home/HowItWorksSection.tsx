@@ -28,9 +28,9 @@ const steps = [
 ];
 
 const HowItWorksSection = () => (
-  <section className="py-16 md:py-24">
+  <section className="pt-8 pb-8 md:pt-10 md:pb-10">
     <div className="mx-auto max-w-6xl px-6 relative">
-      <div className="text-center mb-16">
+      <div className="text-center mb-8 md:mb-10">
         <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
           How it works
         </p>
