@@ -1,5 +1,5 @@
 const SolutionSection = () => (
-  <section className="py-16 md:py-24 relative">
+  <section className="py-10 md:py-14 relative">
     <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
     <div className="mx-auto max-w-[680px] px-6 relative">
       <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4 text-center">

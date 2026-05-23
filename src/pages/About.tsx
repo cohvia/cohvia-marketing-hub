@@ -5,7 +5,7 @@ const About = () => {
     <Layout>
       <section className="relative overflow-hidden">
         <div className="gradient-hero absolute inset-0 pointer-events-none" />
-        <div className="mx-auto max-w-4xl px-6 pt-24 pb-16 md:pt-32 md:pb-20 text-center relative">
+        <div className="mx-auto max-w-4xl px-6 pt-16 pb-10 md:pt-20 md:pb-12 text-center relative">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">About</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
             We're building the CS platform we always wanted
@@ -32,7 +32,7 @@ const About = () => {
       </section>
 
       {/* Mission */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-12 md:pb-16">
         <div className="mx-auto max-w-4xl px-6">
           <div className="surface-card rounded-xl p-8 md:p-12">
             <h2 className="text-2xl font-bold mb-4">Our mission</h2>
@@ -50,7 +50,7 @@ const About = () => {
       </section>
 
       {/* Founder */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-12 md:pb-16">
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="text-2xl font-bold mb-8 text-center">The team</h2>
           <div className="grid md:grid-cols-3 gap-6">
