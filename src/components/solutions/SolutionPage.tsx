@@ -44,7 +44,7 @@ const SolutionPage = ({
     <Layout>
       {/* Hero */}
       <section className="relative gradient-hero">
-        <div className="mx-auto max-w-4xl px-6 pt-24 pb-20 text-center">
+        <div className="mx-auto max-w-4xl px-6 pt-16 pb-12 text-center">
           <span className="inline-block text-xs font-semibold text-primary uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-primary/10 mb-6">
             {chip}
           </span>
@@ -65,7 +65,7 @@ const SolutionPage = ({
 
       {/* Pain */}
       <section className="border-y border-border/60 bg-secondary/20">
-        <div className="mx-auto max-w-3xl px-6 py-20">
+        <div className="mx-auto max-w-3xl px-6 py-12">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-center">
             {pain.headline}
           </h2>
@@ -76,12 +76,12 @@ const SolutionPage = ({
       </section>
 
       {/* Blocks */}
-      <section className="py-24">
+      <section className="py-14">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-3 text-center">
             {helpLabel}
           </p>
-          <div className="space-y-24 mt-16">
+          <div className="space-y-16 mt-10">
             {blocks.map((block, i) => {
               const reverse = i % 2 === 1;
               return (
@@ -116,7 +116,7 @@ const SolutionPage = ({
 
       {/* CTA */}
       <section id="waitlist" className="border-t border-border/60">
-        <div className="mx-auto max-w-3xl px-6 py-24 text-center">
+        <div className="mx-auto max-w-3xl px-6 py-14 text-center">
           <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
             {cta.headline}
           </h2>

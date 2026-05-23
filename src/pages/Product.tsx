@@ -113,7 +113,7 @@ const FeatureBlock = ({
   }
 
   return (
-    <section className={`py-20 md:py-28 ${toneClass[tone]}`}>
+    <section className={`py-12 md:py-16 ${toneClass[tone]}`}>
       {tone === "glow" && (
         <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
       )}
@@ -139,7 +139,7 @@ const Product = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="gradient-hero absolute inset-0 pointer-events-none" />
-        <div className="mx-auto max-w-4xl px-6 pt-24 pb-16 md:pt-32 md:pb-20 text-center relative">
+        <div className="mx-auto max-w-4xl px-6 pt-16 pb-10 md:pt-20 md:pb-12 text-center relative">
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 border border-border bg-card">
             <Sparkles size={14} className="text-primary" />
             <span className="text-xs font-medium text-secondary-foreground">
@@ -173,7 +173,7 @@ const Product = () => {
       </section>
 
       {/* The System */}
-      <section id="system" className="py-20 md:py-28">
+      <section id="system" className="py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-6">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-4">
@@ -409,9 +409,9 @@ const Product = () => {
       </section>
 
           {/* Handover — sticky scroll moment */}
-          <section className="py-20 md:py-28">
+          <section className="py-12 md:py-16">
             <div className="mx-auto max-w-6xl px-6">
-              <div className="max-w-2xl mb-16">
+              <div className="max-w-2xl mb-10">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-primary/10">
                     <ArrowRightLeft size={18} className="text-primary" />
@@ -611,7 +611,7 @@ const Product = () => {
           </FeatureBlock>
 
       {/* Pull-quote band */}
-      <section className="py-20 md:py-28 border-y border-border bg-card">
+      <section className="py-12 md:py-16 border-y border-border bg-card">
         <div className="mx-auto max-w-3xl px-6">
           <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-6 text-center">
             The point
@@ -624,7 +624,7 @@ const Product = () => {
       </section>
 
           {/* Run the book — bento cluster: Risk, AI Fields, Portal, Needs Attention */}
-          <section className="py-20 md:py-28 bg-secondary/30">
+          <section className="py-12 md:py-16 bg-secondary/30">
             <div className="mx-auto max-w-6xl px-6">
               <div className="max-w-3xl mb-14">
                 <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-4">
@@ -810,7 +810,7 @@ const Product = () => {
       </>
 
       {/* Integrations */}
-      <section className="py-20 md:py-24 border-t border-border">
+      <section className="py-12 md:py-16 border-t border-border">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-4">
             Integrations
@@ -836,7 +836,7 @@ const Product = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-12">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
             Customer Success should be{" "}
