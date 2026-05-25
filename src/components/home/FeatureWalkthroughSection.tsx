@@ -1,4 +1,5 @@
 import { ArrowRightLeft, BookOpen, Users, Shield, MessageSquare } from "lucide-react";
+import { Section, SectionHeader, FeatureCard } from "@/components/ui-kit";
 
 const features = [
   {
@@ -39,42 +40,17 @@ const features = [
 ];
 
 const FeatureWalkthroughSection = () => (
-  <section className="py-16 md:py-24">
-    <div className="mx-auto max-w-6xl px-6">
-      <div className="text-center mb-16">
-        <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
-          Features
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-          Built for how CS teams actually work
-        </h2>
-      </div>
-
-      <div className="space-y-6">
-        {features.map((feature, i) => (
-          <div
-            key={i}
-            className="surface-card rounded-xl p-8 md:p-10 transition-all hover:border-primary/30"
-          >
-            <div className="flex flex-col md:flex-row items-start gap-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-primary/10">
-                <feature.icon size={22} className="text-primary" />
-              </div>
-              <div className="flex-1">
-                <p className="text-xs font-medium text-primary uppercase tracking-[0.15em] mb-1">
-                  {feature.label}
-                </p>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-secondary-foreground leading-relaxed max-w-2xl">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+  <Section pad="lg">
+    <SectionHeader
+      eyebrow="Features"
+      title="Built for how CS teams actually work"
+    />
+    <div className="space-y-6">
+      {features.map((feature, i) => (
+        <FeatureCard key={i} {...feature} />
+      ))}
     </div>
-  </section>
+  </Section>
 );
 
 export default FeatureWalkthroughSection;
