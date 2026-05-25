@@ -55,7 +55,7 @@ const solutionsByUseCase = [
     description: "Sales to CS, CSM to CSM, context that transfers completely.",
   },
   {
-    label: "Planning & Execution",
+    label: "Success Plans",
     to: "/solutions/planning-execution",
     description: "Shared plans for every stage of the relationship.",
   },
