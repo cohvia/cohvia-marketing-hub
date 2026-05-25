@@ -1,5 +1,5 @@
-import { ArrowRight, Sparkles, Quote } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Sparkles, Quote } from "lucide-react";
+import { BrandLink, BrandRouterLink } from "@/components/ui-kit";
 
 const NarrativePreview = () => (
   <div className="relative max-w-[640px]">
@@ -127,19 +127,12 @@ const HeroSection = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 opacity-0 animate-fade-in-up animation-delay-300">
-            <a
-              href="#waitlist"
-              className="inline-flex items-center gap-2 rounded-lg gradient-brand-bg px-6 py-3 text-sm font-semibold text-foreground transition-all hover:brightness-110"
-            >
+            <BrandLink href="#waitlist" withArrow>
               Request Early Access
-              <ArrowRight size={16} />
-            </a>
-            <Link
-              to="/product"
-              className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-secondary-foreground transition-all hover:bg-secondary hover:text-foreground"
-            >
+            </BrandLink>
+            <BrandRouterLink to="/product" variant="ghost">
               See how it works
-            </Link>
+            </BrandRouterLink>
           </div>
         </div>
 
