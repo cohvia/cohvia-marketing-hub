@@ -12,6 +12,7 @@ import {
   Globe,
   Bell,
 } from "lucide-react";
+import { PageHero, BrandLink, MockFrame as KitMockFrame } from "@/components/ui-kit";
 
 const narrativeSections = [
   "Why they bought",
@@ -123,54 +124,29 @@ const FeatureBlock = ({
 };
 
 const MockFrame = ({ children }: { children: React.ReactNode }) => (
-  <div className="surface-card rounded-xl overflow-hidden shadow-lg">
-    <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-secondary/40">
-      <span className="w-2.5 h-2.5 rounded-full bg-muted-foreground/30" />
-      <span className="w-2.5 h-2.5 rounded-full bg-muted-foreground/30" />
-      <span className="w-2.5 h-2.5 rounded-full bg-muted-foreground/30" />
-    </div>
-    <div className="p-6">{children}</div>
-  </div>
+  <KitMockFrame>{children}</KitMockFrame>
 );
 
 const Product = () => {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="gradient-hero absolute inset-0 pointer-events-none" />
-        <div className="mx-auto max-w-4xl px-6 pt-16 pb-10 md:pt-20 md:pb-12 text-center relative">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 border border-border bg-card">
-            <Sparkles size={14} className="text-primary" />
-            <span className="text-xs font-medium text-secondary-foreground">
-              Customer Context Platform
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+      <PageHero
+        eyebrow="Customer Context Platform"
+        title={
+          <>
             The relationship intelligence layer for{" "}
             <span className="gradient-brand">Customer Success.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-secondary-foreground max-w-2xl mx-auto leading-relaxed mb-10">
-            Cohvia starts with the story, not the spreadsheet. AI builds a living understanding of
-            every customer relationship and connects it to shared plans you execute together.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#waitlist"
-              className="inline-flex items-center gap-2 rounded-lg gradient-brand-bg px-6 py-3 text-sm font-semibold text-foreground transition-all hover:brightness-110"
-            >
-              Request Early Access
-              <ArrowRight size={16} />
-            </a>
-            <a
-              href="#system"
-              className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-secondary-foreground transition-all hover:bg-secondary hover:text-foreground"
-            >
-              See how it works
-            </a>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+        subtitle="Cohvia starts with the story, not the spreadsheet. AI builds a living understanding of every customer relationship and connects it to shared plans you execute together."
+      >
+        <BrandLink href="#waitlist" withArrow>
+          Request Early Access
+        </BrandLink>
+        <BrandLink href="#system" variant="ghost">
+          See how it works
+        </BrandLink>
+      </PageHero>
 
       {/* The System */}
       <section id="system" className="py-12 md:py-16">
