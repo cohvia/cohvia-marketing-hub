@@ -7,6 +7,7 @@ const integrations = [
   "Gong",
   
   "Fireflies",
+  "Granola",
   "Fathom",
   "Gmail",
   "Outlook",
