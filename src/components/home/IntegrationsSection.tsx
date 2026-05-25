@@ -5,7 +5,7 @@ const integrations = [
   "HubSpot",
   "Attio",
   "Gong",
-  "Chorus",
+  
   "Fireflies",
   "Fathom",
   "Gmail",
