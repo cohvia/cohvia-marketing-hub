@@ -1,27 +1,20 @@
+import { Section, SectionHeader, EmailCaptureForm, Prose } from "@/components/ui-kit";
+
 const WaitlistSection = () => (
-  <section id="waitlist" className="pt-10 pb-12 md:pt-12 md:pb-14 relative">
-    <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
-    <div className="mx-auto max-w-[680px] px-6 relative">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-center">
-        Customer Success should be mutual.
-      </h2>
-      <p className="text-lg text-secondary-foreground mb-10 leading-relaxed text-left">
+  <Section id="waitlist" tone="glow" pad="lg" width="prose">
+    <SectionHeader
+      title="Customer Success should be mutual."
+      className="mb-6 md:mb-6"
+    />
+    <Prose className="mb-10">
+      <p>
         Cohvia is in early access. We're building this with CS teams who believe
         the best customer relationships aren't managed — they're nurtured. If
         that sounds like your team, we should talk.
       </p>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
-        <input
-          type="email"
-          placeholder="you@company.com"
-          className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-        />
-        <button className="w-full sm:w-auto whitespace-nowrap rounded-lg gradient-brand-bg px-6 py-3 text-sm font-semibold text-foreground transition-all hover:brightness-110">
-          Join Waitlist
-        </button>
-      </div>
-    </div>
-  </section>
+    </Prose>
+    <EmailCaptureForm />
+  </Section>
 );
 
 export default WaitlistSection;

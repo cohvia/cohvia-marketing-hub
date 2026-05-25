@@ -1,21 +1,20 @@
-const ProblemSection = () => (
-  <section className="pt-8 pb-10 md:pt-10 md:pb-12">
-    <div className="mx-auto max-w-[680px] px-6">
-      <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4 text-center">
-        The problem
-      </p>
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight text-center">
-        You know their name. But do you know their why?
-      </h2>
+import { Section, SectionHeader, Prose } from "@/components/ui-kit";
 
-      <p className="text-lg text-secondary-foreground leading-relaxed text-left">
+const ProblemSection = () => (
+  <Section pad="sm" width="prose">
+    <SectionHeader
+      eyebrow="The problem"
+      title="You know their name. But do you know their why?"
+    />
+    <Prose>
+      <p>
         Why did they choose you over everyone else? Why do they keep renewing —
         or why are they quietly pulling away? Why does this metric matter to
         them this quarter? You can't make your customer a superstar if you
         don't understand what drives them.
       </p>
-    </div>
-  </section>
+    </Prose>
+  </Section>
 );
 
 export default ProblemSection;
