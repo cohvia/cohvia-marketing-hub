@@ -169,9 +169,9 @@ const Product = () => {
                 </p>
                 <h3 className="text-2xl font-bold mb-4">The Narrative</h3>
                 <p className="text-secondary-foreground leading-relaxed">
-                  The internal, AI-generated strategic story of the relationship. Why they bought.
-                  What they care about. Where things stand. Built from your CRM, calls, emails, and
-                  tickets. Updated continuously. Owned by your team.
+                  The internal, AI-generated strategic story of every account: the context a CRM
+                  can't hold, built from your calls, emails, and tickets, kept current as new data
+                  comes in, and owned by your team.
                 </p>
               </div>
             </div>
