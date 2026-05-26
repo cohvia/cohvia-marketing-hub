@@ -293,15 +293,15 @@ const Product = () => {
             }
           >
             <p>
-              Not a log. Not a timeline. Definitely not a notes field someone typed into at 11pm
-              after a call they barely remember.
+              It's not a log or a timeline, and it's definitely not a notes field someone typed
+              into at 11pm after a call they vaguely remember.
             </p>
             <p>
               The Narrative is a synthesized strategic document that tells your team what actually
-              matters. Eight sections, every claim linked to its source — a Gong call, an email
-              thread, a support ticket. Click any citation to verify.
+              matters. Across its eight sections, every claim links back to the call, email, or
+              ticket it came from, so anyone can click a citation and check it.
             </p>
-            <p className="text-foreground font-medium">AI proposes. Humans decide. Always.</p>
+            <p className="text-foreground font-medium">The AI proposes; your team always decides.</p>
           </FeatureBlock>
 
           {/* Ask Cohvia */}
