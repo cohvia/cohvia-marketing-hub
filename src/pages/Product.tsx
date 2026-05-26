@@ -777,8 +777,9 @@ const Product = () => {
                         Give every customer a home.
                       </h3>
                       <p className="text-secondary-foreground leading-relaxed">
-                        A branded workspace on your subdomain. Magic link access. They see Plans,
-                        Goals, History. They never see the Narrative, ARR, or anything internal.
+                        A branded workspace on your own subdomain, reached by magic link.
+                        Customers see their Plans, Goals, and History. They never see the
+                        Narrative, the ARR, or anything else meant to stay internal.
                       </p>
                     </div>
                   </div>
