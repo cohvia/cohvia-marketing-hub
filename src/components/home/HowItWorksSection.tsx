@@ -12,13 +12,13 @@ const steps = [
     icon: Sparkles,
     title: "AI builds the understanding",
     description:
-      "Every account gets a structured narrative: why they bought, what success looks like, where things stand.",
+      "Each account gets a structured narrative: the context behind the facts, written up and kept current as new calls and emails come in.",
   },
   {
     icon: UserCheck,
     title: "Your team takes ownership",
     description:
-      "CSMs review, edit, and approve. AI proposes updates. Humans decide.",
+      "The AI proposes updates as new data comes in, and your CSMs decide what's true. Nothing changes without a human signing off.",
   },
   {
     icon: Share2,
