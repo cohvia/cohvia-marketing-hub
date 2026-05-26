@@ -157,9 +157,9 @@ const features: { icon: React.ElementType; label: string; title: string; descrip
   {
     icon: BookOpen,
     label: "The narrative",
-    title: "The why, not just the what.",
+    title: "The why behind the what.",
     description:
-      "A living understanding of every account: why they bought, why they stay, what keeps them up at night, what would make them grow.",
+      "A living account narrative that holds the context the CRM can't: why they really stay, and what would make them grow.",
     visual: <NarrativeMock />,
   },
   {
@@ -167,7 +167,7 @@ const features: { icon: React.ElementType; label: string; title: string; descrip
     label: "Sales handover",
     title: "Zero-gap sales handover.",
     description:
-      "The AE's understanding transfers completely on day one. No Slack summaries. No embarrassing re-asks at kickoff.",
+      "Everything the AE learned transfers on day one, so the CSM walks in without the Slack-summary scramble or the awkward re-asks at kickoff.",
     visual: <HandoverMock />,
   },
   {
@@ -175,7 +175,7 @@ const features: { icon: React.ElementType; label: string; title: string; descrip
     label: "Institutional memory",
     title: "Memory that doesn't walk out the door.",
     description:
-      "Vacations, turnover, reorgs: the context stays. The understanding lives in Cohvia, not in someone's head.",
+      "When a CSM takes leave or moves on, the context stays put. It lives in Cohvia, not in one person's head.",
     visual: <TeamMemoryMock />,
   },
   {
