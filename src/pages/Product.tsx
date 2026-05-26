@@ -708,8 +708,9 @@ const Product = () => {
                       Structured answers, no data entry.
                     </h3>
                     <p className="text-secondary-foreground leading-relaxed text-sm">
-                      Define fields in plain language. AI fills them from transcripts, emails, and
-                      tickets. Sortable in the Portfolio. Cited to source.
+                      Define a field in plain language and the AI fills it from your transcripts,
+                      emails, and tickets. The answers are sortable across the Portfolio, every
+                      one cited to its source.
                     </p>
                   </div>
                 </article>
