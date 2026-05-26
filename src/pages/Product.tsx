@@ -809,7 +809,7 @@ const Product = () => {
             ))}
           </div>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-            Secure OAuth integrations. CRM field mapping your CS Leader configures in minutes.
+            Secure OAuth connections, with CRM field mapping your CS Leader sets up in minutes.
             Cohvia reads from your systems. It never writes back.
           </p>
         </div>
