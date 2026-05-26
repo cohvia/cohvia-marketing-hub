@@ -135,8 +135,7 @@ const Product = () => {
         title={
           <>
             The why behind every{" "}
-            <span class
-="gradient-brand">customer relationship.</span>
+            <span className="gradient-brand">customer relationship.</span>
           </>
         }
         subtitle="Cohvia starts with the story, not the spreadsheet. AI builds a living understanding of every customer relationship and connects it to shared plans you execute together."
