@@ -630,9 +630,10 @@ const Product = () => {
                         Risk in context, not in a vacuum.
                       </h3>
                       <p className="text-secondary-foreground leading-relaxed">
-                        Auto-detected: stakeholder transitions, ticket spikes, sentiment drops.
-                        Manual: budget pressure, internal politics. Every signal lives inside the
-                        Narrative, next to the context that explains why.
+                        Some risks Cohvia catches on its own: a stakeholder leaving, a spike in
+                        support tickets. Others your team flags by hand, like budget pressure or
+                        internal politics. Either way, the signal lives inside the Narrative,
+                        right next to the context that explains why it matters.
                       </p>
                     </div>
                     <div className="p-5 md:p-6 bg-secondary/40 sm:border-l border-border space-y-2">
@@ -685,9 +686,9 @@ const Product = () => {
                     accounts need you today
                   </p>
                   <p className="text-secondary-foreground leading-relaxed text-sm">
-                    Stalled plans, overdue milestones, approaching renewals, unassigned accounts.
-                    Rolled up per account. Sorted by severity. The sidebar badge is your morning
-                    check-in.
+                    Stalled plans, overdue milestones, renewals coming up, accounts with no
+                    owner: all of it rolled up per account and sorted by severity. The sidebar
+                    badge is your morning check-in.
                   </p>
                 </article>
 
@@ -707,8 +708,9 @@ const Product = () => {
                       Structured answers, no data entry.
                     </h3>
                     <p className="text-secondary-foreground leading-relaxed text-sm">
-                      Define fields in plain language. AI fills them from transcripts, emails, and
-                      tickets. Sortable in the Portfolio. Cited to source.
+                      Define a field in plain language and the AI fills it from your transcripts,
+                      emails, and tickets. The answers are sortable across the Portfolio, every
+                      one cited to its source.
                     </p>
                   </div>
                 </article>
@@ -775,8 +777,9 @@ const Product = () => {
                         Give every customer a home.
                       </h3>
                       <p className="text-secondary-foreground leading-relaxed">
-                        A branded workspace on your subdomain. Magic link access. They see Plans,
-                        Goals, History. They never see the Narrative, ARR, or anything internal.
+                        A branded workspace on your own subdomain, reached by magic link.
+                        Customers see their Plans, Goals, and History. They never see the
+                        Narrative, the ARR, or anything else meant to stay internal.
                       </p>
                     </div>
                   </div>
@@ -806,7 +809,7 @@ const Product = () => {
             ))}
           </div>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-            Secure OAuth integrations. CRM field mapping your CS Leader configures in minutes.
+            Secure OAuth connections, with CRM field mapping your CS Leader sets up in minutes.
             Cohvia reads from your systems. It never writes back.
           </p>
         </div>
