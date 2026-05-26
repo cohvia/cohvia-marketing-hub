@@ -186,8 +186,9 @@ const Product = () => {
                 </p>
                 <h3 className="text-2xl font-bold mb-4">The Plans</h3>
                 <p className="text-secondary-foreground leading-relaxed">
-                  The shared execution layer. Goals, milestones, and actions you work on with your
-                  customer. Informed by the Narrative. Visible through a branded customer portal.
+                  The shared execution layer: the goals, milestones, and actions you work through
+                  with the customer, informed by the Narrative and visible in a branded portal you
+                  both work from.
                 </p>
               </div>
             </div>
