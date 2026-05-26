@@ -80,7 +80,7 @@ const Pricing = () => {
               {tier.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className="rounded-full gradient-brand-bg px-3 py-1 text-xs font-semibold text-foreground">
-                    Most Popular
+                    Recommended
                   </span>
                 </div>
               )}
