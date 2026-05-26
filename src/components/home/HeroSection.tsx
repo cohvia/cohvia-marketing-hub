@@ -121,9 +121,7 @@ const HeroSection = () => (
           </h1>
 
           <p className="text-lg md:text-xl text-secondary-foreground max-w-xl mb-10 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
-            Your CRM tracks what happened. Your call tool tracks when. Cohvia captures{" "}
-            <em className="italic text-foreground">why</em>: why they chose you, why they stay, what
-            drives them. So your team can scale without losing the relationships that matter.
+            Cohvia builds a strategic narrative for every account from the data your team already records, so you can execute the customer's roadmap for success from day one.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 opacity-0 animate-fade-in-up animation-delay-300">
