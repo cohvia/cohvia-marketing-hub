@@ -403,8 +403,7 @@ const Product = () => {
                   <span className="gradient-brand">actually transfers.</span>
                 </h2>
                 <p className="text-lg text-secondary-foreground leading-relaxed">
-                  No handover call. No Slack novel nobody reads. Four stages, fully automated up to
-                  the point where a human should weigh in.
+                  No handover call, no Slack novel nobody reads. Just four stages that run on their own, right up to the point where a human should weigh in.
                 </p>
               </div>
 
@@ -483,23 +482,23 @@ const Product = () => {
                   {[
                     {
                       n: "01",
-                      title: "Deal closes. Cohvia ingests everything.",
-                      body: "Call recordings, email threads, CRM history. Automatically. The AE doesn't write a single sentence yet.",
+                      title: "When the deal closes, Cohvia ingests everything.",
+                      body: "It pulls in the call recordings, email threads, and CRM history automatically, before the AE has written a single sentence.",
                     },
                     {
                       n: "02",
                       title: "AI drafts the first Narrative.",
-                      body: "Why they bought, what success looks like, who the key people are. Eight sections, every claim cited to the source it came from.",
+                      body: "It drafts all eight sections, from why they bought to what success looks like, with every claim cited to the source it came from.",
                     },
                     {
                       n: "03",
                       title: "The AE reviews and enriches.",
-                      body: "Adds what AI couldn't know: verbal commitments, politics, the real reason the champion pushed. Five minutes, not thirty. (Replaces the handover call that always got rescheduled twice.)",
+                      body: "The AE adds the part no AI could see: the office politics, and the real reason the champion actually pushed for the deal. Minutes of review, not the handover call that always got rescheduled twice.",
                     },
                     {
                       n: "04",
                       title: "The CSM starts with the full picture.",
-                      body: "Day one. Strategic understanding. Suggested plans pre-populated from sales conversations. No Slack archaeology.",
+                      body: "On day one, the CSM inherits the full strategic picture, plus suggested plans already pulled from the sales conversations. No Slack archaeology required.",
                     },
                   ].map((stage) => (
                     <div key={stage.n}>
