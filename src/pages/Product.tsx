@@ -294,7 +294,7 @@ const Product = () => {
           >
             <p>
               It's not a log or a timeline, and it's definitely not a notes field someone typed
-              into at 11pm after a call they vaguely remember.
+              into at 11pm after a call they barely remember.
             </p>
             <p>
               The Narrative is a synthesized strategic document that tells your team what actually
