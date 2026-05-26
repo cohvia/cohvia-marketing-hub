@@ -355,15 +355,16 @@ const Product = () => {
             }
           >
             <p>
-              A global AI chat on every page. It knows where you are: on the Narrative it has full
-              strategic context, on Plans it understands milestones and goals, on the Portfolio it
-              answers cross-account questions.
+              It's a global AI chat that lives on every page and shifts context with you: full
+              strategic detail on a Narrative, milestones and goals on the Plans, cross-account
+              answers on the Portfolio.
             </p>
             <p>
-              Prep for a call in five minutes. Find out who the champion is. Update the Narrative by
-              asking — Cohvia proposes edits as a diff you accept, dismiss, or modify.
+              Ask it to prep you for a call, tell you who the champion is, or update the Narrative
+              on the spot. When you ask for a change, it comes back as a diff you can accept or
+              dismiss.
             </p>
-            <p className="text-foreground font-medium">Grounded in your data. Cited to the source.</p>
+            <p className="text-foreground font-medium">Grounded in your data, cited to its source.</p>
           </FeatureBlock>
 
       {/* Stat strip — breather after the first two blocks */}
