@@ -134,8 +134,8 @@ const Product = () => {
         eyebrow="Customer Context Platform"
         title={
           <>
-            The relationship intelligence layer for{" "}
-            <span className="gradient-brand">Customer Success.</span>
+            The why behind every{" "}
+            <span className="gradient-brand">customer relationship.</span>
           </>
         }
         subtitle="Cohvia starts with the story, not the spreadsheet. AI builds a living understanding of every customer relationship and connects it to shared plans you execute together."
