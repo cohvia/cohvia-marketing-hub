@@ -403,8 +403,7 @@ const Product = () => {
                   <span className="gradient-brand">actually transfers.</span>
                 </h2>
                 <p className="text-lg text-secondary-foreground leading-relaxed">
-                  No handover call. No Slack novel nobody reads. Four stages, fully automated up to
-                  the point where a human should weigh in.
+                  No handover call, no Slack novel nobody reads. Just four stages that run on their own, right up to the point where a human should weigh in.
                 </p>
               </div>
 
