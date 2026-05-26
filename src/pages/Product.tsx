@@ -686,9 +686,9 @@ const Product = () => {
                     accounts need you today
                   </p>
                   <p className="text-secondary-foreground leading-relaxed text-sm">
-                    Stalled plans, overdue milestones, approaching renewals, unassigned accounts.
-                    Rolled up per account. Sorted by severity. The sidebar badge is your morning
-                    check-in.
+                    Stalled plans, overdue milestones, renewals coming up, accounts with no
+                    owner: all of it rolled up per account and sorted by severity. The sidebar
+                    badge is your morning check-in.
                   </p>
                 </article>
 
