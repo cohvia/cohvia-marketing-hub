@@ -266,7 +266,7 @@ const ValuePillarsSection = () => {
             </h2>
           </div>
           <p className="text-base md:text-lg text-secondary-foreground leading-relaxed lg:pb-2 lg:max-w-md lg:justify-self-end">
-            Four capabilities that turn scattered context into a living understanding of every account — from first call to renewal.
+            Four capabilities that turn scattered context into a living understanding of every account, from first call to renewal.
           </p>
         </div>
 
