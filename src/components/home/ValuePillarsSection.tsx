@@ -284,7 +284,7 @@ const ValuePillarsSection = () => {
             <div className="relative grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 p-8 md:p-12 items-center">
               <div className="flex flex-col">
                 <p className="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-3">
-                  Book coverage
+                  The bet
                 </p>
                 <div className="text-7xl md:text-8xl font-bold gradient-brand leading-none tracking-tight">
                   2×
@@ -292,7 +292,7 @@ const ValuePillarsSection = () => {
               </div>
               <div className="md:border-l md:border-border md:pl-12">
                 <p className="text-xl md:text-2xl font-semibold leading-snug max-w-xl">
-                  Double the book of business{" "}
+                  Built to double the book{" "}
                   <span className="text-secondary-foreground font-normal">
                     without doubling churn.
                   </span>
