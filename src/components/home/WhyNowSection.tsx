@@ -77,7 +77,7 @@ const WhyNowSection = () => (
             <ul className="space-y-2.5">
               {[
                 "AI surfaces context, humans build trust",
-                "Narratives that capture the why, not just the what",
+                "Narratives that hold the why, not just the what.",
                 "Plans tailored to each account, not templates",
                 "Your team shows up sharper, every conversation",
               ].map((item) => (
