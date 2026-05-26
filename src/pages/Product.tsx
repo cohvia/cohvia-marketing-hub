@@ -630,9 +630,10 @@ const Product = () => {
                         Risk in context, not in a vacuum.
                       </h3>
                       <p className="text-secondary-foreground leading-relaxed">
-                        Auto-detected: stakeholder transitions, ticket spikes, sentiment drops.
-                        Manual: budget pressure, internal politics. Every signal lives inside the
-                        Narrative, next to the context that explains why.
+                        Some risks Cohvia catches on its own: a stakeholder leaving, a spike in
+                        support tickets. Others your team flags by hand, like budget pressure or
+                        internal politics. Either way, the signal lives inside the Narrative,
+                        right next to the context that explains why it matters.
                       </p>
                     </div>
                     <div className="p-5 md:p-6 bg-secondary/40 sm:border-l border-border space-y-2">
