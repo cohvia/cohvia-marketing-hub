@@ -7,7 +7,6 @@ import HowItWorksSection from "@/components/home/HowItWorksSection";
 import WhyNowSection from "@/components/home/WhyNowSection";
 import IntegrationsSection from "@/components/home/IntegrationsSection";
 import FounderSection from "@/components/home/FounderSection";
-import WaitlistSection from "@/components/home/WaitlistSection";
 
 const Index = () => {
   return (
@@ -20,7 +19,6 @@ const Index = () => {
       <WhyNowSection />
       <IntegrationsSection />
       <FounderSection />
-      <WaitlistSection />
     </Layout>
   );
 };
