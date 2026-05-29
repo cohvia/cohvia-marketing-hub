@@ -96,10 +96,7 @@ const SolutionPage = ({
       </Section>
 
       <CTASection
-        id="waitlist"
         title={cta.headline}
-        secondaryHref="mailto:hello@cohvia.com"
-        secondaryLabel="hello@cohvia.com"
       />
     </Layout>
   );
