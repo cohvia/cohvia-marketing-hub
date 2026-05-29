@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Check } from "lucide-react";
-import { PageHero, Section, BrandLink } from "@/components/ui-kit";
+import { PageHero, Section, BrandLink, CTASection } from "@/components/ui-kit";
 import { cn } from "@/lib/utils";
 
 const tiers = [
