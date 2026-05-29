@@ -263,7 +263,7 @@ const Navbar = () => {
             Sign In
           </a>
           <a
-            href="#waitlist"
+            href="https://app.cohvia.com/signup"
             className="block w-full text-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground"
           >
             Sign Up
