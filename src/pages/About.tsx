@@ -54,6 +54,8 @@ const About = () => {
           ))}
         </div>
       </Section>
+
+      <CTASection title={<>Join us in rebuilding <span className="gradient-brand">Customer Success.</span></>} />
     </Layout>
   );
 };
