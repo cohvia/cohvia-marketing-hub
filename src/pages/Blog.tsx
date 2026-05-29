@@ -73,6 +73,8 @@ const Blog = () => {
           ))}
         </div>
       </Section>
+
+      <CTASection title={<>See how Cohvia works in <span className="gradient-brand">your team.</span></>} />
     </Layout>
   );
 };
