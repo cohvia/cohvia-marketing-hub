@@ -169,10 +169,16 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="#waitlist"
-            className="inline-flex items-center justify-center rounded-lg gradient-brand-bg px-4 py-2 text-sm font-semibold text-foreground transition-all hover:brightness-110"
+            href="https://app.cohvia.com"
+            className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110"
           >
-            Request Early Access
+            Sign In
+          </a>
+          <a
+            href="#waitlist"
+            className="inline-flex items-center justify-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            Sign Up
           </a>
         </div>
 
@@ -251,10 +257,16 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="#waitlist"
-            className="block w-full text-center rounded-lg gradient-brand-bg px-4 py-2 text-sm font-semibold text-foreground"
+            href="https://app.cohvia.com"
+            className="block w-full text-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
           >
-            Request Early Access
+            Sign In
+          </a>
+          <a
+            href="#waitlist"
+            className="block w-full text-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground"
+          >
+            Sign Up
           </a>
         </div>
       )}
