@@ -34,7 +34,7 @@ const tiers = [
       "Integrations (Salesforce, Slack, etc.)",
       "Priority support",
     ],
-    cta: "Request Early Access",
+    cta: "Sign Up Free",
     highlighted: true,
   },
   {
