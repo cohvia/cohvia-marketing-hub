@@ -125,10 +125,7 @@ const HeroSection = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 opacity-0 animate-fade-in-up animation-delay-300">
-            <BrandLink href="#waitlist" withArrow>
-              Request Early Access
-            </BrandLink>
-            <BrandRouterLink to="/product" variant="ghost">
+            <BrandRouterLink to="/product" withArrow>
               See how it works
             </BrandRouterLink>
           </div>
