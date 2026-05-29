@@ -118,6 +118,8 @@ const Pricing = () => {
           ))}
         </div>
       </Section>
+
+      <CTASection title={<>Ready to put the why back into your customer relationships?</>} />
     </Layout>
   );
 };
