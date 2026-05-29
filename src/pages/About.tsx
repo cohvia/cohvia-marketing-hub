@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { PageHero, Section, Card } from "@/components/ui-kit";
+import { PageHero, Section, Card, CTASection } from "@/components/ui-kit";
 
 const About = () => {
   return (
