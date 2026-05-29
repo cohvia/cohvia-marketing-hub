@@ -1,5 +1,5 @@
 import { Sparkles, Quote } from "lucide-react";
-import { BrandLink, BrandRouterLink } from "@/components/ui-kit";
+import { BrandRouterLink } from "@/components/ui-kit";
 
 const NarrativePreview = () => (
   <div className="relative max-w-[640px]">
