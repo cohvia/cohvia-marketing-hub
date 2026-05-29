@@ -108,7 +108,7 @@ const Pricing = () => {
               </ul>
 
               <BrandLink
-                href="/#waitlist"
+                href={tier.name === "Enterprise" ? "mailto:hello@cohvia.com" : "https://app.cohvia.com/signup"}
                 variant={tier.highlighted ? "brand" : "ghost"}
                 className="w-full"
               >
