@@ -826,18 +826,18 @@ const Product = () => {
             We're in early access, working with CS teams who believe understanding beats automation.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/#waitlist"
+            <a
+              href="https://app.cohvia.com/signup"
               className="inline-flex items-center gap-2 rounded-lg gradient-brand-bg px-6 py-3 text-sm font-semibold text-foreground transition-all hover:brightness-110"
             >
-              Request Early Access
+              Sign Up Free
               <ArrowRight size={16} />
-            </Link>
+            </a>
             <a
-              href="mailto:hello@cohvia.com"
+              href="https://app.cohvia.com"
               className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-secondary-foreground transition-all hover:bg-secondary hover:text-foreground"
             >
-              hello@cohvia.com
+              Sign In
             </a>
           </div>
         </div>
