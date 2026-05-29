@@ -140,8 +140,8 @@ const Product = () => {
         }
         subtitle="Cohvia starts with the story, not the spreadsheet. AI builds a living understanding of every customer relationship and connects it to shared plans you execute together."
       >
-        <BrandLink href="#waitlist" withArrow>
-          Request Early Access
+        <BrandLink href="https://app.cohvia.com/signup" withArrow>
+          Sign Up Free
         </BrandLink>
         <BrandLink href="#system" variant="ghost">
           See how it works
