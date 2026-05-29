@@ -62,10 +62,10 @@ const TeamOfOne = () => (
         visual: <SuccessPlanWithVisibility />,
       },
       {
-        title: "Sales handover without a CSM to hand to",
+        title: "Sales handovers that arrive ready, not raw",
         body: (
           <p>
-            At most companies the AE hands the account to a CSM. At yours, they hand it to you, and you're already handling five other things. Cohvia generates the Narrative from the sales data automatically, ready for you to review when you've got the time. The context stops waiting for you to be free.
+            At most companies the AE hands the account to a dedicated CSM. At yours, the AE hands it to you, and you're already in the middle of five other things. Cohvia drafts the Narrative from the sales data automatically, so by the time you open the account the context is already assembled and waiting for your review.
           </p>
         ),
         visual: <AENarrativeAutoDraft />,
