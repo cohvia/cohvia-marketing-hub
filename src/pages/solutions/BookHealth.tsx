@@ -10,12 +10,12 @@ const BookHealth = () => (
   <SolutionPage
     chip="Use Case"
     headline="See across your book. Act before things break."
-    subheadline="Risk signals, portfolio visibility, and health monitoring for CS Leaders and CSMs. Not health scores in a vacuum: signals with context."
+    subheadline="Risk signals and portfolio visibility for CS Leaders and CSMs, with the context that explains why each signal matters."
     pain={{
-      headline: "Health scores without context aren't a strategy.",
+      headline: "A health score on its own isn't a strategy.",
       body: (
         <p>
-          A red dot tells you an account is at risk. It doesn't tell you why, or what to do, or whether the issue is the champion who left or the ticket that never got resolved. By the time you figure it out, you're already in a save motion you should never have needed.
+          A red dot tells you an account is at risk. It doesn't tell you the champion left, or that the ticket from three weeks ago never got resolved, or what you should actually do about it. By the time you've pieced the story together, you're running a save motion that should never have been needed.
         </p>
       ),
     }}
@@ -26,20 +26,20 @@ const BookHealth = () => (
         body: (
           <>
             <p>
-              Auto-detected from ingested data: stakeholder transitions, ticket spikes, negative sentiment, engagement drops, competitor mentions, renewals without a plan.
+              Some risks Cohvia catches on its own from the data already flowing in: a stakeholder leaving, a spike in support tickets, sentiment turning, engagement falling off, a competitor name showing up in a call, a renewal with no plan attached.
             </p>
             <p>
-              Flagged manually by CSMs: budget pressure, internal politics, executive misalignment. Every signal lives inside the Narrative next to the strategic context that explains why.
+              Others your team flags by hand, like budget pressure, internal politics, or an executive who's gone quiet. Either way, the signal lives inside the Narrative, right next to the context that explains why it matters.
             </p>
           </>
         ),
         visual: <RiskInNarrative />,
       },
       {
-        title: "Custom AI signals you define in plain language",
+        title: "Custom signals you describe in plain language",
         body: (
           <p>
-            Describe a pattern. "Alert me when a decision-maker hasn't attended the last three calls." "Flag when a customer mentions evaluating competitors." Test against 30 days of data. Tune the description. Deploy. No data science team. No engineering ticket.
+            Describe a pattern the way you'd say it out loud. "Alert me when a decision-maker hasn't been on the last three calls." "Flag when a customer mentions evaluating someone else." Test it against the last 30 days of your data, tune the wording until it's catching the right things, and turn it on. No data science team, no ticket to engineering.
           </p>
         ),
         visual: <CustomSignal />,
@@ -48,16 +48,16 @@ const BookHealth = () => (
         title: "Portfolio visibility without dashboards",
         body: (
           <p>
-            Accounts grouped by CSM, health, lifecycle stage, or tag. AI Field columns surface structured insights. Risk indicators show which accounts need attention. Sort by renewal, ARR, or last activity. Table view for power users. List view for everyone else.
+            Group accounts by CSM, health, lifecycle stage, or tag, and surface AI Fields as sortable columns. Risk indicators show which accounts need attention, and you can sort by renewal, ARR, or last activity. Table view if you live in spreadsheets, list view if you don't.
           </p>
         ),
         visual: <PortfolioHealth />,
       },
       {
-        title: "Needs Attention: the accounts that need you right now",
+        title: "Needs Attention: one view for the accounts that need you today",
         body: (
           <p>
-            One view. Stalled plans, overdue milestones, approaching renewals, risk signals, unassigned accounts. Rolled up per account. Critical: red. Warning: amber. Sorted by severity. The sidebar badge is your morning check-in.
+            Stalled plans, overdue milestones, renewals coming up, risk signals, accounts with no owner: all of it rolled up per account and sorted by severity, with critical in red and warning in amber. The sidebar badge is your morning check-in.
           </p>
         ),
         visual: <NeedsAttention />,
@@ -66,12 +66,12 @@ const BookHealth = () => (
         title: "Understanding is the best churn prevention",
         body: (
           <p>
-            You don't prevent churn with health scores. You prevent it by knowing why a customer bought, what success looks like for them, and when something changes. A champion leaving is a data point. Knowing that champion was the only person who believed in you is understanding. The difference determines whether you save the account.
+            You don't prevent churn with a health score. You prevent it by knowing why a customer bought, what success looks like in their words, and noticing the moment something changes. A champion leaving is a data point. Knowing that champion was the only person in the room who actually believed in you is understanding. The difference is whether you save the account.
           </p>
         ),
       },
     ]}
-    cta={{ headline: "See risk. Understand why. Act in time." }}
+    cta={{ headline: "See the risk. Understand the why. Act in time." }}
   />
 );
 

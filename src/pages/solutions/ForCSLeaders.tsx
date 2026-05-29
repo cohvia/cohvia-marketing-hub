@@ -9,22 +9,22 @@ import {
 const ForCSLeaders = () => (
   <SolutionPage
     chip="For CS Leaders"
-    headline="Scale your team without losing the human touch."
-    subheadline="More accounts, fewer people, same expectation of quality. Cohvia gives you visibility across your book through understanding, not dashboards."
+    headline="Scale the team without losing the human touch."
+    subheadline="More accounts, fewer people, same expectation of quality. Cohvia gives you visibility across the book through understanding, not another dashboard."
     pain={{
-      headline: "You shouldn't have to ask your CSMs what's going on.",
+      headline: "You shouldn't have to ask a CSM what's going on with their accounts.",
       body: (
         <p>
-          The only way to know where an account stands is to ask. The CSM gives you the highlight reel. You get it once a week. If they're sick, you're blind. If they leave, you're starting over.
+          Right now, the only way to know where an account stands is to ask the CSM, and you get the highlight reel once a week. If they're out sick you're blind, and if they leave you're starting from scratch. The understanding lives in their head, not the system.
         </p>
       ),
     }}
     blocks={[
       {
-        title: "See every account's story",
+        title: "Read any account's story in two minutes",
         body: (
           <p>
-            Open any account, read the Narrative in two minutes. No meeting required. Group by CSM, filter by health, sort by renewal. AI Fields show structured insights as sortable columns: champion name, competitors mentioned, sentiment.
+            Open any account and read the Narrative without scheduling a meeting. Group by CSM, filter by health, sort by renewal. AI Fields surface structured insights as sortable columns, like champion name, competitors mentioned, and sentiment.
           </p>
         ),
         visual: <PortfolioByCSM />,
@@ -33,16 +33,16 @@ const ForCSLeaders = () => (
         title: "One view for everything that needs you",
         body: (
           <p>
-            Stalled plans, approaching renewals, risk signals, unassigned accounts: all rolled up per account, sorted by severity. The sidebar badge is your daily pulse check.
+            Stalled plans, renewals coming up, risk signals, accounts with no owner: all of it rolled up per account and sorted by severity. The sidebar badge is your daily pulse check.
           </p>
         ),
         visual: <NeedsAttention />,
       },
       {
-        title: "Risk signals you define",
+        title: "Risk signals you define yourself",
         body: (
           <p>
-            Describe patterns in plain language. "Alert me when a champion hasn't been on the last three calls." Test against 30 days of data. Deploy. Adjust if it's too noisy. No data science team, no ticket to engineering.
+            Describe the pattern the way you'd say it out loud: "Alert me when a champion hasn't been on the last three calls." Test it against 30 days of data, tune the wording if it's too noisy, and turn it on. No data science team, no ticket to engineering.
           </p>
         ),
         visual: <CustomSignal />,
@@ -51,21 +51,21 @@ const ForCSLeaders = () => (
         title: "Handovers you can trust",
         body: (
           <p>
-            Every sales handover generates a full Narrative before the CSM sees it. The AE reviews and enriches it. When CSMs transfer accounts, the Narrative stays. The understanding doesn't walk out the door at 5pm on someone's last day.
+            Every sales handover generates a full Narrative before the CSM sees it, and the AE reviews and enriches it. When CSMs transfer accounts, the Narrative stays with the account. The understanding doesn't walk out the door at 5pm on someone's last day.
           </p>
         ),
         visual: <HandoverEnrich />,
       },
       {
-        title: "Team templates and promoted workflows",
+        title: "Templates from your best CSMs, shared with the team",
         body: (
           <p>
-            Standard Success Plan, Onboarding, and Renewal templates. Promote what your best CSMs do to the whole team. Consistency without micromanagement.
+            Standard templates for Success Plans, Onboarding, and Renewals come built in. When one of your CSMs figures out something that works, you promote it to the whole team. Consistency without micromanagement.
           </p>
         ),
       },
     ]}
-    cta={{ headline: "Lead with understanding, not spreadsheets." }}
+    cta={{ headline: "Lead with understanding, not a spreadsheet." }}
   />
 );
 

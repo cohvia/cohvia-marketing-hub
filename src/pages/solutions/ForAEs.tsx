@@ -9,27 +9,27 @@ import {
 const ForAEs = () => (
   <SolutionPage
     chip="For AEs"
-    headline="Five minutes of your time. Five hours saved for CS."
-    subheadline="You spent months understanding this customer. Cohvia makes sure that understanding actually makes it to the CSM."
+    headline="Five minutes of your time, five hours saved for CS."
+    subheadline="You spent months getting to know this customer. Cohvia is how that understanding actually reaches the CSM, instead of dying in a CRM field."
     pain={{
-      headline: "You know the handover doesn't work.",
+      headline: "You already know the handover doesn't work.",
       body: (
         <>
           <p>
-            You closed the deal. You know why the customer bought, what was promised, who the champion is, what keeps them up at night. You try to pass it along: a CRM note, a Slack message, maybe a quick call with the CSM.
+            You closed the deal, so you know why they bought, what got promised, who the champion is, and what keeps them up at night. You try to pass it along through a CRM note, a Slack message, maybe a quick call if the CSM has the time.
           </p>
           <p>
-            Three weeks later, the customer tells you the CSM asked them to "walk through their goals again." You cringe. They cringe. Everyone cringes.
+            Three weeks later the customer tells you the CSM just asked them to "walk through their goals again." The handover format never had a place to hold what you actually knew.
           </p>
         </>
       ),
     }}
     blocks={[
       {
-        title: "AI does the heavy lifting",
+        title: "Cohvia does the heavy lifting",
         body: (
           <p>
-            When the deal closes, Cohvia ingests your call recordings, emails, and CRM history. AI generates a full Narrative draft: why they bought, what success looks like, who the key people are. You didn't have to write any of it.
+            When the deal closes, Cohvia ingests your call recordings, emails, and CRM history, and drafts a full Narrative from them: why they bought, what success looks like, who the key people are. You didn't have to write any of it.
           </p>
         ),
         visual: <AENarrativeAutoDraft />,
@@ -38,7 +38,7 @@ const ForAEs = () => (
         title: "You review and enrich",
         body: (
           <p>
-            You get notified to review the Narrative before the CSM sees it. Use Ask Cohvia to add what the AI couldn't know: verbal commitments, internal politics, the real reason the champion pushed for the deal. Five minutes, not thirty.
+            You get notified to review the draft before the CSM sees it, and Ask Cohvia helps you add the parts the AI couldn't see: the verbal commitments, the office politics, the real reason the champion pushed for this. Five minutes of review, not the handover call that always got rescheduled twice.
           </p>
         ),
         visual: <HandoverEnrich />,
@@ -47,7 +47,7 @@ const ForAEs = () => (
         title: "Then you're done",
         body: (
           <p>
-            Your view is simple: accounts pending your review. Once you've enriched the Narrative and the CSM is assigned, the account disappears from your list. No ongoing access to Plans, Portfolio, or anything else. Clean separation.
+            Your view stays simple: just the accounts pending your review. Once you've enriched the Narrative and the CSM is assigned, the account drops off your list. No ongoing access to Plans, Portfolio, or anything else meant for the CS team. Clean separation.
           </p>
         ),
         visual: <AEReviewQueue />,
@@ -56,7 +56,7 @@ const ForAEs = () => (
         title: "The CSM starts informed",
         body: (
           <p>
-            The CSM opens a complete strategic understanding on day one. Your months of relationship-building didn't evaporate into a CRM field. The customer doesn't get re-asked. You look good. They look good. Everyone looks good.
+            On day one, the CSM opens a complete strategic picture instead of a CRM record. The months of relationship-building you did don't evaporate, and the customer doesn't get re-asked the questions they already answered.
           </p>
         ),
         visual: <StepCSMOpen />,

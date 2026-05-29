@@ -9,12 +9,12 @@ const PlanningExecution = () => (
   <SolutionPage
     chip="Use Case"
     headline="Shared plans for every stage of the relationship."
-    subheadline="Success plans, onboarding, renewals: structured, collaborative, visible to your customer. Informed by the Narrative, not built from scratch."
+    subheadline="Success plans, onboarding, and renewals that are structured, collaborative, and visible to the customer. Informed by the Narrative, not built from scratch every time."
     pain={{
-      headline: "Plans that live in a Google Doc nobody updates are not plans.",
+      headline: "A plan in a Google Doc nobody updates isn't really a plan.",
       body: (
         <p>
-          You start with the best intentions. A kickoff doc. A shared spreadsheet. Maybe a project in your PM tool. Three weeks later nobody's touched it, the customer has no visibility, and the next QBR is built from scratch. Again.
+          You start with the best intentions: a kickoff doc, a shared spreadsheet, maybe a project in your PM tool. Three weeks later nobody has touched it, the customer has no visibility, and the next QBR slides get built from a blank page. Again.
         </p>
       ),
     }}
@@ -25,10 +25,10 @@ const PlanningExecution = () => (
         body: (
           <>
             <p>
-              Every account gets a Main Success Plan. Auto-suggested from sales handover data. Goals, milestones, and actions that ladder up to what the customer cares about.
+              Every account gets a Main Success Plan that's auto-suggested from the sales handover data, with goals, milestones, and actions that ladder up to what the customer actually cares about.
             </p>
             <p>
-              Two views: internal (full detail) and customer (curated by the CSM). Toggle visibility per milestone. Share through the portal. Customers check off actions, edit shared goals, manage who in their org has access.
+              There are two views of the plan: the internal one with full detail, and a customer view that the CSM curates by toggling visibility per milestone. The shared version goes through the portal, where customers check off actions, edit the goals you share with them, and manage who in their organization has access.
             </p>
           </>
         ),
@@ -38,20 +38,20 @@ const PlanningExecution = () => (
         title: "Onboarding without reinventing the wheel",
         body: (
           <p>
-            AI suggests an Onboarding Plan from the sales conversations. Your CS Leader defines the default template. The CSM adjusts and activates. The customer sees what's coming, what they need to do, and where things stand. No more "when does onboarding end?" because it's visible to everyone.
+            Cohvia suggests an Onboarding Plan from the sales conversations. Your CS Leader defines the default template, the CSM adjusts and activates it, and the customer sees what's coming, what they need to do, and where things stand. The "when does onboarding actually end?" question stops happening because the answer is visible to everyone.
           </p>
         ),
         visual: <OnboardingPlan />,
       },
       {
-        title: "Renewals without surprises",
+        title: "Renewals without the surprises",
         body: (
           <>
             <p>
-              Renewal Plans auto-activate when the renewal window opens. Default milestones: executive alignment, ROI summary, expansion opportunities, resolve open issues, commercial terms, contract sent, contract signed.
+              Renewal Plans auto-activate when the renewal window opens, with default milestones for executive alignment, ROI summary, expansion opportunities, resolving open issues, commercial terms, contract sent, and contract signed.
             </p>
             <p>
-              Countdown colors track urgency: grey → blue → amber → red. If the plan stalls for 14+ days, it surfaces in Needs Attention. Internal by default. The CSM decides when and whether to share it.
+              Countdown colors track urgency from grey through blue and amber to red, and if the plan stalls for 14 days or more it surfaces in Needs Attention. Internal by default; the CSM decides when, and whether, to share it with the customer.
             </p>
           </>
         ),

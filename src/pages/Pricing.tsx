@@ -8,7 +8,7 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "forever",
-    description: "For small teams getting started with structured CS.",
+    description: "For a small team starting to build a real CS practice.",
     features: [
       "Up to 25 accounts",
       "Account Narratives (AI-generated)",
@@ -16,25 +16,25 @@ const tiers = [
       "1 team member",
       "Community support",
     ],
-    cta: "Get Started Free",
+    cta: "Get started free",
     highlighted: false,
   },
   {
     name: "Pro",
     price: "$49",
     period: "per user / month",
-    description: "For growing CS teams that need full visibility and control.",
+    description: "For a growing CS team that needs visibility across the whole book.",
     features: [
       "Unlimited accounts",
-      "Advanced Narratives + AI Chat",
+      "Advanced Narratives + Ask Cohvia",
       "Collaborative Success Plans",
       "Risk Signals & Alerts",
       "Customer Portal (branded)",
       "Workflows & Automations",
-      "Integrations (Salesforce, Slack, etc.)",
+      "Integrations (Salesforce, Slack, and more)",
       "Priority support",
     ],
-    cta: "Sign Up Free",
+    cta: "Sign up free",
     highlighted: true,
   },
   {
@@ -51,7 +51,7 @@ const tiers = [
       "Advanced analytics",
       "Custom onboarding",
     ],
-    cta: "Contact Sales",
+    cta: "Contact sales",
     highlighted: false,
   },
 ];
@@ -61,8 +61,8 @@ const Pricing = () => {
     <Layout>
       <PageHero
         eyebrow="Pricing"
-        title="Simple pricing, no surprises"
-        subtitle="Start free. Scale when you're ready. No credit card required."
+        title="Start free. Pay when the book grows."
+        subtitle="No credit card to begin, and no surprise line items later. The Free tier is a real product, not a trial."
       />
 
       <Section pad="md">
@@ -119,7 +119,7 @@ const Pricing = () => {
         </div>
       </Section>
 
-      <CTASection title={<>Ready to put the why back into your customer relationships?</>} />
+      <CTASection title={<>Put the why back into the relationship.</>} />
     </Layout>
   );
 };

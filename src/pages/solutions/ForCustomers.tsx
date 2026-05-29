@@ -8,17 +8,17 @@ import {
 const ForCustomers = () => (
   <SolutionPage
     chip="For Customers"
-    headline="Finally, a vendor who shows you what's actually happening."
-    subheadline="No more wondering where things stand. Your success plan, your goals, your progress: all in one place, branded to your vendor, updated in real time."
+    headline="A vendor that actually shows you where things stand."
+    subheadline="Your success plan, your goals, your progress, all in one place. Branded to your vendor, kept current as the relationship evolves."
     pain={{
-      headline: "You've been here before.",
+      headline: "You've been on this side of the table before.",
       body: (
         <>
           <p>
-            You signed up for a product. Someone from Customer Success introduced themselves. There was a kickoff call. Maybe an onboarding checklist in a Google Doc. Then... status update emails. QBR slides you didn't ask for. The occasional "just checking in."
+            You bought the product, someone from Customer Success introduced themselves, and there was a kickoff call and maybe an onboarding checklist in a Google Doc. After that it became status update emails, QBR slides you didn't ask for, and the occasional "just checking in."
           </p>
           <p>
-            You have no idea whether you're on track. You don't know what your goals are supposed to be. You definitely don't remember what was agreed three months ago. And when your CSM changed, you started from scratch. Again.
+            You don't really know whether you're on track, or what the goals were supposed to be, and you definitely don't remember what was agreed three months ago. And when your CSM moved on, the relationship started over from scratch.
           </p>
         </>
       ),
@@ -28,16 +28,16 @@ const ForCustomers = () => (
         title: "Your own branded portal",
         body: (
           <p>
-            A clean, branded workspace on your vendor's subdomain. Their logo, their colors. No generic SaaS interface. No logging into their internal tool. Just your relationship, presented clearly.
+            A clean workspace on your vendor's subdomain, with their logo and their colors. No generic SaaS interface, and no logging into their internal tool. Just the relationship, presented clearly to you.
           </p>
         ),
         visual: <CustomerPortalOverview />,
       },
       {
-        title: "See your success plan",
+        title: "See the success plan you're part of",
         body: (
           <p>
-            Your goals, your milestones, your action items. Check things off. Edit shared goals. See what's coming next. No more emailing your CSM to ask "where are we at?"
+            Your goals, milestones, and action items live in one place, and you can check things off, edit the goals you share with your CSM, and see what's coming next. The "where are we at?" email becomes unnecessary because the answer is already in front of you.
           </p>
         ),
         visual: <CustomerSharedPlan />,
@@ -46,7 +46,7 @@ const ForCustomers = () => (
         title: "Manage your own access",
         body: (
           <p>
-            Invite colleagues to see specific plans. Control who in your org has visibility. Your CSM shares the plan with you; you decide who else sees it.
+            Invite colleagues to see specific plans and control who in your organization has visibility. Your CSM shares the plan with you, and you decide who else gets in.
           </p>
         ),
       },
@@ -54,7 +54,7 @@ const ForCustomers = () => (
         title: "Magic link access",
         body: (
           <p>
-            No password to remember. No account to create. Click the link in your email, you're in. Come back anytime through the same URL.
+            No password to remember and no account to create. The link arrives in your email, you click it, you're in. Come back anytime through the same URL.
           </p>
         ),
         visual: <CustomerMagicLink />,
@@ -63,7 +63,7 @@ const ForCustomers = () => (
         title: "Your data stays private",
         body: (
           <p>
-            You never see the vendor's internal Narrative, health scores, revenue data, or anything about other customers. Just your relationship, your plans, your progress.
+            You never see the vendor's internal Narrative, their health scores, revenue figures, or anything about other customers. Just your relationship, your plans, and your progress.
           </p>
         ),
       },
