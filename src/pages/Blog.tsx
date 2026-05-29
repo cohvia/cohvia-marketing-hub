@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { ArrowRight } from "lucide-react";
-import { PageHero, Section, Card } from "@/components/ui-kit";
+import { PageHero, Section, Card, CTASection } from "@/components/ui-kit";
 
 const posts = [
   {
@@ -73,6 +73,8 @@ const Blog = () => {
           ))}
         </div>
       </Section>
+
+      <CTASection title={<>See how Cohvia works in <span className="gradient-brand">your team.</span></>} />
     </Layout>
   );
 };

@@ -437,10 +437,10 @@ interface CTASectionProps {
 export const CTASection = ({
   title,
   subtitle,
-  primaryHref = "/#waitlist",
-  primaryLabel = "Request Early Access",
-  secondaryHref,
-  secondaryLabel,
+  primaryHref = "https://app.cohvia.com/signup",
+  primaryLabel = "Sign Up Free",
+  secondaryHref = "https://app.cohvia.com",
+  secondaryLabel = "Sign In",
   id,
 }: CTASectionProps) => (
   <Section id={id} tone="glow" pad="lg" width="narrow" className="border-t border-border/60">

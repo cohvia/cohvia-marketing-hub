@@ -40,8 +40,11 @@ const SolutionPage = ({
   return (
     <Layout>
       <PageHero eyebrow={chip} title={headline} subtitle={subheadline}>
-        <BrandLink href="#waitlist" withArrow>
-          Request Early Access
+        <BrandLink href="https://app.cohvia.com/signup" withArrow>
+          Sign Up Free
+        </BrandLink>
+        <BrandLink href="https://app.cohvia.com" variant="ghost">
+          Sign In
         </BrandLink>
       </PageHero>
 
@@ -93,10 +96,7 @@ const SolutionPage = ({
       </Section>
 
       <CTASection
-        id="waitlist"
         title={cta.headline}
-        secondaryHref="mailto:hello@cohvia.com"
-        secondaryLabel="hello@cohvia.com"
       />
     </Layout>
   );

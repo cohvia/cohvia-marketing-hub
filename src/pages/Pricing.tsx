@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Check } from "lucide-react";
-import { PageHero, Section, BrandLink } from "@/components/ui-kit";
+import { PageHero, Section, BrandLink, CTASection } from "@/components/ui-kit";
 import { cn } from "@/lib/utils";
 
 const tiers = [
@@ -34,7 +34,7 @@ const tiers = [
       "Integrations (Salesforce, Slack, etc.)",
       "Priority support",
     ],
-    cta: "Request Early Access",
+    cta: "Sign Up Free",
     highlighted: true,
   },
   {
@@ -108,7 +108,7 @@ const Pricing = () => {
               </ul>
 
               <BrandLink
-                href="/#waitlist"
+                href={tier.name === "Enterprise" ? "mailto:hello@cohvia.com" : "https://app.cohvia.com/signup"}
                 variant={tier.highlighted ? "brand" : "ghost"}
                 className="w-full"
               >
@@ -118,6 +118,8 @@ const Pricing = () => {
           ))}
         </div>
       </Section>
+
+      <CTASection title={<>Ready to put the why back into your customer relationships?</>} />
     </Layout>
   );
 };
