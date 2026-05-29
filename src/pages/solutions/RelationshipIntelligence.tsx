@@ -9,19 +9,19 @@ const RelationshipIntelligence = () => (
   <SolutionPage
     chip="Use Case"
     headline="Understand the why behind every customer relationship."
-    subheadline="Your CRM knows what happened. Your call tool knows when. Cohvia captures why: why they chose you, why they stay, what drives them, what worries them, and how to make them a superstar."
+    subheadline="Your CRM holds the what and the when. Cohvia holds the why: why they chose you, why they stay, what's quietly putting the relationship at risk."
     pain={{
-      headline: "You have data about your customers. You don't have understanding.",
+      headline: "You have a lot of data about your customers. You don't have a lot of understanding.",
       body: (
         <>
           <p>
-            You know their ARR. You know their renewal date. You know how many tickets they filed last month.
+            You know their ARR, their renewal date, and how many tickets they filed last month. Your CRM might even tell you the closed-won reason the AE typed in twelve months ago.
           </p>
           <p>
-            But can you tell me why they bought in the first place? What success looks like in their words, not yours? Who the real champion is and what motivates them personally? What would make them leave?
+            What it can't tell you is the texture: why they really bought, what success looks like in their words rather than yours, who the actual champion is and what motivates them, what would quietly make them leave.
           </p>
           <p>
-            That understanding exists. It's in your Gong calls, your email threads, your support tickets, your CSM's head. It's just never been assembled into something useful.
+            That understanding does exist. It's sitting in your Gong calls, your email threads, your support tickets, and your CSM's head. It just hasn't ever been assembled into something usable.
           </p>
         </>
       ),
@@ -33,10 +33,10 @@ const RelationshipIntelligence = () => (
         body: (
           <>
             <p>
-              Every account gets a living strategic document. Eight sections that answer the questions nobody else is asking.
+              Every account gets a living strategic document made of eight sections, each one answering a question nobody else is asking about that relationship.
             </p>
             <p>
-              Built from real data across your connected tools. Every claim cited to its source. Updated continuously. Owned by your team.
+              It's built from real data across your connected tools, with every claim cited to the source it came from, updated continuously, and owned by your team.
             </p>
           </>
         ),
@@ -46,7 +46,7 @@ const RelationshipIntelligence = () => (
         title: "Ask Cohvia",
         body: (
           <p>
-            A global AI chat that knows every account. Ask it why a customer bought, who the skeptic is, what changed since last quarter. Get answers grounded in your data, not hallucinated summaries.
+            A global chat that knows every account in your book. Ask it why a customer bought, who the skeptic in the room is, or what's changed since last quarter, and you get answers grounded in your own data, not the hallucinated summary other AI tools tend to hand back.
           </p>
         ),
         visual: <AskCohviaPrep />,
@@ -55,7 +55,7 @@ const RelationshipIntelligence = () => (
         title: "AI Fields",
         body: (
           <p>
-            Define fields in plain language. AI fills them from transcripts, emails, and tickets. Champion name. Primary use case. Competitors mentioned. Sentiment. Structured insights without the data entry. (Without the CSM forgetting to do the data entry.)
+            Define a field in plain language and Cohvia fills it from your transcripts, emails, and tickets: champion name, primary use case, competitors mentioned, sentiment. The structured insights show up sortable across the Portfolio, every answer cited to its source. No CSM forgets to do the data entry because there's no data entry left to do.
           </p>
         ),
         visual: <AIFieldsPortfolio />,
@@ -64,14 +64,14 @@ const RelationshipIntelligence = () => (
         title: "Inline citations",
         body: (
           <p>
-            Every claim in the Narrative links to its source: a specific Gong call with a timestamp, an email thread, a support ticket. Click to verify. A data sources panel shows everything the AI used. Trust, not faith.
+            Every claim in the Narrative links back to where it came from: a specific Gong call with a timestamp, an email thread, a support ticket. Click to verify. A data sources panel shows everything the AI used to assemble the picture. Trust, not faith.
           </p>
         ),
       },
     ]}
     cta={{
       headline:
-        "They help you get up to speed on customer data. Cohvia helps you get up to speed on a customer relationship.",
+        "Other tools help you get up to speed on customer data. Cohvia helps you get up to speed on the customer relationship.",
     }}
   />
 );

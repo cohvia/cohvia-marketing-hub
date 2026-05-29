@@ -7,41 +7,41 @@ import {
 const Handovers = () => (
   <SolutionPage
     chip="Use Case"
-    headline="Context that transfers completely."
-    subheadline="Sales to CS. CSM to CSM. Every handover is a moment where understanding either survives or dies. Cohvia makes sure it survives."
+    headline="Context that actually transfers."
+    subheadline="Sales to CS, and CSM to CSM. Every handover is a moment where the understanding either survives or quietly dies. Cohvia is how it survives."
     pain={{
-      headline: "Handovers are where the why dies.",
+      headline: "The handover is where the why goes to die.",
       body: (
         <p>
-          The AE knows why the customer bought. What was promised. Who the champion is. The CSM gets a CRM record and a Slack message. Three months later the relationship gets reassigned and the new CSM starts from zero. The customer notices every time.
+          The AE knows why the customer bought, what got promised, and who the real champion is. The CSM inherits a CRM record and a Slack message. Three months later the account gets reassigned and the next CSM starts from zero. The customer notices every time, because they're the only one carrying the story.
         </p>
       ),
     }}
     helpLabel="How Cohvia Solves It"
     blocks={[
       {
-        title: "Sales Handover: no more lost context at close",
+        title: "Sales handover, without the lost context at close",
         body: (
           <>
             <p>
-              Deal closes. Cohvia ingests calls, emails, and CRM history. AI generates the first Narrative. The AE reviews and enriches it: verbal commitments, politics, the real reason the champion pushed.
+              When the deal closes, Cohvia ingests the calls, emails, and CRM history, and drafts the first version of the Narrative. The AE reviews it and adds what the AI couldn't see: the verbal commitments, the office politics, the real reason the champion pushed for this.
             </p>
             <p>
-              Five minutes, not thirty. (Replaces the handover call that always got rescheduled twice.) The CSM starts day one with a strategic understanding and suggested plans pre-populated from sales conversations.
+              Five minutes of review, not the handover call that always got rescheduled twice. The CSM starts day one with a full strategic picture and suggested plans already pulled from the sales conversations.
             </p>
           </>
         ),
         visual: <HandoverFourSteps />,
       },
       {
-        title: "Account Transfers: the story continues",
+        title: "Account transfers, where the story continues",
         body: (
           <>
             <p>
-              When a CSM leaves, gets promoted, or their book gets rebalanced, the Narrative stays. The new CSM reads, not asks. Plans and history transfer completely.
+              When a CSM leaves, gets promoted, or the book gets rebalanced, the Narrative stays with the account. The new CSM reads instead of asks, and the plans and history transfer with them.
             </p>
             <p>
-              The customer's portal doesn't change: same plans, same goals, same progress. The only difference is the CSM's name. And that CSM already understands them. That's what institutional memory should feel like.
+              The customer's portal doesn't change either. Same plans, same goals, same progress, with a different name at the top. And that name already understands them. That's what institutional memory is supposed to feel like.
             </p>
           </>
         ),
