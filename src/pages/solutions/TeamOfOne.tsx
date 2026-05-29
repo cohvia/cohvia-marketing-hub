@@ -38,7 +38,7 @@ const TeamOfOne = () => (
         title: "The Narrative remembers so you don't have to",
         body: (
           <p>
-            You can't hold 30 relationships in your head, and you don't need to. Every account has a living Narrative that covers why they bought, what they care about, and where things stand. Open any account and you've got the full picture in two minutes, even the account you haven't touched in three weeks. Especially that one.
+            You don't have to hold 30 relationships in your head anymore. Every account has a living Narrative that covers why they bought, what they care about, and where things stand. Open any account and you've got the full picture in two minutes, even the account you haven't touched in three weeks. Especially that one.
           </p>
         ),
         visual: <NarrativeWhy />,
