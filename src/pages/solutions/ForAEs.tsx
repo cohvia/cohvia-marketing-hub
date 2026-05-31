@@ -62,7 +62,7 @@ const ForAEs = () => (
         visual: <StepCSMOpen />,
       },
     ]}
-    cta={{ headline: "Your deal context deserves better than a Slack message." }}
+    cta={{ headline: "Your account context is worth more than a Slack message." }}
   />
 );
 
