@@ -45,7 +45,7 @@ const solutionsByRole = [
 
 const solutionsByUseCase = [
   {
-    label: "Relationship Intelligence",
+    label: "Customer Context",
     to: "/solutions/relationship-intelligence",
     description: "Understand the why behind every customer relationship.",
   },
