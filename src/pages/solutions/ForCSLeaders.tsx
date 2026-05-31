@@ -4,6 +4,8 @@ import {
   NeedsAttention,
   CustomSignal,
   HandoverEnrich,
+  TeamBookDistribution,
+  ReassignedAccount,
 } from "@/components/solutions/visuals";
 
 const ForCSLeaders = () => (
