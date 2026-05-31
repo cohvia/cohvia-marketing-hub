@@ -64,16 +64,21 @@ const SolutionPage = ({
         <div className="space-y-16 mt-10">
           {blocks.map((block, i) => {
             const reverse = i % 2 === 1;
+            const hasVisual = Boolean(block.visual);
             return (
               <div
                 key={i}
-                className={`flex flex-col gap-10 lg:gap-16 items-center ${
-                  reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-                }`}
+                className={
+                  hasVisual
+                    ? `flex flex-col gap-10 lg:gap-16 items-center ${
+                        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+                      }`
+                    : "max-w-2xl mx-auto text-center"
+                }
               >
-                <div className="flex-1 max-w-xl">
+                <div className={hasVisual ? "flex-1 max-w-xl" : ""}>
                   {typeof block.step === "number" && (
-                    <div className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 text-primary font-bold text-sm mb-4">
+                    <div className={`inline-flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 text-primary font-bold text-sm mb-4`}>
                       {block.step}
                     </div>
                   )}
@@ -81,12 +86,12 @@ const SolutionPage = ({
                     {block.title}
                   </h3>
                   {block.body && (
-                    <div className="space-y-3 text-secondary-foreground leading-relaxed">
+                    <div className={`space-y-3 text-secondary-foreground leading-relaxed ${hasVisual ? "" : "text-left max-w-[680px] mx-auto"}`}>
                       {block.body}
                     </div>
                   )}
                 </div>
-                {block.visual && (
+                {hasVisual && (
                   <div className="flex-1 w-full">{block.visual}</div>
                 )}
               </div>
