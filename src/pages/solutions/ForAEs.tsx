@@ -12,7 +12,7 @@ const ForAEs = () => (
     headline="Five minutes of your time, five hours saved for CS."
     subheadline="You spent months getting to know this customer. Cohvia is how that understanding actually reaches the CSM, instead of dying in a CRM field."
     pain={{
-      headline: "You already know the handover doesn't work.",
+      headline: "The handover format was never built for what you actually know.",
       body: (
         <>
           <p>
