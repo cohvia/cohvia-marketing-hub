@@ -68,6 +68,15 @@ const ForCSLeaders = () => (
         visual: <HandoverEnrich />,
       },
       {
+        title: "CSM-to-CSM handovers without the scramble",
+        body: (
+          <p>
+            When a CSM takes over an account, they don't need to watch four years of Gong recordings to get up to speed. The Narrative is already there: why the customer bought, who matters, what's at risk, and where things stand. They walk into the first call informed, and the customer never feels the transition.
+          </p>
+        ),
+        visual: <ReassignedAccount />,
+      },
+      {
         title: "Templates from your best CSMs, shared with the team",
         body: (
           <p>
