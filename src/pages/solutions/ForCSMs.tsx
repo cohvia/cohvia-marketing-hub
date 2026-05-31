@@ -12,12 +12,12 @@ const ForCSMs = () => (
   <SolutionPage
     chip="For CSMs"
     headline="Know every account like it's your only one."
-    subheadline="You're managing 40 accounts and you care about every one of them. The math doesn't add up, so Cohvia holds the understanding you can't."
+    subheadline="You care about every account you manage. Cohvia helps you show up for each one like it's the only one."
     pain={{
-      headline: "You're not bad at your job. You're doing three jobs at once.",
+      headline: "You'd prep for every call if you had the time.",
       body: (
         <p>
-          You know you should re-read the Gong transcript before the call, and check the tickets before the QBR. But you have 45 accounts and three hours of admin standing between you and the first customer conversation of the day. Something always gets skipped.
+          Re-reading Gong transcripts. Checking support tickets before the QBR. Keeping the success plan current. You know what good looks like, but with forty accounts and a calendar full of back-to-backs, the prep time just isn't there. Cohvia surfaces the context you need so you can walk into every conversation informed and ready.
         </p>
       ),
     }}
