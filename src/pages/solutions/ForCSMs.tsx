@@ -5,6 +5,7 @@ import {
   PortalCheckoff,
   NewAccountReady,
   RiskInContext,
+  ReassignedAccount,
 } from "@/components/solutions/visuals";
 
 const ForCSMs = () => (
