@@ -41,6 +41,15 @@ const ForCSLeaders = () => (
         visual: <NeedsAttention />,
       },
       {
+        title: "Balance the book across your team",
+        body: (
+          <p>
+            See account counts, health scores, and renewal dates grouped by CSM at a glance. Spot overloaded team members, uneven risk concentration, and upcoming coverage gaps before they become problems. Reassign accounts in seconds, and the Narrative travels with them.
+          </p>
+        ),
+        visual: <TeamBookDistribution />,
+      },
+      {
         title: "Risk signals you define yourself",
         body: (
           <p>
