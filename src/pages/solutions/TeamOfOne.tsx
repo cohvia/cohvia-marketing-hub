@@ -80,10 +80,10 @@ const TeamOfOne = () => (
         visual: <RenewalPlan />,
       },
       {
-        title: "Risk signals when nobody else is watching",
+        title: "Risk signals to report back to the team",
         body: (
           <p>
-            There's no CS Leader reviewing your book, so Cohvia watches it for you. Stakeholder changes, engagement drops, sentiment shifts, and competitor mentions all surface inside the Narrative with the context that explains them. Including the honest one: "You haven't touched this account in 21 days." Sometimes you need the nudge.
+            Cohvia watches your book so you can raise customer risks quickly and accurately with your broader team. Stakeholder changes, engagement drops, sentiment shifts, and competitor mentions all surface inside the Narrative with the context that explains them. Including the honest one: "You haven't touched this account in 21 days."
           </p>
         ),
         visual: <RiskInNarrative />,
