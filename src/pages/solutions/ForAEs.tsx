@@ -9,8 +9,8 @@ import {
 const ForAEs = () => (
   <SolutionPage
     chip="For AEs"
-    headline="Five minutes of your time, five hours saved for CS."
-    subheadline="You spent months getting to know this customer. Cohvia is how that understanding actually reaches the CSM, instead of dying in a CRM field."
+    headline="Five minutes of your time, a faster-growing account."
+    subheadline="You spent months getting to know this customer. Cohvia is how that understanding actually reaches the CSM — so the account ramps faster, renews cleaner, and stays open to the next conversation with you."
     pain={{
       headline: "The handover format was never built for what you actually know.",
       body: (
@@ -19,7 +19,7 @@ const ForAEs = () => (
             You closed the deal, so you know why they bought, what got promised, who the champion is, and what keeps them up at night. You try to pass it along through a CRM note, a Slack message, maybe a quick call if the CSM has the time.
           </p>
           <p>
-            Three weeks later the customer tells you the CSM just asked them to "walk through their goals again." The handover format never had a place to hold what you actually knew.
+            Three weeks later the customer tells you the CSM just asked them to "walk through their goals again." Trust takes a hit, the relationship cools, and the expansion conversation you were lining up for month six suddenly feels a lot further away.
           </p>
         </>
       ),
