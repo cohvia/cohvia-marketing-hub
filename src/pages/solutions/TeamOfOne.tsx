@@ -18,7 +18,7 @@ const TeamOfOne = () => (
     }
     subheadline="You're the entire CS function, and you need a system that holds the context a whole team would normally carry."
     pain={{
-      headline: "You're doing the job of four people, and your customers can feel it.",
+      headline: "You're doing the job of four people. Don't let your customers feel it.",
       body: (
         <>
           <p>
@@ -28,7 +28,7 @@ const TeamOfOne = () => (
             You care about every account. But there are 30 of them, there's no team behind you, and the system holding it all together is your memory, your calendar, and a spreadsheet that stopped being accurate in February.
           </p>
           <p>
-            The worst part is that you know things are slipping. You just can't see where fast enough to do anything about it.
+            The worst part is that you know things could be slipping. You just can't see where fast enough to do anything about it.
           </p>
         </>
       ),
