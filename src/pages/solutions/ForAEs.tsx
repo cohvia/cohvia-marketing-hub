@@ -53,10 +53,10 @@ const ForAEs = () => (
         visual: <AEReviewQueue />,
       },
       {
-        title: "The CSM starts informed",
+        title: "The account grows faster — and you stay in the picture",
         body: (
           <p>
-            On day one, the CSM opens a complete strategic picture instead of a CRM record. The months of relationship-building you did don't evaporate, and the customer doesn't get re-asked the questions they already answered.
+            On day one, the CSM opens a complete strategic picture instead of a CRM record. Onboarding is shorter, value lands sooner, and the customer doesn't get re-asked the questions they already answered. That means cleaner renewals, warmer references when you need them, and an expansion path that's actually ready when you come back for it.
           </p>
         ),
         visual: <StepCSMOpen />,
