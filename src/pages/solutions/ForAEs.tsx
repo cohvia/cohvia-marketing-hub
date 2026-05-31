@@ -9,8 +9,8 @@ import {
 const ForAEs = () => (
   <SolutionPage
     chip="For AEs"
-    headline="Five minutes of your time, five hours saved for CS."
-    subheadline="You spent months getting to know this customer. Cohvia is how that understanding actually reaches the CSM, instead of dying in a CRM field."
+    headline="Five minutes of your time, a faster-growing account."
+    subheadline="You spent months getting to know this customer. Cohvia is how that understanding actually reaches the CSM — so the account ramps faster, renews cleaner, and stays open to the next conversation with you."
     pain={{
       headline: "The handover format was never built for what you actually know.",
       body: (
@@ -19,7 +19,7 @@ const ForAEs = () => (
             You closed the deal, so you know why they bought, what got promised, who the champion is, and what keeps them up at night. You try to pass it along through a CRM note, a Slack message, maybe a quick call if the CSM has the time.
           </p>
           <p>
-            Three weeks later the customer tells you the CSM just asked them to "walk through their goals again." The handover format never had a place to hold what you actually knew.
+            Three weeks later the customer tells you the CSM just asked them to "walk through their goals again." Trust takes a hit, the relationship cools, and the expansion conversation you were lining up for month six suddenly feels a lot further away.
           </p>
         </>
       ),
@@ -53,10 +53,10 @@ const ForAEs = () => (
         visual: <AEReviewQueue />,
       },
       {
-        title: "The CSM starts informed",
+        title: "The account grows faster — and you stay in the picture",
         body: (
           <p>
-            On day one, the CSM opens a complete strategic picture instead of a CRM record. The months of relationship-building you did don't evaporate, and the customer doesn't get re-asked the questions they already answered.
+            On day one, the CSM opens a complete strategic picture instead of a CRM record. Onboarding is shorter, value lands sooner, and the customer doesn't get re-asked the questions they already answered. That means cleaner renewals, warmer references when you need them, and an expansion path that's actually ready when you come back for it.
           </p>
         ),
         visual: <StepCSMOpen />,
