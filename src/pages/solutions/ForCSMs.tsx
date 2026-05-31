@@ -5,6 +5,7 @@ import {
   PortalCheckoff,
   NewAccountReady,
   RiskInContext,
+  ReassignedAccount,
 } from "@/components/solutions/visuals";
 
 const ForCSMs = () => (
@@ -56,6 +57,15 @@ const ForCSMs = () => (
           </p>
         ),
         visual: <NewAccountReady />,
+      },
+      {
+        title: "Take over an account without starting from zero",
+        body: (
+          <p>
+            When you're assigned an account from another CSM, you don't need to watch four years of Gong recordings to manage it well. The Narrative covers why they bought, who the key people are, what's gone wrong before, and where things stand today. You walk into your first call sounding like you've been there all along.
+          </p>
+        ),
+        visual: <ReassignedAccount />,
       },
       {
         title: "Risk signals with context, not just a color",

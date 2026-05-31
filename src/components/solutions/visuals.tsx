@@ -740,3 +740,37 @@ export const CoverageScale = () => (
   </MockFrame>
 );
 
+export const TeamBookDistribution = () => (
+  <MockFrame>
+    <div className="space-y-3">
+      <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
+        <span className="font-semibold text-foreground">Team · Account distribution</span>
+        <span>38 accounts</span>
+      </div>
+      {[
+        { csm: "Maya Chen", count: 18, max: false },
+        { csm: "Jordan Pak", count: 12, max: false },
+        { csm: "Alex R.", count: 8, max: false },
+      ].map((g) => (
+        <div key={g.csm} className="surface-elevated rounded-lg p-3">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-semibold text-foreground">{g.csm}</span>
+            <span className="text-xs text-muted-foreground">{g.count} accounts</span>
+          </div>
+          <div className="w-full h-2 rounded-full bg-secondary overflow-hidden">
+            <div
+              className="h-full gradient-brand-bg"
+              style={{ width: `${(g.count / 18) * 100}%` }}
+            />
+          </div>
+        </div>
+      ))}
+      <div className="flex items-center gap-2 text-xs text-primary">
+        <ArrowRight size={12} />
+        <span>Reassign 3 accounts to balance the load</span>
+      </div>
+    </div>
+  </MockFrame>
+);
+
+

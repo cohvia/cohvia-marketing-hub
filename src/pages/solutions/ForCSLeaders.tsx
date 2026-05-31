@@ -4,6 +4,8 @@ import {
   NeedsAttention,
   CustomSignal,
   HandoverEnrich,
+  TeamBookDistribution,
+  ReassignedAccount,
 } from "@/components/solutions/visuals";
 
 const ForCSLeaders = () => (
@@ -39,6 +41,15 @@ const ForCSLeaders = () => (
         visual: <NeedsAttention />,
       },
       {
+        title: "Balance the book across your team",
+        body: (
+          <p>
+            See account counts, health scores, and renewal dates grouped by CSM at a glance. Spot overloaded team members, uneven risk concentration, and upcoming coverage gaps before they become problems. Reassign accounts in seconds, and the Narrative travels with them.
+          </p>
+        ),
+        visual: <TeamBookDistribution />,
+      },
+      {
         title: "Risk signals you define yourself",
         body: (
           <p>
@@ -55,6 +66,15 @@ const ForCSLeaders = () => (
           </p>
         ),
         visual: <HandoverEnrich />,
+      },
+      {
+        title: "CSM-to-CSM handovers without the scramble",
+        body: (
+          <p>
+            When a CSM takes over an account, they don't need to watch four years of Gong recordings to get up to speed. The Narrative is already there: why the customer bought, who matters, what's at risk, and where things stand. They walk into the first call informed, and the customer never feels the transition.
+          </p>
+        ),
+        visual: <ReassignedAccount />,
       },
       {
         title: "Templates from your best CSMs, shared with the team",
