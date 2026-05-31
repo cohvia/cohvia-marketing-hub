@@ -71,10 +71,10 @@ const TeamOfOne = () => (
         visual: <AENarrativeAutoDraft />,
       },
       {
-        title: "Renewals you actually see coming",
+        title: "Renewal prep handled for you",
         body: (
           <p>
-            When there's no CS Leader watching the book, renewals have a habit of sneaking up. Cohvia auto-activates the renewal plan at the threshold you set, surfaces the countdown in the Portfolio, and flags it in Needs Attention if the plan stalls. You stop being surprised by renewal dates you technically knew about and forgot.
+            When you're managing everything yourself, renewals have a habit of sneaking up. Cohvia auto-activates your templated renewal plan at the threshold you set, surfaces the countdown in the Portfolio, and flags it in Needs Attention if the plan stalls. No more renewal surprises.
           </p>
         ),
         visual: <RenewalPlan />,
