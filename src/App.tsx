@@ -18,6 +18,7 @@ import Handovers from "./pages/solutions/Handovers.tsx";
 import PlanningExecution from "./pages/solutions/PlanningExecution.tsx";
 import BookHealth from "./pages/solutions/BookHealth.tsx";
 import ScalingLeverage from "./pages/solutions/ScalingLeverage.tsx";
+import Legal from "./pages/Legal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
