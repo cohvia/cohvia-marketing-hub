@@ -14,11 +14,6 @@ import {
   Zap,
   Users,
   Sparkles,
-  Globe,
-  GraduationCap,
-  Clock,
-  Heart,
-  Coins,
 } from "lucide-react";
 
 const values = [
@@ -47,15 +42,6 @@ const values = [
     title: "Calm beats clever",
     body: "We choose the clear path over the impressive one. The product should feel like a relief, not another tab to manage.",
   },
-];
-
-const perks = [
-  { icon: Globe, title: "Remote-first", body: "Work from wherever you do your best thinking." },
-  { icon: Clock, title: "Real time off", body: "Generous PTO with a minimum, not just a maximum." },
-  { icon: Heart, title: "Health, dental & vision", body: "Full coverage for you and your family." },
-  { icon: Coins, title: "Meaningful equity", body: "Early team, real ownership in what we build." },
-  { icon: GraduationCap, title: "Learning budget", body: "Books, courses, conferences — keep growing." },
-  { icon: Users, title: "Annual offsite", body: "We get together in person to build relationships that last." },
 ];
 
 const About = () => {
@@ -184,26 +170,6 @@ const About = () => {
             </figcaption>
           </figure>
         </Card>
-      </Section>
-
-      {/* Working at Cohvia */}
-      <Section pad="lg" width="wide" tone="tinted">
-        <SectionHeader
-          eyebrow="Working at Cohvia"
-          title="A small team, building something we actually use."
-          subtitle="We're remote-first, deliberately small, and biased toward people who've lived the problem we're solving. We work hard at work, then we go live our lives."
-        />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {perks.map((p) => (
-            <Card key={p.title} className="p-6" interactive>
-              <IconBadge icon={p.icon} className="mb-4" />
-              <h3 className="text-base font-semibold mb-1.5">{p.title}</h3>
-              <p className="text-sm text-secondary-foreground leading-relaxed">
-                {p.body}
-              </p>
-            </Card>
-          ))}
-        </div>
       </Section>
 
       {/* Careers */}
