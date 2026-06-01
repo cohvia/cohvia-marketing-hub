@@ -57,6 +57,7 @@ const Legal = () => {
             <nav className="flex flex-col gap-1">
               {policies.map((p) => {
                 const disabled = !p.content;
+                const isChild = !!p.parent;
                 return (
                   <NavLink
                     key={p.slug}
@@ -64,7 +65,8 @@ const Legal = () => {
                     onClick={(e) => disabled && e.preventDefault()}
                     className={({ isActive }) =>
                       [
-                        "rounded-md px-3 py-2 text-sm transition-colors",
+                        "rounded-md py-2 text-sm transition-colors",
+                        isChild ? "pl-6 pr-3 text-xs" : "px-3",
                         isActive
                           ? "bg-secondary text-foreground font-medium"
                           : "text-muted-foreground hover:text-foreground hover:bg-secondary/60",
