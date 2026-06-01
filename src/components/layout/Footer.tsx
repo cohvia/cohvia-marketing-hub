@@ -50,8 +50,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-2.5">
+              <li><Link to="/glossary/customer-context-platform" className={linkClass}>Customer Context Platform</Link></li>
+              <li><Link to="/glossary/customer-narrative" className={linkClass}>Customer Narrative</Link></li>
+              <li><Link to="/glossary/ai-success-plans" className={linkClass}>AI Success Plans</Link></li>
               <li><Link to="/security" className={linkClass}>Security</Link></li>
               <li><Link to="/legal/privacy" className={linkClass}>Privacy</Link></li>
               <li><Link to="/legal/terms" className={linkClass}>Terms</Link></li>

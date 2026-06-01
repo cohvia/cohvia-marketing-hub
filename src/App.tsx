@@ -21,6 +21,10 @@ import ScalingLeverage from "./pages/solutions/ScalingLeverage.tsx";
 import Legal from "./pages/Legal.tsx";
 import Security from "./pages/Security.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import CustomerContextPlatform from "./pages/glossary/CustomerContextPlatform.tsx";
+import CustomerNarrative from "./pages/glossary/CustomerNarrative.tsx";
+import AccountNarrative from "./pages/glossary/AccountNarrative.tsx";
+import AISuccessPlans from "./pages/glossary/AISuccessPlans.tsx";
 
 const queryClient = new QueryClient();
 
@@ -49,7 +53,12 @@ const App = () => (
           <Route path="/legal" element={<Legal />} />
           <Route path="/legal/:slug" element={<Legal />} />
           <Route path="/security" element={<Security />} />
+          <Route path="/glossary/customer-context-platform" element={<CustomerContextPlatform />} />
+          <Route path="/glossary/customer-narrative" element={<CustomerNarrative />} />
+          <Route path="/glossary/account-narrative" element={<AccountNarrative />} />
+          <Route path="/glossary/ai-success-plans" element={<AISuccessPlans />} />
           <Route path="*" element={<NotFound />} />
+
 
         </Routes>
       </BrowserRouter>
