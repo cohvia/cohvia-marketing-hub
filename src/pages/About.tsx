@@ -82,7 +82,7 @@ const About = () => {
             <p>
               Customer Success is one of the most important functions in any B2B
               SaaS company. And it's still being run on tools built for a
-              different job — a CRM designed for the sales pipeline, a
+              different job: a CRM designed for the sales pipeline, a
               spreadsheet that stopped being accurate two quarters ago, a
               folder of Gong recordings nobody has time to re-watch.
             </p>
@@ -96,7 +96,7 @@ const About = () => {
         </div>
       </Section>
 
-      {/* Name origin — kept, refined */}
+      {/* Name origin: kept, refined */}
       <Section pad="md" width="default" tone="tinted">
         <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-start">
           <div className="md:col-span-2">
@@ -104,14 +104,14 @@ const About = () => {
               The name
             </p>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              <span className="gradient-brand">Cohvia</span> — to nurture, together.
+              <span className="gradient-brand">Cohvia</span>: to nurture, together.
             </h2>
           </div>
           <div className="md:col-span-3 text-lg text-secondary-foreground leading-relaxed">
             <p>
               Cohvia draws on Irish Gaelic roots: <em>cothú</em>, to nurture and
               grow something carefully, joined with <em>comh</em> and{" "}
-              <em>beatha</em> — together and life. The name reflects a simple
+              <em>beatha</em>: together and life. The name reflects a simple
               belief that runs through the product: Customer Success works when
               it's mutual, and falls apart when it isn't.
             </p>
@@ -119,12 +119,12 @@ const About = () => {
         </div>
       </Section>
 
-      {/* Values — numbered grid */}
+      {/* Values: numbered grid */}
       <Section pad="lg" width="wide">
         <SectionHeader
           eyebrow="What we believe"
           title="The principles we build by."
-          subtitle="Five things we keep coming back to when we're deciding what to build, who to hire, and how to show up for customers."
+          subtitle="Six things we keep coming back to when we're deciding what to build, who to hire, and how to show up for customers."
         />
         <div className="grid md:grid-cols-2 gap-5">
           {values.map((v, i) => (
