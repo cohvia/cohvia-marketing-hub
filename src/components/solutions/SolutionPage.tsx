@@ -40,10 +40,10 @@ const SolutionPage = ({
   return (
     <Layout>
       <PageHero eyebrow={chip} title={headline} subtitle={subheadline}>
-        <BrandLink href="https://app.cohvia.com/signup" withArrow>
+        <BrandLink href="https://app.cohvia.com/sign-up" withArrow>
           Sign Up Free
         </BrandLink>
-        <BrandLink href="https://app.cohvia.com" variant="ghost">
+        <BrandLink href="https://app.cohvia.com/sign-in" variant="ghost">
           Sign In
         </BrandLink>
       </PageHero>
