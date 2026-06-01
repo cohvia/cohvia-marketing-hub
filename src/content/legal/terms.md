@@ -1,4 +1,4 @@
-# Cohvia — Terms of Service
+# Terms of Service
 
 **Last updated: May 31, 2026**
 

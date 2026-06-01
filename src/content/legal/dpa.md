@@ -1,4 +1,4 @@
-# Cohvia — Data Processing Agreement
+# Data Processing Agreement
 
 **Last updated: May 31, 2026**
 
