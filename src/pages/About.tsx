@@ -14,6 +14,7 @@ import {
   Zap,
   Users,
   Sparkles,
+  Heart,
 } from "lucide-react";
 
 const values = [
@@ -30,17 +31,22 @@ const values = [
   {
     icon: Zap,
     title: "Ship the boring part",
-    body: "The unsexy work — handovers, context, follow-through — is where the real wins live. We obsess over it.",
+    body: "The unsexy work (handovers, context, follow-through) is where the real wins live. We obsess over it.",
   },
   {
     icon: Users,
-    title: "Lived experience required",
-    body: "We've all sat in the chair we're building for. If something feels off to a CSM, that's the bug, not a feature request.",
+    title: "Live the experience",
+    body: "We dogfood Cohvia, manage our own customer relationships in it, and constantly test what we build. If it doesn't work for us, it doesn't ship.",
   },
   {
     icon: Sparkles,
-    title: "Calm beats clever",
-    body: "We choose the clear path over the impressive one. The product should feel like a relief, not another tab to manage.",
+    title: "Smart, then invisible",
+    body: "We solve hard problems so you don't have to think about them. The intelligence is in the infrastructure; the experience is effortless.",
+  },
+  {
+    icon: Heart,
+    title: "Simple relationships",
+    body: "It should be simple to have a human relationship with your customers. We relentlessly remove the friction that gets in the way.",
   },
 ];
 
