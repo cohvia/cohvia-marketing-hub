@@ -140,7 +140,7 @@ const Product = () => {
         }
         subtitle="Cohvia starts with the story, not the spreadsheet. AI builds a living understanding of every customer relationship and connects it to shared plans you execute together."
       >
-        <BrandLink href="https://app.cohvia.com/signup" withArrow>
+        <BrandLink href="https://app.cohvia.com/sign-up" withArrow>
           Sign Up Free
         </BrandLink>
         <BrandLink href="#system" variant="ghost">
@@ -827,14 +827,14 @@ const Product = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://app.cohvia.com/signup"
+              href="https://app.cohvia.com/sign-up"
               className="inline-flex items-center gap-2 rounded-lg gradient-brand-bg px-6 py-3 text-sm font-semibold text-foreground transition-all hover:brightness-110"
             >
               Sign Up Free
               <ArrowRight size={16} />
             </a>
             <a
-              href="https://app.cohvia.com"
+              href="https://app.cohvia.com/sign-in"
               className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-secondary-foreground transition-all hover:bg-secondary hover:text-foreground"
             >
               Sign In

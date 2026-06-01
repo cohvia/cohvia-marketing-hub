@@ -169,13 +169,13 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="https://app.cohvia.com"
+            href="https://app.cohvia.com/sign-in"
             className="inline-flex items-center justify-center rounded-lg gradient-brand-bg px-4 py-2 text-sm font-semibold text-foreground transition-all hover:brightness-110"
           >
             Sign In
           </a>
           <a
-            href="https://app.cohvia.com/signup"
+            href="https://app.cohvia.com/sign-up"
             className="inline-flex items-center justify-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
           >
             Sign Up
@@ -257,13 +257,13 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="https://app.cohvia.com"
+            href="https://app.cohvia.com/sign-in"
             className="block w-full text-center rounded-lg gradient-brand-bg px-4 py-2 text-sm font-semibold text-foreground"
           >
             Sign In
           </a>
           <a
-            href="https://app.cohvia.com/signup"
+            href="https://app.cohvia.com/sign-up"
             className="block w-full text-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground"
           >
             Sign Up

@@ -437,9 +437,9 @@ interface CTASectionProps {
 export const CTASection = ({
   title,
   subtitle,
-  primaryHref = "https://app.cohvia.com/signup",
+  primaryHref = "https://app.cohvia.com/sign-up",
   primaryLabel = "Sign Up Free",
-  secondaryHref = "https://app.cohvia.com",
+  secondaryHref = "https://app.cohvia.com/sign-in",
   secondaryLabel = "Sign In",
   id,
 }: CTASectionProps) => (
