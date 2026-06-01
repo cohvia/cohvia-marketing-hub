@@ -1,48 +1,62 @@
 import { Link } from "react-router-dom";
 import cohviaLogo from "@/assets/cohvia-wordmark-white.svg";
 
+const linkClass =
+  "text-sm text-secondary-foreground hover:text-foreground transition-colors";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-          <div className="col-span-2 md:col-span-2">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+          <div className="col-span-2">
             <img src={cohviaLogo} alt="Cohvia" className="h-5 mb-3" />
-            <p className="text-sm text-secondary-foreground leading-relaxed mb-4">
+            <p className="text-sm text-secondary-foreground leading-relaxed">
               Customer Context Platform
-            </p>
-            <p className="text-xs italic text-secondary-foreground leading-relaxed max-w-md">
-              Cohvia is inspired by Irish Gaelic roots — <em>cothú</em>, meaning
-              to nurture and cultivate growth, and <em>comh</em> and{" "}
-              <em>beatha</em>, meaning together and life. Together, they reflect
-              a simple belief: Customer success works best when it's mutual.
             </p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Product</h4>
             <ul className="space-y-2.5">
-              <li><Link to="/product" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Product</Link></li>
-              <li><Link to="/pricing" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Pricing</Link></li>
-              <li><span className="text-sm text-muted-foreground">Changelog</span></li>
+              <li><Link to="/product" className={linkClass}>Overview</Link></li>
+              <li><Link to="/solutions/relationship-intelligence" className={linkClass}>Relationship intelligence</Link></li>
+              <li><Link to="/solutions/handovers" className={linkClass}>Handovers</Link></li>
+              <li><Link to="/solutions/planning-execution" className={linkClass}>Planning & execution</Link></li>
+              <li><Link to="/solutions/book-health" className={linkClass}>Book health</Link></li>
+              <li><Link to="/solutions/scaling-leverage" className={linkClass}>Scaling & leverage</Link></li>
+              <li><Link to="/pricing" className={linkClass}>Pricing</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-foreground mb-4">Solutions</h4>
+            <ul className="space-y-2.5">
+              <li><Link to="/solutions/cs-leaders" className={linkClass}>CS leaders</Link></li>
+              <li><Link to="/solutions/csms" className={linkClass}>CSMs</Link></li>
+              <li><Link to="/solutions/aes" className={linkClass}>Account executives</Link></li>
+              <li><Link to="/solutions/team-of-one" className={linkClass}>Team of one</Link></li>
+              <li><Link to="/solutions/customers" className={linkClass}>For customers</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2.5">
-              <li><Link to="/about" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">About</Link></li>
-              <li><Link to="/blog" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Blog</Link></li>
-              <li><span className="text-sm text-muted-foreground">Careers</span></li>
+              <li><Link to="/about" className={linkClass}>About</Link></li>
+              <li><Link to="/blog" className={linkClass}>Blog</Link></li>
+              <li><a href="mailto:hello@cohvia.com" className={linkClass}>Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-2.5">
-              <li><Link to="/legal/privacy" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Privacy</Link></li>
-              <li><Link to="/legal/terms" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Terms</Link></li>
-              <li><Link to="/security" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Security</Link></li>
+              <li><Link to="/security" className={linkClass}>Security</Link></li>
+              <li><Link to="/legal/privacy" className={linkClass}>Privacy</Link></li>
+              <li><Link to="/legal/terms" className={linkClass}>Terms</Link></li>
+              <li><Link to="/legal/dpa" className={linkClass}>DPA</Link></li>
+              <li><Link to="/legal/subprocessors" className={linkClass}>Subprocessors</Link></li>
             </ul>
           </div>
         </div>
