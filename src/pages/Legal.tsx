@@ -9,16 +9,21 @@ import cookiesMd from "@/content/legal/cookies.md?raw";
 import dpaMd from "@/content/legal/dpa.md?raw";
 import acceptableUseMd from "@/content/legal/acceptable-use.md?raw";
 import subprocessorsMd from "@/content/legal/subprocessors.md?raw";
+import termsFrMd from "@/content/legal/terms-fr.md?raw";
+import privacyFrMd from "@/content/legal/privacy-fr.md?raw";
 
 type Policy = {
   slug: string;
   label: string;
   content?: string;
+  parent?: string;
 };
 
 const policies: Policy[] = [
   { slug: "terms", label: "Terms of Service", content: termsMd },
+  { slug: "conditions", label: "Conditions d'utilisation (FR)", content: termsFrMd, parent: "terms" },
   { slug: "privacy", label: "Privacy Policy", content: privacyMd },
+  { slug: "confidentialite", label: "Politique de confidentialité (FR)", content: privacyFrMd, parent: "privacy" },
   { slug: "cookies", label: "Cookie Policy", content: cookiesMd },
   { slug: "dpa", label: "Data Processing Agreement", content: dpaMd },
   { slug: "subprocessors", label: "Subprocessors", content: subprocessorsMd },
