@@ -123,6 +123,7 @@ const Legal = () => {
                 >
                   {active.content}
                 </ReactMarkdown>
+                {active.slug === "subprocessors" && <SubprocessorSubscribeForm />}
               </div>
             ) : (
               <div className="rounded-lg border border-border bg-card p-10 text-center">
