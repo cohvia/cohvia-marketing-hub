@@ -18,6 +18,7 @@ import Handovers from "./pages/solutions/Handovers.tsx";
 import PlanningExecution from "./pages/solutions/PlanningExecution.tsx";
 import BookHealth from "./pages/solutions/BookHealth.tsx";
 import ScalingLeverage from "./pages/solutions/ScalingLeverage.tsx";
+import Legal from "./pages/Legal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -44,7 +45,10 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/legal/:slug" element={<Legal />} />
           <Route path="*" element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
