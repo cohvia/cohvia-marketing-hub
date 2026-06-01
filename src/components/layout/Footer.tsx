@@ -44,7 +44,7 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2.5">
               <li><Link to="/about" className={linkClass}>About</Link></li>
-              <li><Link to="/blog" className={linkClass}>Blog</Link></li>
+              
               <li><a href="mailto:hello@cohvia.com" className={linkClass}>Contact</a></li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ import Index from "./pages/Index.tsx";
 import Product from "./pages/Product.tsx";
 import Pricing from "./pages/Pricing.tsx";
 import About from "./pages/About.tsx";
-import Blog from "./pages/Blog.tsx";
+
 import TeamOfOne from "./pages/solutions/TeamOfOne.tsx";
 import ForCSLeaders from "./pages/solutions/ForCSLeaders.tsx";
 import ForCSMs from "./pages/solutions/ForCSMs.tsx";
@@ -45,7 +45,7 @@ const App = () => (
           <Route path="/solutions/scaling-leverage" element={<ScalingLeverage />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
+          
           <Route path="/legal" element={<Legal />} />
           <Route path="/legal/:slug" element={<Legal />} />
           <Route path="/security" element={<Security />} />
