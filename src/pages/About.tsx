@@ -14,11 +14,6 @@ import {
   Zap,
   Users,
   Sparkles,
-  Globe,
-  GraduationCap,
-  Clock,
-  Heart,
-  Coins,
 } from "lucide-react";
 
 const values = [
