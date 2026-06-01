@@ -2,7 +2,7 @@
 
 **Last updated: May 31, 2026**
 
-This Data Processing Agreement ("**DPA**") forms part of, and is incorporated into, the [Terms of Service](https://cohvia.com/legal/terms) (the "**Agreement**") between **SACS Ecommerce Stores Inc.**, operating as "**Cohvia**" ("**Cohvia**," "**Processor**") and the customer that accepts the Agreement ("**Customer**," "**Controller**"). It applies where and to the extent Cohvia processes Customer Personal Data on Customer's behalf in providing the Service. By accepting the Agreement, Customer accepts this DPA. Where the Agreement and this DPA conflict on matters of personal-data processing, this DPA controls.
+This Data Processing Agreement ("**DPA**") forms part of, and is incorporated into, the [Terms of Service](/legal/terms) (the "**Agreement**") between **SACS Ecommerce Stores Inc.**, operating as "**Cohvia**" ("**Cohvia**," "**Processor**") and the customer that accepts the Agreement ("**Customer**," "**Controller**"). It applies where and to the extent Cohvia processes Customer Personal Data on Customer's behalf in providing the Service. By accepting the Agreement, Customer accepts this DPA. Where the Agreement and this DPA conflict on matters of personal-data processing, this DPA controls.
 
 ---
 
@@ -58,7 +58,7 @@ Cohvia ensures that personnel authorized to process Customer Personal Data are b
 
 ## 6. Subprocessors
 
-6.1 **General authorization.** Customer provides general written authorization for Cohvia to engage Subprocessors. The current list is at **[cohvia.com/about/subprocessors](https://cohvia.com/about/subprocessors)**.
+6.1 **General authorization.** Customer provides general written authorization for Cohvia to engage Subprocessors. The current list is at **[Subprocessors list](/legal/subprocessors)**.
 
 6.2 **Changes and right to object.** Cohvia will give Customer at least **30 days' notice** (for example by updating the subprocessors page and offering a subscription to notifications) before adding or replacing a Subprocessor. Customer may object on reasonable data-protection grounds within that period; the parties will work in good faith to resolve the objection, and if they cannot, Customer may terminate the affected part of the Service.
 
@@ -184,7 +184,7 @@ Cohvia maintains measures including, as applicable:
 
 ## Exhibit C — Subprocessors
 
-The current list of Subprocessors, including each Subprocessor's name, role/processing activity, and location, is maintained at **[cohvia.com/about/subprocessors](https://cohvia.com/about/subprocessors)**, which is incorporated into this DPA by reference. The list currently includes providers for cloud hosting, database, authentication, data integration, AI model routing, payments, and analytics.
+The current list of Subprocessors, including each Subprocessor's name, role/processing activity, and location, is maintained at **[Subprocessors list](/legal/subprocessors)**, which is incorporated into this DPA by reference. The list currently includes providers for cloud hosting, database, authentication, data integration, AI model routing, payments, and analytics.
 
 ---
 

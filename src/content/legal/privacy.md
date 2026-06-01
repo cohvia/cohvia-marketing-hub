@@ -5,7 +5,7 @@
 This Privacy Policy explains how **SACS Ecommerce Stores Inc.**, operating as "**Cohvia**" ("**we**," "**us**"), handles personal data. It covers two different situations, because Cohvia plays two different roles:
 
 - **As a controller**, when we decide how and why to process personal data — for example, data about visitors to our website, people who sign up for or administer a Cohvia account, and recipients of our marketing. This Policy is our notice to those individuals.
-- **As a processor**, when we process personal data contained in the data our customers connect or upload to the Service ("**Customer Data**") on their instructions. For that data, our customer is the controller, and our handling is governed by our [Data Processing Agreement](https://cohvia.com/legal/dpa). If you are an individual whose data appears in a customer's account (for example, because you were named in a transcript or email), please contact that customer; we will assist them in responding to you.
+- **As a processor**, when we process personal data contained in the data our customers connect or upload to the Service ("**Customer Data**") on their instructions. For that data, our customer is the controller, and our handling is governed by our [Data Processing Agreement](/legal/dpa). If you are an individual whose data appears in a customer's account (for example, because you were named in a transcript or email), please contact that customer; we will assist them in responding to you.
 
 If you are in the EEA, UK, Switzerland, the United States, or Canada (including Quebec), the regional sections below give you additional information and rights.
 
@@ -63,7 +63,7 @@ Cohvia is an AI-native platform. In providing the Service to customers, we proce
 
 ## 5. Who we share personal data with
 
-**Service providers / subprocessors.** We use trusted vendors to host and operate the Service (hosting, database, authentication, data integration, AI model routing, payments, and analytics). Our current subprocessors, their roles, and locations are listed at **[cohvia.com/about/subprocessors](https://cohvia.com/about/subprocessors)**. They are bound by contracts limiting their use of personal data to providing services to us.
+**Service providers / subprocessors.** We use trusted vendors to host and operate the Service (hosting, database, authentication, data integration, AI model routing, payments, and analytics). Our current subprocessors, their roles, and locations are listed at **[Subprocessors list](/legal/subprocessors)**. They are bound by contracts limiting their use of personal data to providing services to us.
 
 **Payment provider (independent controller).** Our payment provider, Dodo Payments, acts as **merchant of record** and as an **independent controller** of the payment and buyer data it collects directly from you to process transactions. Its handling of that data is governed by its own privacy policy.
 
@@ -99,13 +99,13 @@ We keep personal data only as long as needed for the purposes described, then de
 - **Billing records:** as required for tax and accounting (typically up to 7 years).
 - **Usage logs:** for a limited period for security and analytics.
 - **Marketing data:** until you unsubscribe or object.
-- **Customer Data (as processor):** per the retention and deletion terms of the [DPA](https://cohvia.com/legal/dpa), including any post-termination export window.
+- **Customer Data (as processor):** per the retention and deletion terms of the [DPA](/legal/dpa), including any post-termination export window.
 
 ---
 
 ## 9. Cookies and similar technologies
 
-We use cookies and similar technologies for essential functionality, security, and analytics. Where required by law (including in the EEA and, for non-essential cookies, the UK), we ask for your consent and provide controls to manage your preferences. You can also control cookies through your browser. See our full [Cookie Policy](https://cohvia.com/legal/cookies).
+We use cookies and similar technologies for essential functionality, security, and analytics. Where required by law (including in the EEA and, for non-essential cookies, the UK), we ask for your consent and provide controls to manage your preferences. You can also control cookies through your browser. See our full [Cookie Policy](/legal/cookies).
 
 ---
 
@@ -117,7 +117,7 @@ The Service is a business tool and is not directed to children. We do not knowin
 
 ## 11. Security
 
-We maintain administrative, technical, and organizational measures designed to protect personal data appropriate to the risk, including encryption in transit and at rest, access controls, and tenant isolation. No method of transmission or storage is completely secure, and we cannot guarantee absolute security. Our security measures applicable to Customer Data are described in the [DPA](https://cohvia.com/legal/dpa).
+We maintain administrative, technical, and organizational measures designed to protect personal data appropriate to the risk, including encryption in transit and at rest, access controls, and tenant isolation. No method of transmission or storage is completely secure, and we cannot guarantee absolute security. Our security measures applicable to Customer Data are described in the [DPA](/legal/dpa).
 
 ---
 

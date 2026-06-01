@@ -6,7 +6,7 @@ These Terms of Service ("**Terms**") are a binding agreement between **SACS Ecom
 
 **By clicking "Sign Up," "Create Account," "I Agree," or a similar button, or by accessing or using the Service, you agree to these Terms.** If you are accepting on behalf of an organization, you represent that you have authority to bind that organization, and "Customer" refers to that organization.
 
-These Terms incorporate by reference our [Privacy Policy](https://cohvia.com/legal/privacy), our [Data Processing Agreement](https://cohvia.com/legal/dpa) ("**DPA**"), our [Acceptable Use Policy](https://cohvia.com/legal/aup) ("**AUP**"), and our [Subprocessors list](https://cohvia.com/about/subprocessors). If you do not agree, do not use the Service.
+These Terms incorporate by reference our [Privacy Policy](/legal/privacy), our [Data Processing Agreement](/legal/dpa) ("**DPA**"), our [Acceptable Use Policy](/legal/acceptable-use) ("**AUP**"), and our [Subprocessors list](/legal/subprocessors). If you do not agree, do not use the Service.
 
 ---
 
@@ -26,7 +26,7 @@ These Terms incorporate by reference our [Privacy Policy](https://cohvia.com/leg
 
 2.1 **Plans.** The Service is offered in tiers (currently Starter, Growth, and Scale). Pricing combines a per-seat component and an AI-usage component, as described at the point of purchase. Tier features, seat allotments, and usage limits are as described on our pricing page or order screen at the time of purchase.
 
-2.2 **Payment processor.** Payments are processed by our third-party payment provider, Dodo Payments, acting as merchant of record. By subscribing, you also agree to the payment provider's applicable terms. The payment provider handles billing, taxes (including VAT/GST where applicable), and payment data; Cohvia does not store full payment card details. See our [Privacy Policy](https://cohvia.com/legal/privacy) for how payment data is handled.
+2.2 **Payment processor.** Payments are processed by our third-party payment provider, Dodo Payments, acting as merchant of record. By subscribing, you also agree to the payment provider's applicable terms. The payment provider handles billing, taxes (including VAT/GST where applicable), and payment data; Cohvia does not store full payment card details. See our [Privacy Policy](/legal/privacy) for how payment data is handled.
 
 2.3 **Billing cycle and auto-renewal.** Subscriptions are billed in advance on a recurring basis (monthly or annually, as selected) and **automatically renew** for successive periods of the same length unless cancelled before the renewal date. AI-usage charges above any included allotment are billed in arrears.
 
@@ -46,7 +46,7 @@ These Terms incorporate by reference our [Privacy Policy](https://cohvia.com/leg
 
 3.2 **Ownership.** As between the parties, **you own all Customer Data**, including your inputs and, to the extent permitted by law, the Outputs generated for you. We claim no ownership of Customer Data.
 
-3.3 **License to operate the Service.** You grant Cohvia a limited, worldwide, non-exclusive license to host, copy, process, transmit, and display Customer Data **solely** to provide, secure, maintain, and support the Service for you, and as further described in the [DPA](https://cohvia.com/legal/dpa). This license ends when Customer Data is deleted from the Service, subject to the retention terms in the DPA.
+3.3 **License to operate the Service.** You grant Cohvia a limited, worldwide, non-exclusive license to host, copy, process, transmit, and display Customer Data **solely** to provide, secure, maintain, and support the Service for you, and as further described in the [DPA](/legal/dpa). This license ends when Customer Data is deleted from the Service, subject to the retention terms in the DPA.
 
 3.4 **No training on Customer Data.** **Cohvia does not, and will not, use Customer Data to train, fine-tune, or improve any generative AI or machine-learning model.** We route AI processing to commercial model endpoints that are contractually committed not to train on submitted data; our current model provider's commercial terms state that the provider may not train its models on customer content submitted through its services. We will not change this no-training commitment for your Customer Data without your prior consent.
 
@@ -72,7 +72,7 @@ These Terms incorporate by reference our [Privacy Policy](https://cohvia.com/leg
 
 ## 5. Acceptable Use
 
-5.1 You and your users must comply with the [Acceptable Use Policy](https://cohvia.com/legal/aup). Without limiting it, you must not:
+5.1 You and your users must comply with the [Acceptable Use Policy](/legal/acceptable-use). Without limiting it, you must not:
 
 (a) use the Service in violation of any law or third-party right;
 
@@ -104,11 +104,11 @@ These Terms incorporate by reference our [Privacy Policy](https://cohvia.com/leg
 
 ## 7. Data Protection and Privacy
 
-7.1 Our handling of personal data is described in the [Privacy Policy](https://cohvia.com/legal/privacy).
+7.1 Our handling of personal data is described in the [Privacy Policy](/legal/privacy).
 
-7.2 Where Cohvia processes personal data contained in Customer Data on your behalf, you are the controller (or equivalent) and Cohvia is the processor. That processing is governed by the [Data Processing Agreement](https://cohvia.com/legal/dpa), which is incorporated into these Terms and which you accept by accepting these Terms.
+7.2 Where Cohvia processes personal data contained in Customer Data on your behalf, you are the controller (or equivalent) and Cohvia is the processor. That processing is governed by the [Data Processing Agreement](/legal/dpa), which is incorporated into these Terms and which you accept by accepting these Terms.
 
-7.3 Cohvia engages subprocessors to provide the Service, listed at [cohvia.com/about/subprocessors](https://cohvia.com/about/subprocessors). The DPA governs subprocessor authorization, notice of changes, and your right to object.
+7.3 Cohvia engages subprocessors to provide the Service, listed at [Subprocessors list](/legal/subprocessors). The DPA governs subprocessor authorization, notice of changes, and your right to object.
 
 ---
 
@@ -150,7 +150,7 @@ These Terms incorporate by reference our [Privacy Policy](https://cohvia.com/leg
 
 11.2 **Termination for cause.** Either party may terminate for the other's material breach not cured within 30 days of written notice. Cohvia may terminate or suspend immediately for breaches of Sections 5 (Acceptable Use) or non-payment, or where required by law.
 
-11.3 **Effect.** On termination: your right to use the Service ends; accrued payment obligations survive; and the return and deletion of Customer Data is handled as described in the [DPA](https://cohvia.com/legal/dpa) (including any export window and deletion timeline).
+11.3 **Effect.** On termination: your right to use the Service ends; accrued payment obligations survive; and the return and deletion of Customer Data is handled as described in the [DPA](/legal/dpa) (including any export window and deletion timeline).
 
 11.4 **Survival.** Sections 3.2, 3.4, 6, 8, 9, 10, 11.3–11.4, 12, and 13, and any terms that by their nature should survive, survive termination.
 
