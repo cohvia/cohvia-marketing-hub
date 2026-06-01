@@ -61,7 +61,7 @@ The table below lists the main cookies we use. We update it as our stack evolves
 ## 4. Your choices and controls
 
 ### 4.1 Cookie preferences
-Where required by law, we show a cookie banner the first time you visit. You can change your choices at any time at **[COOKIE SETTINGS URL — e.g., cohvia.com/cookie-settings]** or via the "Cookie preferences" link in the website footer.
+Where required by law, we show a cookie banner the first time you visit. You can change your choices at any time via the "Cookie preferences" link in the website footer.
 
 ### 4.2 Browser controls
 Most browsers let you block or delete cookies. Doing so for strictly necessary cookies will break sign-in and core functionality. For instructions, see your browser's help pages:
