@@ -2,7 +2,7 @@
 
 **Last updated: May 31, 2026**
 
-This Cookie Policy explains how **SACS Ecommerce Stores Inc.** (operating as "**Cohvia**," "**we**," "**us**") uses cookies and similar technologies on **cohvia.com** and in the Cohvia application (together, the "**Service**"). It supplements our [Privacy Policy](https://cohvia.com/legal/privacy).
+This Cookie Policy explains how **SACS Ecommerce Stores Inc.** (operating as "**Cohvia**," "**we**," "**us**") uses cookies and similar technologies on **cohvia.com** and in the Cohvia application (together, the "**Service**"). It supplements our [Privacy Policy](/legal/privacy).
 
 By using the Service you accept the use of strictly necessary cookies. For non-essential cookies, we ask for your consent where required by law and you can manage your preferences at any time.
 
@@ -61,7 +61,7 @@ The table below lists the main cookies we use. We update it as our stack evolves
 ## 4. Your choices and controls
 
 ### 4.1 Cookie preferences
-Where required by law, we show a cookie banner the first time you visit. You can change your choices at any time at **[COOKIE SETTINGS URL — e.g., cohvia.com/cookie-settings]** or via the "Cookie preferences" link in the website footer.
+Where required by law, we show a cookie banner the first time you visit. You can change your choices at any time via the "Cookie preferences" link in the website footer.
 
 ### 4.2 Browser controls
 Most browsers let you block or delete cookies. Doing so for strictly necessary cookies will break sign-in and core functionality. For instructions, see your browser's help pages:
@@ -81,7 +81,7 @@ In the EEA, we ask for opt-in consent for non-essential cookies before they are 
 
 ## 5. Third-party cookies and subprocessors
 
-Some cookies are set by our subprocessors when their services load in our pages — for example, authentication (Clerk), hosting (Vercel), and analytics. These third parties are bound by contracts limiting their use of personal data to providing services to us. The current list of subprocessors is at **[cohvia.com/about/subprocessors](https://cohvia.com/about/subprocessors)**.
+Some cookies are set by our subprocessors when their services load in our pages — for example, authentication (Clerk), hosting (Vercel), and analytics. These third parties are bound by contracts limiting their use of personal data to providing services to us. The current list of subprocessors is at **[Subprocessors list](/legal/subprocessors)**.
 
 ---
 

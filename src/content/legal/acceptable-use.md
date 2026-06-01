@@ -2,7 +2,7 @@
 
 **Last updated: May 31, 2026**
 
-This Acceptable Use Policy ("**AUP**") describes how the Cohvia Service may and may not be used. It is incorporated into the [Terms of Service](https://cohvia.com/legal/terms) and applies to **SACS Ecommerce Stores Inc.** (operating as "Cohvia") and to every customer, user, and visitor of the Service ("**you**").
+This Acceptable Use Policy ("**AUP**") describes how the Cohvia Service may and may not be used. It is incorporated into the [Terms of Service](/legal/terms) and applies to **SACS Ecommerce Stores Inc.** (operating as "Cohvia") and to every customer, user, and visitor of the Service ("**you**").
 
 We keep this AUP short and plain so you know where the lines are. Violations may result in suspension or termination of your account.
 

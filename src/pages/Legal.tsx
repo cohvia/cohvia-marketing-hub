@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from "react";
-import { NavLink, useParams, Navigate } from "react-router-dom";
+import { NavLink, useParams, Navigate, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Layout from "@/components/layout/Layout";
@@ -85,7 +85,32 @@ const Legal = () => {
           <article className="min-w-0">
             {active.content ? (
               <div className="legal-prose">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    a: ({ href = "", children, ...props }) => {
+                      if (href.startsWith("/")) {
+                        return (
+                          <Link to={href} {...(props as any)}>
+                            {children}
+                          </Link>
+                        );
+                      }
+                      const isExternal = /^https?:\/\//i.test(href);
+                      return (
+                        <a
+                          href={href}
+                          {...(isExternal
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {})}
+                          {...props}
+                        >
+                          {children}
+                        </a>
+                      );
+                    },
+                  }}
+                >
                   {active.content}
                 </ReactMarkdown>
               </div>
