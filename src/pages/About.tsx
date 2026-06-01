@@ -45,7 +45,7 @@ const values = [
   },
   {
     icon: Heart,
-    title: "Simple relationships",
+    title: "Real simple relationships",
     body: "It should be simple to have a human relationship with your customers. We relentlessly remove the friction that gets in the way.",
   },
 ];
