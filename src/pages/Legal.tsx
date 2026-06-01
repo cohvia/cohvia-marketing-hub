@@ -9,16 +9,21 @@ import cookiesMd from "@/content/legal/cookies.md?raw";
 import dpaMd from "@/content/legal/dpa.md?raw";
 import acceptableUseMd from "@/content/legal/acceptable-use.md?raw";
 import subprocessorsMd from "@/content/legal/subprocessors.md?raw";
+import termsFrMd from "@/content/legal/terms-fr.md?raw";
+import privacyFrMd from "@/content/legal/privacy-fr.md?raw";
 
 type Policy = {
   slug: string;
   label: string;
   content?: string;
+  parent?: string;
 };
 
 const policies: Policy[] = [
   { slug: "terms", label: "Terms of Service", content: termsMd },
+  { slug: "conditions", label: "Conditions d'utilisation (FR)", content: termsFrMd, parent: "terms" },
   { slug: "privacy", label: "Privacy Policy", content: privacyMd },
+  { slug: "confidentialite", label: "Politique de confidentialité (FR)", content: privacyFrMd, parent: "privacy" },
   { slug: "cookies", label: "Cookie Policy", content: cookiesMd },
   { slug: "dpa", label: "Data Processing Agreement", content: dpaMd },
   { slug: "subprocessors", label: "Subprocessors", content: subprocessorsMd },
@@ -52,6 +57,7 @@ const Legal = () => {
             <nav className="flex flex-col gap-1">
               {policies.map((p) => {
                 const disabled = !p.content;
+                const isChild = !!p.parent;
                 return (
                   <NavLink
                     key={p.slug}
@@ -59,7 +65,8 @@ const Legal = () => {
                     onClick={(e) => disabled && e.preventDefault()}
                     className={({ isActive }) =>
                       [
-                        "rounded-md px-3 py-2 text-sm transition-colors",
+                        "rounded-md py-2 text-sm transition-colors",
+                        isChild ? "pl-6 pr-3 text-xs" : "px-3",
                         isActive
                           ? "bg-secondary text-foreground font-medium"
                           : "text-muted-foreground hover:text-foreground hover:bg-secondary/60",
