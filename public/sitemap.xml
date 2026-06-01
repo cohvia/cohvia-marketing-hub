@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.cohvia.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.cohvia.com/product</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.cohvia.com/pricing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cohvia.com/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.cohvia.com/security</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/cs-leaders</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/csms</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/aes</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/team-of-one</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/customers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/relationship-intelligence</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/handovers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/planning-execution</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/book-health</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/solutions/scaling-leverage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cohvia.com/glossary/customer-context-platform</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cohvia.com/glossary/customer-narrative</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cohvia.com/glossary/account-narrative</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cohvia.com/glossary/ai-success-plans</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cohvia.com/legal/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.cohvia.com/legal/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.cohvia.com/legal/dpa</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.cohvia.com/legal/subprocessors</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.cohvia.com/legal/cookies</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.cohvia.com/legal/acceptable-use</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.cohvia.com/legal/confidentialite</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.cohvia.com/legal/conditions</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
