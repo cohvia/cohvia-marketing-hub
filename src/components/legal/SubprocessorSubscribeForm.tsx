@@ -38,7 +38,7 @@ const SubprocessorSubscribeForm = () => {
 
   return (
     <aside className="not-prose mt-4 mb-10 rounded-xl border border-border bg-secondary/30 pt-4 pb-6 px-6 md:pt-5 md:pb-8 md:px-8">
-      <h3 className="text-lg font-semibold text-foreground mb-1">
+      <h3 className="mt-0 text-lg font-semibold text-foreground mb-1">
         Get subprocessor change notifications
       </h3>
       <p className="text-sm text-secondary-foreground mb-5 max-w-prose">
