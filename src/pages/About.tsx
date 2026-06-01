@@ -44,15 +44,6 @@ const values = [
   },
 ];
 
-const perks = [
-  { icon: Globe, title: "Remote-first", body: "Work from wherever you do your best thinking." },
-  { icon: Clock, title: "Real time off", body: "Generous PTO with a minimum, not just a maximum." },
-  { icon: Heart, title: "Health, dental & vision", body: "Full coverage for you and your family." },
-  { icon: Coins, title: "Meaningful equity", body: "Early team, real ownership in what we build." },
-  { icon: GraduationCap, title: "Learning budget", body: "Books, courses, conferences — keep growing." },
-  { icon: Users, title: "Annual offsite", body: "We get together in person to build relationships that last." },
-];
-
 const About = () => {
   return (
     <Layout>
