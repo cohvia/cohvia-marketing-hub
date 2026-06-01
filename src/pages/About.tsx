@@ -67,7 +67,7 @@ const About = () => {
         </BrandLink>
       </PageHero>
 
-      {/* Mission — large statement */}
+      {/* Mission: large statement */}
       <Section id="story" pad="lg" width="default">
         <div className="grid md:grid-cols-5 gap-10 md:gap-16 items-start">
           <div className="md:col-span-2">
