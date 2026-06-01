@@ -12,7 +12,6 @@ const navLinks = [
   { label: "Product", to: "/product" },
   { label: "Pricing", to: "/pricing" },
   { label: "About", to: "/about" },
-  { label: "Blog", to: "/blog" },
 ];
 
 const solutionsByRole = [
