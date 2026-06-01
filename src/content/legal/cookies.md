@@ -1,4 +1,4 @@
-# Cohvia — Cookie Policy
+# Cookie Policy
 
 **Last updated: May 31, 2026**
 

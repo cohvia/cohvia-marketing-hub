@@ -1,4 +1,4 @@
-# Cohvia — Acceptable Use Policy
+# Acceptable Use Policy
 
 **Last updated: May 31, 2026**
 

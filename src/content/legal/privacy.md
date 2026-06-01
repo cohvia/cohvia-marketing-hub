@@ -1,4 +1,4 @@
-# Cohvia — Privacy Policy
+# Privacy Policy
 
 **Last updated: May 31, 2026**
 
