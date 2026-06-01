@@ -4,6 +4,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Layout from "@/components/layout/Layout";
 import termsMd from "@/content/legal/terms.md?raw";
+import privacyMd from "@/content/legal/privacy.md?raw";
+import cookiesMd from "@/content/legal/cookies.md?raw";
+import dpaMd from "@/content/legal/dpa.md?raw";
+import acceptableUseMd from "@/content/legal/acceptable-use.md?raw";
 
 type Policy = {
   slug: string;
@@ -13,11 +17,11 @@ type Policy = {
 
 const policies: Policy[] = [
   { slug: "terms", label: "Terms of Service", content: termsMd },
-  { slug: "privacy", label: "Privacy Policy" },
-  { slug: "cookies", label: "Cookie Policy" },
-  { slug: "dpa", label: "Data Processing Agreement" },
+  { slug: "privacy", label: "Privacy Policy", content: privacyMd },
+  { slug: "cookies", label: "Cookie Policy", content: cookiesMd },
+  { slug: "dpa", label: "Data Processing Agreement", content: dpaMd },
   { slug: "subprocessors", label: "Subprocessors" },
-  { slug: "acceptable-use", label: "Acceptable Use Policy" },
+  { slug: "acceptable-use", label: "Acceptable Use Policy", content: acceptableUseMd },
 ];
 
 const Legal = () => {
