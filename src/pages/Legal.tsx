@@ -11,6 +11,7 @@ import acceptableUseMd from "@/content/legal/acceptable-use.md?raw";
 import subprocessorsMd from "@/content/legal/subprocessors.md?raw";
 import termsFrMd from "@/content/legal/terms-fr.md?raw";
 import privacyFrMd from "@/content/legal/privacy-fr.md?raw";
+import SubprocessorSubscribeForm from "@/components/legal/SubprocessorSubscribeForm";
 
 type Policy = {
   slug: string;
@@ -122,6 +123,7 @@ const Legal = () => {
                 >
                   {active.content}
                 </ReactMarkdown>
+                {active.slug === "subprocessors" && <SubprocessorSubscribeForm />}
               </div>
             ) : (
               <div className="rounded-lg border border-border bg-card p-10 text-center">
