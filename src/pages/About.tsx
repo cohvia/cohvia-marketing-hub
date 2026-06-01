@@ -172,26 +172,6 @@ const About = () => {
         </Card>
       </Section>
 
-      {/* Working at Cohvia */}
-      <Section pad="lg" width="wide" tone="tinted">
-        <SectionHeader
-          eyebrow="Working at Cohvia"
-          title="A small team, building something we actually use."
-          subtitle="We're remote-first, deliberately small, and biased toward people who've lived the problem we're solving. We work hard at work, then we go live our lives."
-        />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {perks.map((p) => (
-            <Card key={p.title} className="p-6" interactive>
-              <IconBadge icon={p.icon} className="mb-4" />
-              <h3 className="text-base font-semibold mb-1.5">{p.title}</h3>
-              <p className="text-sm text-secondary-foreground leading-relaxed">
-                {p.body}
-              </p>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
       {/* Careers */}
       <Section id="careers" pad="lg" width="default">
         <SectionHeader
