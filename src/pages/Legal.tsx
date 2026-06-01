@@ -8,6 +8,7 @@ import privacyMd from "@/content/legal/privacy.md?raw";
 import cookiesMd from "@/content/legal/cookies.md?raw";
 import dpaMd from "@/content/legal/dpa.md?raw";
 import acceptableUseMd from "@/content/legal/acceptable-use.md?raw";
+import subprocessorsMd from "@/content/legal/subprocessors.md?raw";
 
 type Policy = {
   slug: string;
@@ -20,9 +21,10 @@ const policies: Policy[] = [
   { slug: "privacy", label: "Privacy Policy", content: privacyMd },
   { slug: "cookies", label: "Cookie Policy", content: cookiesMd },
   { slug: "dpa", label: "Data Processing Agreement", content: dpaMd },
-  { slug: "subprocessors", label: "Subprocessors" },
+  { slug: "subprocessors", label: "Subprocessors", content: subprocessorsMd },
   { slug: "acceptable-use", label: "Acceptable Use Policy", content: acceptableUseMd },
 ];
+
 
 const Legal = () => {
   const { slug } = useParams<{ slug: string }>();
