@@ -40,9 +40,8 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-2.5">
-              <li><span className="text-sm text-muted-foreground">Privacy</span></li>
-              <li><span className="text-sm text-muted-foreground">Terms</span></li>
-              <li><span className="text-sm text-muted-foreground">Security</span></li>
+              <li><Link to="/legal/privacy" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Privacy</Link></li>
+              <li><Link to="/legal/terms" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">Terms</Link></li>
             </ul>
           </div>
         </div>
