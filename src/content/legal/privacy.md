@@ -139,7 +139,7 @@ Depending on your state of residence (including California, Virginia, Colorado, 
 We handle personal information in accordance with Canada's Personal Information Protection and Electronic Documents Act and applicable provincial laws. You may request access to and correction of your personal information and may direct questions or complaints to our privacy contact, and ultimately to the Office of the Privacy Commissioner of Canada.
 
 ### 12.4 Quebec (Law 25)
-For Quebec residents: our designated person responsible for the protection of personal information is reachable at **privacy@cohvia.com**. We obtain consent appropriate to the sensitivity of the data; we have conducted (or will conduct) a privacy impact assessment before transferring Quebec residents' personal information outside Quebec; you have rights of access, correction, portability, and de-indexation; and where we make a decision based exclusively on automated processing, you may be informed and may submit observations. A French-language version of this Policy is available at **[FRENCH PRIVACY POLICY URL]**.
+For Quebec residents: our designated person responsible for the protection of personal information is reachable at **privacy@cohvia.com**. We obtain consent appropriate to the sensitivity of the data; we have conducted (or will conduct) a privacy impact assessment before transferring Quebec residents' personal information outside Quebec; you have rights of access, correction, portability, and de-indexation; and where we make a decision based exclusively on automated processing, you may be informed and may submit observations. A French-language version of this Policy is available on request at **privacy@cohvia.com**.
 
 ---
 
