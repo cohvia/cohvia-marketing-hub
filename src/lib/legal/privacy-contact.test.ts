@@ -11,7 +11,9 @@ describe("privacy-contact", () => {
 
   it("names the Quebec Law 25 privacy officer", () => {
     expect(PRIVACY_OFFICER.name).toBe("Sarah Cunningham-Scharf");
-    expect(PRIVACY_OFFICER.titleEn).toBeTruthy();
-    expect(PRIVACY_OFFICER.titleFr).toBeTruthy();
+    expect(PRIVACY_OFFICER.titleEn).toBe("Founder & CEO");
+    expect(PRIVACY_OFFICER.titleFr).toBe(
+      "Fondatrice et présidente-directrice générale",
+    );
   });
 });

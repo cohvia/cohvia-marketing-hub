@@ -86,7 +86,7 @@ Cohvia is established in Canada, which the European Commission has determined pr
 
 Depending on where you live, you may have rights to: access your personal data; correct it; delete it; restrict or object to processing; data portability; withdraw consent (without affecting prior processing); and lodge a complaint with a supervisory authority. We do not subject account users to solely automated decisions producing legal or similarly significant effects.
 
-To exercise any right, contact **privacy@cohvia.com** or use our [privacy request form](#privacy-request-form) on this page. We will respond within the timeframe required by applicable law (generally one month under GDPR/UK GDPR). We may need to verify your identity. These rights are free to exercise, subject to limited exceptions for manifestly unfounded or excessive requests.
+To exercise any right, contact **privacy@cohvia.com** or use the privacy request form at the bottom of this page. We will respond within the timeframe required by applicable law (generally one month under GDPR/UK GDPR). We may need to verify your identity. These rights are free to exercise, subject to limited exceptions for manifestly unfounded or excessive requests.
 
 If your personal data sits within a customer's Cohvia account (Customer Data), the customer is the controller; we will refer your request to them and assist them in responding.
 
@@ -140,7 +140,7 @@ Depending on your state of residence (including California, Virginia, Colorado, 
 We handle personal information in accordance with Canada's Personal Information Protection and Electronic Documents Act and applicable provincial laws. You may request access to and correction of your personal information and may direct questions or complaints to our privacy contact, and ultimately to the Office of the Privacy Commissioner of Canada.
 
 ### 12.4 Quebec (Law 25)
-For Quebec residents: our designated person responsible for the protection of personal information is **Sarah Cunningham-Scharf**, Founder & CEO, reachable at **privacy@cohvia.com**. We obtain consent appropriate to the sensitivity of the data; we have conducted (or will conduct) a privacy impact assessment before transferring Quebec residents' personal information outside Quebec; you have rights of access, correction, portability, and de-indexation; and where we make a decision based exclusively on automated processing, you may be informed and may submit observations. A French-language version of this Policy is available on request at **privacy@cohvia.com**.
+For Quebec residents: our designated person responsible for the protection of personal information is **Sarah Cunningham-Scharf**, Founder & CEO, reachable at **privacy@cohvia.com**. We obtain consent appropriate to the sensitivity of the data; we have conducted (or will conduct) a privacy impact assessment before transferring Quebec residents' personal information outside Quebec; you have rights of access, correction, portability, and de-indexation; and where we make a decision based exclusively on automated processing, you may be informed and may submit observations. A French-language version of this Policy is available at **[/legal/confidentialite](/legal/confidentialite)**.
 
 ---
 

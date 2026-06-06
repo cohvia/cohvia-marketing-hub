@@ -1,6 +1,6 @@
 # DSAR intake and handling process (COH-110)
 
-**Status:** Live on marketing site (form + email) — manual fulfilment until COH-105 tooling ships  
+**Status:** Form ships with the marketing site; **email delivery is live only after** `privacy@cohvia.com`, Loops template, Supabase secrets, and edge-function deploy are verified (see setup below). Manual fulfilment until COH-105 tooling ships.  
 **Last updated:** June 6, 2026  
 **Public surfaces:** [Privacy Policy](https://cohvia.com/legal/privacy) · [Formulaire FR](https://cohvia.com/legal/confidentialite)
 
@@ -19,6 +19,8 @@ Legal entity: **SACS Ecommerce Stores Inc.** (operating as Cohvia), 620 King Str
 2. **Web form** — embedded at the bottom of `/legal/privacy` and `/legal/confidentialite` on cohvia.com. Submissions are routed to **privacy@cohvia.com** via a Loops transactional email (`privacy-request-intake` Supabase Edge Function).
 
 Direct email remains valid; the form is an optional convenience.
+
+**Abuse controls:** honeypot field, per-IP rate limit (5 submissions/hour), and per-email rate limit. Cloudflare Turnstile can be added later if needed.
 
 ## One-time setup (email + Loops)
 
