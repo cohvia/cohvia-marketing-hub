@@ -1,6 +1,6 @@
 # Politique de confidentialité
 
-**Dernière mise à jour : 31 mai 2026**
+**Dernière mise à jour : 6 juin 2026**
 
 > **Note linguistique.** La présente version française est fournie pour les personnes au Québec et ailleurs au Canada. Une version anglaise est disponible à l'adresse [/legal/privacy](/legal/privacy). Pour les résidents du Québec, la version française prévaut dans la mesure requise par la *Charte de la langue française*.
 
@@ -21,6 +21,7 @@ Le responsable des renseignements personnels décrits dans la présente Politiqu
 > 620 King Street North, bureau 1004
 > Waterloo (Ontario) N2J 4G8, Canada
 > Personne-ressource pour la confidentialité : **privacy@cohvia.com**
+> Personne responsable de la protection des renseignements personnels (Loi 25) : **Sarah Cunningham-Scharf**, fondatrice et présidente-directrice générale
 
 ---
 
@@ -85,7 +86,7 @@ Cohvia est établie au Canada, dont la Commission européenne a reconnu qu'il of
 
 Selon votre lieu de résidence, vous pouvez avoir le droit : d'accéder à vos renseignements personnels; de les faire rectifier; de les faire supprimer; de limiter le traitement ou de vous y opposer; à la portabilité des données; de retirer votre consentement (sans incidence sur le traitement antérieur); et de déposer une plainte auprès d'une autorité de surveillance. Nous ne soumettons pas les utilisateurs de compte à des décisions fondées exclusivement sur un traitement automatisé produisant des effets juridiques ou des effets sérieux semblables.
 
-Pour exercer un droit, écrivez à **privacy@cohvia.com**. Nous répondrons dans le délai exigé par la loi applicable (généralement un mois en vertu du RGPD / RGPD du Royaume-Uni; au plus tard 30 jours en vertu de la Loi 25 au Québec). Nous pourrions devoir vérifier votre identité. L'exercice de ces droits est gratuit, sous réserve d'exceptions limitées pour les demandes manifestement infondées ou excessives.
+Pour exercer un droit, écrivez à **privacy@cohvia.com** ou utilisez notre [formulaire de demande relative à la vie privée](#privacy-request-form) sur cette page. Nous répondrons dans le délai exigé par la loi applicable (généralement un mois en vertu du RGPD / RGPD du Royaume-Uni; au plus tard 30 jours en vertu de la Loi 25 au Québec). Nous pourrions devoir vérifier votre identité. L'exercice de ces droits est gratuit, sous réserve d'exceptions limitées pour les demandes manifestement infondées ou excessives.
 
 Si vos renseignements personnels se trouvent dans le compte Cohvia d'un client (Données client), le client est le responsable; nous lui transmettrons votre demande et l'aiderons à y répondre.
 
@@ -139,7 +140,7 @@ Selon votre État de résidence (notamment la Californie, la Virginie, le Colora
 Nous traitons les renseignements personnels conformément à la *Loi sur la protection des renseignements personnels et les documents électroniques* du Canada et aux lois provinciales applicables. Vous pouvez demander l'accès à vos renseignements personnels et leur rectification, et adresser vos questions ou plaintes à notre personne-ressource pour la confidentialité, et ultimement au Commissariat à la protection de la vie privée du Canada.
 
 ### 12.4 Québec (Loi 25)
-Pour les résidents du Québec : la personne responsable de la protection des renseignements personnels que nous avons désignée peut être jointe à **privacy@cohvia.com**. Nous obtenons un consentement adapté à la sensibilité des renseignements; nous avons réalisé (ou réaliserons) une évaluation des facteurs relatifs à la vie privée avant de communiquer des renseignements personnels de résidents du Québec à l'extérieur du Québec; vous disposez de droits d'accès, de rectification, de portabilité et de désindexation; et lorsque nous rendons une décision fondée exclusivement sur un traitement automatisé, vous pouvez en être informé et présenter vos observations. En cas d'**incident de confidentialité** présentant un risque de préjudice sérieux, nous prendrons les mesures requises et procéderons aux avis exigés par la loi. Vous pouvez également porter plainte auprès de la **Commission d'accès à l'information du Québec**. La présente version française de cette Politique est offerte à l'adresse **[/legal/confidentialite](/legal/confidentialite)**.
+Pour les résidents du Québec : la personne responsable de la protection des renseignements personnels que nous avons désignée est **Sarah Cunningham-Scharf**, fondatrice et présidente-directrice générale, joignable à **privacy@cohvia.com**. Nous obtenons un consentement adapté à la sensibilité des renseignements; nous avons réalisé (ou réaliserons) une évaluation des facteurs relatifs à la vie privée avant de communiquer des renseignements personnels de résidents du Québec à l'extérieur du Québec; vous disposez de droits d'accès, de rectification, de portabilité et de désindexation; et lorsque nous rendons une décision fondée exclusivement sur un traitement automatisé, vous pouvez en être informé et présenter vos observations. En cas d'**incident de confidentialité** présentant un risque de préjudice sérieux, nous prendrons les mesures requises et procéderons aux avis exigés par la loi. Vous pouvez également porter plainte auprès de la **Commission d'accès à l'information du Québec**. La présente version française de cette Politique est offerte à l'adresse **[/legal/confidentialite](/legal/confidentialite)**.
 
 ---
 
