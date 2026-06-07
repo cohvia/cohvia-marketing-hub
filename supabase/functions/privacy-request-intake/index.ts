@@ -245,7 +245,8 @@ Deno.serve(async (req) => {
 
     console.log('privacy-request-intake: Loops call finished (HTTP ok, not rejected by Loops)');
 
-    return new Response(JSON.stringify({ ok: true }), {
+    // `delivery` lets you tell honeypot (`{ ok: true }` only) from Loops path in DevTools → Network.
+    return new Response(JSON.stringify({ ok: true, delivery: 'loops' }), {
       status: 200,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
