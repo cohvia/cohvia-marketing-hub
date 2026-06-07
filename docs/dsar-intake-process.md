@@ -71,6 +71,8 @@ supabase functions deploy privacy-request-intake
 
 **No email but the form succeeds:** The Loops API can return **HTTP 200** with a JSON body `{ "success": false, "message": "…" }` (e.g. wrong transactional ID, missing data variable, or invalid recipient). Check **Supabase → Edge Function → Logs** for `Loops rejected send` and the message; fix the template/variables in Loops, then redeploy if you changed env. Also check **spam** for `privacy@cohvia.com` and Loops → **Sending** / activity for the send.
 
+**Supabase shows POST 200 but you only see `booted` / `shutdown` in Logs:** Use **Edge Functions → _your function_ → Invocations** for status and timing. In the browser **Network** tab, open the `privacy-request-intake` response: **`{ "ok": true, "delivery": "loops" }`** means the handler finished the Loops branch; **`{ "ok": true }` only** means the honeypot path (no Loops call)—often autofill on the hidden field.
+
 ## Handling workflow (manual v1)
 
 Use this checklist for every request. Target response times:
