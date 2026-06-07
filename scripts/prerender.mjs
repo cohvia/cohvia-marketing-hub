@@ -63,6 +63,15 @@ function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+function isCookiebotRequest(urlString) {
+  try {
+    const { hostname } = new URL(urlString);
+    return hostname === "cookiebot.com" || hostname.endsWith(".cookiebot.com");
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Stock Playwright Chromium expects system libs (e.g. NSPR) missing on Vercel's build image.
  * On Vercel we use @sparticuz/chromium + playwright-core (bundled binary + args for serverless).
@@ -150,6 +159,18 @@ async function main() {
     // context after each route can tear down the whole browser. Full navigations reset the document
     // so react-helmet-async does not leak between URLs.
     const context = await browser.newContext();
+    // Cookiebot keys consent + injected scripts to document host. Prerender uses
+    // http://127.0.0.1 — if uc.js runs here, dist/*.html ships cc.js/configuration
+    // with referer=127.0.0.1 and analytics show no real consents. Block Cookiebot
+    // during capture only; production browsers still load uc.js from index.html.
+    await context.route("**/*", async (route) => {
+      const url = route.request().url();
+      if (isCookiebotRequest(url)) {
+        await route.abort();
+        return;
+      }
+      await route.continue();
+    });
     const page = await context.newPage();
     try {
       for (const path of paths) {
