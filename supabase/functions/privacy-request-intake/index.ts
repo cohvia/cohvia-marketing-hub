@@ -221,21 +221,19 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Loops documents success as `{ "success": true }`. Treat anything else
-    // (including HTTP 200 + `{ success: false }` or an empty / non-JSON body) as failure.
+    // Loops returns HTTP 200 with `{ success: false, message }` on validation errors.
+    // Success is usually `{ success: true }`, but some responses may be empty / non-JSON.
+    // Only fail on explicit `success: false` to avoid false 502s.
     const loopsPayload = (await response.json().catch(() => null)) as {
       success?: boolean;
       message?: string;
     } | null;
 
-    if (!loopsPayload || loopsPayload.success !== true) {
-      const detail =
-        loopsPayload && typeof loopsPayload === 'object' && loopsPayload.message
-          ? loopsPayload.message
-          : loopsPayload === null
-            ? 'empty or non-JSON response'
-            : `success field: ${String(loopsPayload.success)}`;
-      console.error('privacy-request-intake: Loops did not confirm success', detail);
+    if (loopsPayload && loopsPayload.success === false) {
+      console.error(
+        'privacy-request-intake: Loops rejected send',
+        loopsPayload.message ?? 'no message',
+      );
       return new Response(
         JSON.stringify({
           error:
@@ -245,7 +243,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    console.log('privacy-request-intake: Loops accepted (success path)');
+    console.log('privacy-request-intake: Loops call finished (HTTP ok, not rejected by Loops)');
 
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
