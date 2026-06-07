@@ -1,1 +1,11 @@
-project_id = "yxhkfymlpczwpqamqvem"
+# Linked to production Cohvia — update project_id if you use a different Supabase project.
+project_id = "yawquhkjrgyluqbugwas"
+
+# Marketing site has no Supabase Auth for anonymous visitors. `functions.invoke`
+# does not send a user JWT, so JWT verification must be off for these public intakes.
+# Security: honeypot + rate limits in each function handler.
+[functions.privacy-request-intake]
+verify_jwt = false
+
+[functions.subscribe-subprocessors]
+verify_jwt = false
