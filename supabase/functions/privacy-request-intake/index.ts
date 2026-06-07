@@ -158,7 +158,7 @@ Deno.serve(async (req) => {
     const transactionalId = Deno.env.get('LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID');
 
     if (!(apiKey && transactionalId)) {
-      console.error('privacy-request-intake: Loops not configured');
+      console.error('privacy-request-intake: Loops not configured (missing LOOPS_API_KEY or LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID)');
       return new Response(
         JSON.stringify({
           error: 'Privacy request intake is temporarily unavailable. Please email privacy@cohvia.com.',
@@ -166,6 +166,8 @@ Deno.serve(async (req) => {
         { status: 503, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
       );
     }
+
+    console.log('privacy-request-intake: validated, invoking Loops transactional');
 
     const submittedAt = new Date().toISOString();
     const controller = new AbortController();
@@ -209,7 +211,7 @@ Deno.serve(async (req) => {
 
     if (!response.ok) {
       console.error(
-        'privacy-request-intake: Loops send failed',
+        'privacy-request-intake: Loops HTTP error',
         response.status,
         response.headers.get('x-request-id') ?? 'no-request-id',
       );
@@ -218,6 +220,28 @@ Deno.serve(async (req) => {
         { status: 502, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
       );
     }
+
+    // Loops often returns HTTP 200 with JSON { success: false, message: "..." } on validation errors.
+    const loopsPayload = (await response.json().catch(() => null)) as {
+      success?: boolean;
+      message?: string;
+    } | null;
+
+    if (loopsPayload && loopsPayload.success === false) {
+      console.error(
+        'privacy-request-intake: Loops rejected send',
+        loopsPayload.message ?? 'no message',
+      );
+      return new Response(
+        JSON.stringify({
+          error:
+            'Could not submit your request. If this keeps happening, email privacy@cohvia.com directly.',
+        }),
+        { status: 502, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
+      );
+    }
+
+    console.log('privacy-request-intake: Loops accepted (success path)');
 
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
