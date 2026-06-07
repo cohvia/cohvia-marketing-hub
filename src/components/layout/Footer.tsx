@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import cohviaLogo from "@/assets/cohvia-wordmark-white.svg";
+import { openCookiebotConsentSettings } from "@/lib/cookiebotPreferences";
 
 const linkClass =
   "text-sm text-secondary-foreground hover:text-foreground transition-colors";
@@ -57,6 +58,20 @@ const Footer = () => {
               <li><Link to="/glossary/ai-success-plans" className={linkClass}>AI Success Plans</Link></li>
               <li><Link to="/security" className={linkClass}>Security</Link></li>
               <li><Link to="/legal/privacy" className={linkClass}>Privacy</Link></li>
+              <li>
+                <a
+                  id="cookie-preferences"
+                  href="#"
+                  className={linkClass}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openCookiebotConsentSettings();
+                  }}
+                >
+                  Cookie preferences
+                </a>
+              </li>
+              <li><Link to="/legal/cookies" className={linkClass}>Cookie Policy</Link></li>
               <li><Link to="/legal/terms" className={linkClass}>Terms</Link></li>
               <li><Link to="/legal/dpa" className={linkClass}>DPA</Link></li>
               <li><Link to="/legal/subprocessors" className={linkClass}>Subprocessors</Link></li>
