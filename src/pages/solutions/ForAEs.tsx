@@ -11,6 +11,7 @@ const ForAEs = () => (
     chip="For AEs"
     headline="Five minutes of your time, a faster-growing account."
     subheadline="You spent months getting to know this customer. Cohvia is how that understanding actually reaches the CSM — so the account ramps faster, renews cleaner, and stays open to the next conversation with you."
+    seoPath="/solutions/aes"
     pain={{
       headline: "The handover format was never built for what you actually know.",
       body: (

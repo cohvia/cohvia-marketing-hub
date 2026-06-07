@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 
 import {
   ArrowRight,
@@ -130,6 +131,11 @@ const MockFrame = ({ children }: { children: React.ReactNode }) => (
 const Product = () => {
   return (
     <Layout>
+      <SEO
+        title="Product — Cohvia Customer Context Platform"
+        description="Cohvia starts with the story, not the spreadsheet. AI builds a living understanding of every customer relationship and connects it to shared plans you execute together."
+        path="/product"
+      />
       <PageHero
         eyebrow="Customer Context Platform"
         title={

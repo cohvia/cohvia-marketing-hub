@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import {
   PageHero,
   Section,
@@ -94,6 +95,11 @@ const compliance = [
 const Security = () => {
   return (
     <Layout>
+      <SEO
+        title="Security — Cohvia Trust Center"
+        description="Customer Success is built on trust. The same goes for the platform you run it on. Here's how we protect your data and your customers' data."
+        path="/security"
+      />
       <PageHero
         eyebrow="Trust"
         title={

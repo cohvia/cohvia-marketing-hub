@@ -6,6 +6,7 @@ const ScalingLeverage = () => (
     chip="Use Case"
     headline="Do more with fewer people, without losing the quality."
     subheadline="Your team is being asked to cover more accounts with the same headcount. The rest of the industry is automating the relationship away. Cohvia is built to scale the understanding instead."
+    seoPath="/solutions/scaling-leverage"
     pain={{
       headline: "The math the team is being asked to do doesn't add up.",
       body: (

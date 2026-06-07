@@ -10,6 +10,7 @@ const RelationshipIntelligence = () => (
     chip="Use Case"
     headline="Understand the why behind every customer relationship."
     subheadline="Your CRM holds the what and the when. Cohvia holds the why: why they chose you, why they stay, what's quietly putting the relationship at risk."
+    seoPath="/solutions/relationship-intelligence"
     pain={{
       headline: "You have a lot of data about your customers. You don't have a lot of understanding.",
       body: (

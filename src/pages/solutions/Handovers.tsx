@@ -9,6 +9,7 @@ const Handovers = () => (
     chip="Use Case"
     headline="Context that actually transfers."
     subheadline="Sales to CS, and CSM to CSM. Every handover is a moment where the understanding either survives or quietly dies. Cohvia is how it survives."
+    seoPath="/solutions/handovers"
     pain={{
       headline: "The handover is where the why goes to die.",
       body: (

@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import { Check } from "lucide-react";
 import { PageHero, Section, BrandLink, CTASection } from "@/components/ui-kit";
 import { cn } from "@/lib/utils";
@@ -59,6 +60,11 @@ const tiers = [
 const Pricing = () => {
   return (
     <Layout>
+      <SEO
+        title="Pricing — Cohvia"
+        description="No credit card to begin, and no surprise line items later. The Free tier is a real product, not a trial."
+        path="/pricing"
+      />
       <PageHero
         eyebrow="Pricing"
         title="Start free. Pay when the book grows."

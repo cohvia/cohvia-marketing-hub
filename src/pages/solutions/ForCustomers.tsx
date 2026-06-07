@@ -10,6 +10,7 @@ const ForCustomers = () => (
     chip="For Customers"
     headline="Hit the goals you bought the product for."
     subheadline="See what you're working toward, what's been done, and what's next — so you actually get the ROI you signed up for, instead of wondering where things stand."
+    seoPath="/solutions/customers"
     pain={{
       headline: "You bought this to solve a problem. Where are you on that?",
       body: (

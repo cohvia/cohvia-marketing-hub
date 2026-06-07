@@ -17,6 +17,7 @@ const TeamOfOne = () => (
       </>
     }
     subheadline="You're the entire CS function, and you need a system that holds the context a whole team would normally carry."
+    seoPath="/solutions/team-of-one"
     pain={{
       headline: "You're doing the job of four people. Don't let your customers feel it.",
       body: (

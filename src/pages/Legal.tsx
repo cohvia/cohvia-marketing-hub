@@ -3,6 +3,7 @@ import { NavLink, useParams, Navigate, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Layout from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import termsMd from "@/content/legal/terms.md?raw";
 import privacyMd from "@/content/legal/privacy.md?raw";
 import cookiesMd from "@/content/legal/cookies.md?raw";
@@ -49,6 +50,11 @@ const Legal = () => {
 
   return (
     <Layout>
+      <SEO
+        title={`${active.label} | Cohvia`}
+        description={`${active.label} for Cohvia's Customer Context Platform.`}
+        path={`/legal/${active.slug}`}
+      />
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-12">
           {/* Side menu */}

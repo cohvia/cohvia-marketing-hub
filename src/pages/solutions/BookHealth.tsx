@@ -11,6 +11,7 @@ const BookHealth = () => (
     chip="Use Case"
     headline="See across your book. Act before things break."
     subheadline="Risk signals and portfolio visibility for CS Leaders and CSMs, with the context that explains why each signal matters."
+    seoPath="/solutions/book-health"
     pain={{
       headline: "A health score on its own isn't a strategy.",
       body: (
