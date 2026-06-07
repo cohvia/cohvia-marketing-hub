@@ -66,15 +66,19 @@ function sleep(ms) {
 /**
  * Stock Playwright Chromium expects system libs (e.g. NSPR) missing on Vercel's build image.
  * On Vercel we use @sparticuz/chromium + playwright-core (bundled binary + args for serverless).
+ * Sparticuz may report headless: "shell"; coerce to boolean for Playwright launch().
  */
 async function launchBrowserForPrerender() {
   if (process.env.VERCEL === "1") {
     const chromiumPack = (await import("@sparticuz/chromium")).default;
     const { chromium: pwChromium } = await import("playwright-core");
+    // Sparticuz exposes headless as true | "shell"; Playwright 1.57 launch() expects boolean only.
+    const headless =
+      chromiumPack.headless === "shell" ? true : Boolean(chromiumPack.headless);
     return pwChromium.launch({
       args: chromiumPack.args,
       executablePath: await chromiumPack.executablePath(),
-      headless: chromiumPack.headless,
+      headless,
     });
   }
   const { chromium } = await import("playwright");
