@@ -13,6 +13,7 @@ const ForCSLeaders = () => (
     chip="For CS Leaders"
     headline="Scale the team without losing the human touch."
     subheadline="More accounts, fewer people, same expectation of quality. Cohvia gives you visibility across the book through understanding, not another dashboard."
+    seoPath="/solutions/cs-leaders"
     pain={{
       headline: "You shouldn't have to ask a CSM what's going on with their accounts.",
       body: (

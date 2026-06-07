@@ -10,6 +10,7 @@ const PlanningExecution = () => (
     chip="Use Case"
     headline="Shared plans for every stage of the relationship."
     subheadline="Success plans, onboarding, and renewals that are structured, collaborative, and visible to the customer. Informed by the Narrative, not built from scratch every time."
+    seoPath="/solutions/planning-execution"
     pain={{
       headline: "A plan in a Google Doc nobody updates isn't really a plan.",
       body: (

@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import {
   PageHero,
   Section,
@@ -53,6 +54,11 @@ const values = [
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="About Cohvia — Customer Success platform"
+        description="Cohvia is the Customer Success platform we wished existed when we were the ones running the QBRs, dreading the handover calls, and watching context disappear into someone's head."
+        path="/about"
+      />
       {/* Hero */}
       <PageHero
         eyebrow="Company"

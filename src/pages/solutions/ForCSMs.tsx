@@ -13,6 +13,7 @@ const ForCSMs = () => (
     chip="For CSMs"
     headline="Know every account like it's your only one."
     subheadline="You care about every account you manage. Cohvia helps you show up for each one like it's the only one."
+    seoPath="/solutions/csms"
     pain={{
       headline: "You'd prep for every call if you had the time.",
       body: (

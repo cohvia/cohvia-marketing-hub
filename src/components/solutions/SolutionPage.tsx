@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Layout from "@/components/layout/Layout";
+import { SEO } from "@/components/SEO";
 import {
   PageHero,
   Section,
@@ -22,6 +23,8 @@ type SolutionPageProps = {
   chip: string;
   headline: ReactNode;
   subheadline: string;
+  /** Route path for canonical / OG URLs, e.g. "/solutions/team-of-one" */
+  seoPath: string;
   pain: { headline: string; body: ReactNode };
   helpLabel?: string;
   blocks: Block[];
@@ -32,6 +35,7 @@ const SolutionPage = ({
   chip,
   headline,
   subheadline,
+  seoPath,
   pain,
   helpLabel = "How Cohvia Helps",
   blocks,
@@ -39,6 +43,7 @@ const SolutionPage = ({
 }: SolutionPageProps) => {
   return (
     <Layout>
+      <SEO title={`${chip} | Cohvia`} description={subheadline} path={seoPath} />
       <PageHero eyebrow={chip} title={headline} subtitle={subheadline}>
         <BrandLink href="https://app.cohvia.com/sign-up" withArrow>
           Sign Up Free
