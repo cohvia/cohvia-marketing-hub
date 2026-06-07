@@ -3,6 +3,65 @@ import { supabase } from "@/integrations/supabase/client";
 import { BrandButton } from "@/components/ui-kit";
 import { PRIVACY_CONTACT_EMAIL } from "@/lib/legal/privacy-contact";
 
+/**
+ * On non-2xx, `supabase.functions.invoke` returns `data: null` and
+ * `error.message` is always the generic "Edge Function returned a non-2xx…".
+ * The real payload is the failed `Response`: use `response` from the invoke
+ * result and/or `error.context`, read the body as text, then JSON.parse.
+ */
+function functionsFailureResponse(
+  error: unknown,
+  invokeResponse: Response | undefined,
+): Response | null {
+  if (invokeResponse instanceof Response) return invokeResponse;
+  if (
+    error &&
+    typeof error === "object" &&
+    "context" in error &&
+    (error as { context: unknown }).context instanceof Response
+  ) {
+    return (error as { context: Response }).context;
+  }
+  return null;
+}
+
+async function edgeFunctionErrorDetail(
+  error: unknown,
+  data: unknown,
+  invokeResponse: Response | undefined,
+  fallback: string,
+): Promise<string> {
+  if (
+    data &&
+    typeof data === "object" &&
+    "error" in data &&
+    typeof (data as { error: unknown }).error === "string"
+  ) {
+    return (data as { error: string }).error;
+  }
+
+  const res = functionsFailureResponse(error, invokeResponse);
+  if (res) {
+    const raw = (await res.clone().text().catch(() => "")).trim();
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw) as { error?: unknown };
+        if (typeof parsed.error === "string" && parsed.error.length > 0) {
+          return parsed.error;
+        }
+      } catch {
+        if (raw.length <= 400 && !raw.includes("<")) {
+          return raw;
+        }
+      }
+    }
+    return `${fallback} (HTTP ${res.status})`;
+  }
+
+  if (error instanceof Error) return error.message;
+  return fallback;
+}
+
 type Status = "idle" | "loading" | "success" | "error";
 type Locale = "en" | "fr";
 
@@ -118,9 +177,8 @@ const PrivacyRequestForm = ({ locale = "en" }: PrivacyRequestFormProps) => {
     setMessage("");
 
     try {
-      const { data, error } = await supabase.functions.invoke(
-        "privacy-request-intake",
-        {
+      const { data, error, response: invokeResponse } =
+        await supabase.functions.invoke("privacy-request-intake", {
           body: {
             fullName,
             email,
@@ -131,13 +189,12 @@ const PrivacyRequestForm = ({ locale = "en" }: PrivacyRequestFormProps) => {
             companyWebsite,
             locale,
           },
-        },
-      );
+        });
 
       if (error || (data as { error?: string })?.error) {
         setStatus("error");
         setMessage(
-          (data as { error?: string })?.error || error?.message || t.error,
+          await edgeFunctionErrorDetail(error, data, invokeResponse, t.error),
         );
         return;
       }
