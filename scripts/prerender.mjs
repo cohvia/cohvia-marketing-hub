@@ -66,8 +66,15 @@ function sleep(ms) {
 /**
  * Stock Playwright Chromium expects system libs (e.g. NSPR) missing on Vercel's build image.
  * On Vercel we use @sparticuz/chromium + playwright-core (bundled binary + args for serverless).
- * Sparticuz may report headless: "shell"; coerce to boolean for Playwright launch().
+ * Sparticuz may report headless as true | "shell"; coerce to boolean for Playwright launch().
+ * Sparticuz args often include --headless=shell; strip those so Playwright's headless option is sole source.
  */
+function filterSparticuzLaunchArgs(args) {
+  return (args ?? []).filter(
+    (a) => typeof a === "string" && !/^--headless(=|$)/.test(a)
+  );
+}
+
 async function launchBrowserForPrerender() {
   if (process.env.VERCEL === "1") {
     const chromiumPack = (await import("@sparticuz/chromium")).default;
@@ -76,7 +83,7 @@ async function launchBrowserForPrerender() {
     const headless =
       chromiumPack.headless === "shell" ? true : Boolean(chromiumPack.headless);
     return pwChromium.launch({
-      args: chromiumPack.args,
+      args: filterSparticuzLaunchArgs(chromiumPack.args),
       executablePath: await chromiumPack.executablePath(),
       headless,
     });
@@ -139,11 +146,13 @@ async function main() {
   const browser = await launchBrowserForPrerender();
   try {
     server = await startPreviewServer();
-    // Fresh document per URL so react-helmet-async head tags never leak between routes.
-    for (const path of paths) {
-      const context = await browser.newContext();
-      const page = await context.newPage();
-      try {
+    // One context + one page: Sparticuz/Chromium is often built with --single-process; closing a
+    // context after each route can tear down the whole browser. Full navigations reset the document
+    // so react-helmet-async does not leak between URLs.
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    try {
+      for (const path of paths) {
         const url = `${previewOrigin}${path === "/" ? "/" : path}`;
         await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120_000 });
         await page.waitForFunction(
@@ -154,41 +163,41 @@ async function main() {
           },
           { timeout: 120_000 }
         );
-      // Let layout effects / short async head updates settle (Helmet).
-      await sleep(300);
-      // react-helmet-async appends tags with data-rh; index.html still has default OG/twitter/description.
-      // Drop the stale shell copies so the first matching tag in source is the route-specific one.
-      await page.evaluate(() => {
-        const head = document.head;
-        const dupSelectors = [
-          'meta[name="description"]',
-          'meta[property="og:title"]',
-          'meta[property="og:description"]',
-          'meta[property="og:url"]',
-          'meta[property="og:type"]',
-          'meta[name="twitter:card"]',
-          'meta[name="twitter:title"]',
-          'meta[name="twitter:description"]',
-        ];
-        for (const sel of dupSelectors) {
-          const nodes = Array.from(head.querySelectorAll(sel));
-          const withRh = nodes.filter((n) => n.hasAttribute("data-rh"));
-          if (withRh.length === 0) continue;
-          for (const n of nodes) {
-            if (!n.hasAttribute("data-rh")) {
-              n.remove();
+        // Let layout effects / short async head updates settle (Helmet).
+        await sleep(300);
+        // react-helmet-async appends tags with data-rh; index.html still has default OG/twitter/description.
+        // Drop the stale shell copies so the first matching tag in source is the route-specific one.
+        await page.evaluate(() => {
+          const head = document.head;
+          const dupSelectors = [
+            'meta[name="description"]',
+            'meta[property="og:title"]',
+            'meta[property="og:description"]',
+            'meta[property="og:url"]',
+            'meta[property="og:type"]',
+            'meta[name="twitter:card"]',
+            'meta[name="twitter:title"]',
+            'meta[name="twitter:description"]',
+          ];
+          for (const sel of dupSelectors) {
+            const nodes = Array.from(head.querySelectorAll(sel));
+            const withRh = nodes.filter((n) => n.hasAttribute("data-rh"));
+            if (withRh.length === 0) continue;
+            for (const n of nodes) {
+              if (!n.hasAttribute("data-rh")) {
+                n.remove();
+              }
             }
           }
-        }
-      });
-      const html = await page.content();
+        });
+        const html = await page.content();
         const outFile = distHtmlPathForUrlPath(path);
         mkdirSync(dirname(outFile), { recursive: true });
         writeFileSync(outFile, html, "utf8");
         console.log(`[prerender] wrote ${outFile.replace(root + "/", "")}`);
-      } finally {
-        await context.close();
       }
+    } finally {
+      await context.close();
     }
   } finally {
     await browser.close().catch(() => {});
