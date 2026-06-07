@@ -67,6 +67,10 @@ supabase functions deploy privacy-request-intake
 2. Submit a test request with a throwaway detail line (e.g. “COH-110 test — please ignore”).
 3. Confirm **privacy@cohvia.com** receives the Loops notification.
 
+**Troubleshooting:** If the form shows “Edge Function returned a non-2xx status code”, the usual cause is **JWT verification** left on for a public form. Anonymous visitors are not signed in to Supabase Auth, so the platform rejects the request before your handler runs. Fix: in `supabase/config.toml` set `verify_jwt = false` for `privacy-request-intake` and `subscribe-subprocessors`, then redeploy those functions (or turn off “Verify JWT” for each function in Supabase Dashboard → Edge Functions → the function → settings).
+
+**No email but the form succeeds:** The Loops API can return **HTTP 200** with a JSON body `{ "success": false, "message": "…" }` (e.g. wrong transactional ID, missing data variable, or invalid recipient). Check **Supabase → Edge Function → Logs** for `Loops rejected send` and the message; fix the template/variables in Loops, then redeploy if you changed env. Also check **spam** for `privacy@cohvia.com` and Loops → **Sending** / activity for the send.
+
 ## Handling workflow (manual v1)
 
 Use this checklist for every request. Target response times:
