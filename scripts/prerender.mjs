@@ -8,7 +8,6 @@ import { spawn } from "node:child_process";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { chromium } from "playwright";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -64,6 +63,24 @@ function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+/**
+ * Stock Playwright Chromium expects system libs (e.g. NSPR) missing on Vercel's build image.
+ * On Vercel we use @sparticuz/chromium + playwright-core (bundled binary + args for serverless).
+ */
+async function launchBrowserForPrerender() {
+  if (process.env.VERCEL === "1") {
+    const chromiumPack = (await import("@sparticuz/chromium")).default;
+    const { chromium: pwChromium } = await import("playwright-core");
+    return pwChromium.launch({
+      args: chromiumPack.args,
+      executablePath: await chromiumPack.executablePath(),
+      headless: chromiumPack.headless,
+    });
+  }
+  const { chromium } = await import("playwright");
+  return chromium.launch({ headless: true });
+}
+
 function startPreviewServer() {
   const child = spawn(
     process.platform === "win32" ? "npx.cmd" : "npx",
@@ -115,7 +132,7 @@ async function main() {
   writeFileSync(join(dist, "spa-fallback.html"), spaShell, "utf8");
 
   let server;
-  const browser = await chromium.launch({ headless: true });
+  const browser = await launchBrowserForPrerender();
   try {
     server = await startPreviewServer();
     // Fresh document per URL so react-helmet-async head tags never leak between routes.
