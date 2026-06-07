@@ -167,7 +167,7 @@ const PrivacyRequestForm = ({ locale = "en" }: PrivacyRequestFormProps) => {
   const [relationship, setRelationship] = useState<Relationship>("data_subject");
   const [organizationName, setOrganizationName] = useState("");
   const [details, setDetails] = useState("");
-  const [companyWebsite, setCompanyWebsite] = useState("");
+  const [leaveBlankHp, setLeaveBlankHp] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
@@ -186,7 +186,7 @@ const PrivacyRequestForm = ({ locale = "en" }: PrivacyRequestFormProps) => {
             relationship,
             organizationName,
             details,
-            companyWebsite,
+            leave_blank_honeypot: leaveBlankHp,
             locale,
           },
         });
@@ -207,7 +207,7 @@ const PrivacyRequestForm = ({ locale = "en" }: PrivacyRequestFormProps) => {
       setRelationship("data_subject");
       setOrganizationName("");
       setDetails("");
-      setCompanyWebsite("");
+      setLeaveBlankHp("");
     } catch {
       setStatus("error");
       setMessage(t.error);
@@ -238,14 +238,14 @@ const PrivacyRequestForm = ({ locale = "en" }: PrivacyRequestFormProps) => {
 
       <form onSubmit={onSubmit} className="flex max-w-xl flex-col gap-4">
         <div className="absolute -left-[9999px]" aria-hidden="true">
-          <label htmlFor="companyWebsite">Company website</label>
+          <label htmlFor="leave-blank-hp">Leave blank</label>
           <input
-            id="companyWebsite"
+            id="leave-blank-hp"
             type="text"
             tabIndex={-1}
-            autoComplete="off"
-            value={companyWebsite}
-            onChange={(e) => setCompanyWebsite(e.target.value)}
+            autoComplete="new-password"
+            value={leaveBlankHp}
+            onChange={(e) => setLeaveBlankHp(e.target.value)}
           />
         </div>
 

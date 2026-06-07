@@ -20,7 +20,7 @@ Legal entity: **SACS Ecommerce Stores Inc.** (operating as Cohvia), 620 King Str
 
 Direct email remains valid; the form is an optional convenience.
 
-**Abuse controls:** honeypot field, per-IP rate limit (5 submissions/hour), and per-email rate limit. Cloudflare Turnstile can be added later if needed.
+**Abuse controls:** honeypot field (`leave_blank_honeypot`, plus legacy `companyWebsite` if present), per-IP rate limit (5 submissions/hour), and per-email rate limit. Cloudflare Turnstile can be added later if needed.
 
 ## One-time setup (email + Loops)
 
@@ -69,7 +69,7 @@ supabase functions deploy privacy-request-intake
 
 **Troubleshooting:** If the form shows “Edge Function returned a non-2xx status code”, the usual cause is **JWT verification** left on for a public form. Anonymous visitors are not signed in to Supabase Auth, so the platform rejects the request before your handler runs. Fix: in `supabase/config.toml` set `verify_jwt = false` for `privacy-request-intake` and `subscribe-subprocessors`, then redeploy those functions (or turn off “Verify JWT” for each function in Supabase Dashboard → Edge Functions → the function → settings).
 
-**No email but the form succeeds:** The Loops API can return **HTTP 200** with a JSON body `{ "success": false, "message": "…" }` (e.g. wrong transactional ID, missing data variable, or invalid recipient). Check **Supabase → Edge Function → Logs** for `Loops rejected send` and the message; fix the template/variables in Loops, then redeploy if you changed env. Also check **spam** for `privacy@cohvia.com` and Loops → **Sending** / activity for the send.
+**No email but the form succeeds:** Often the **honeypot** was tripped (password manager filled a hidden “website” field): the function returned **200** and **never called Loops** — Loops correctly shows **0 sends**. After deploy, check the JSON response: only `{ "ok": true }` (no `delivery`) means honeypot; `{ "ok": true, "delivery": "loops" }` means the Loops branch ran. If the Loops API returns **HTTP 200** without `{ "success": true }` or an `id`, the function now returns **502** with a clear message instead of a false success — fix transactional ID / template / API key workspace alignment. Also check **spam** for `privacy@cohvia.com` and Loops → **Sending** / activity for the send.
 
 **Supabase shows POST 200 but you only see `booted` / `shutdown` in Logs:** Use **Edge Functions → _your function_ → Invocations** for status and timing. In the browser **Network** tab, open the `privacy-request-intake` response: **`{ "ok": true, "delivery": "loops" }`** means the handler finished the Loops branch; **`{ "ok": true }` only** means the honeypot path (no Loops call)—often autofill on the hidden field.
 

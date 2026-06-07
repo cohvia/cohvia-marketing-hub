@@ -28,7 +28,10 @@ interface Body {
   relationship?: string;
   organizationName?: string;
   details?: string;
+  /** Legacy honeypot name (password managers often filled "Company website"). */
   companyWebsite?: string;
+  /** Current honeypot — must stay empty; autofill should not target this key. */
+  leave_blank_honeypot?: string;
   locale?: string;
 }
 
@@ -112,7 +115,11 @@ Deno.serve(async (req) => {
 
     const body: Body = await req.json().catch(() => ({}));
 
-    if (trimField(body.companyWebsite, 200)) {
+    // Honeypot: any non-empty value = likely bot / password-manager autofill.
+    if (
+      trimField(body.companyWebsite, 200) ||
+      trimField(body.leave_blank_honeypot, 200)
+    ) {
       return new Response(JSON.stringify({ ok: true }), {
         status: 200,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -221,15 +228,14 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Loops returns HTTP 200 with `{ success: false, message }` on validation errors.
-    // Success is usually `{ success: true }`, but some responses may be empty / non-JSON.
-    // Only fail on explicit `success: false` to avoid false 502s.
+    // Loops: explicit failure, or missing success signal (empty body used to look like "success" here but Loops showed 0 sends).
     const loopsPayload = (await response.json().catch(() => null)) as {
       success?: boolean;
       message?: string;
+      id?: string;
     } | null;
 
-    if (loopsPayload && loopsPayload.success === false) {
+    if (loopsPayload?.success === false) {
       console.error(
         'privacy-request-intake: Loops rejected send',
         loopsPayload.message ?? 'no message',
@@ -243,7 +249,25 @@ Deno.serve(async (req) => {
       );
     }
 
-    console.log('privacy-request-intake: Loops call finished (HTTP ok, not rejected by Loops)');
+    const loopsConfirmed =
+      loopsPayload &&
+      (loopsPayload.success === true || typeof loopsPayload.id === 'string');
+
+    if (!loopsConfirmed) {
+      console.error(
+        'privacy-request-intake: Loops response did not confirm send',
+        loopsPayload == null ? 'empty or non-json body' : JSON.stringify(loopsPayload),
+      );
+      return new Response(
+        JSON.stringify({
+          error:
+            'Privacy intake could not confirm the notification email was sent. In Loops, verify the transactional template ID matches Supabase secret LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID and the API key’s workspace, then try again — or email privacy@cohvia.com.',
+        }),
+        { status: 502, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
+      );
+    }
+
+    console.log('privacy-request-intake: Loops call finished (confirmed send)');
 
     // `delivery` lets you tell honeypot (`{ ok: true }` only) from Loops path in DevTools → Network.
     return new Response(JSON.stringify({ ok: true, delivery: 'loops' }), {
