@@ -1,8 +1,8 @@
 # DSAR intake and handling process (COH-110)
 
 **Status:** Form ships with the marketing site; **email delivery is live only after** `privacy@cohvia.com`, Loops template, Supabase secrets, and edge-function deploy are verified (see setup below). Manual fulfilment until COH-105 tooling ships.  
-**Last updated:** June 6, 2026  
-**Public surfaces:** [Privacy Policy](https://cohvia.com/legal/privacy) · [Formulaire FR](https://cohvia.com/legal/confidentialite)
+**Last updated:** June 7, 2026  
+**Public surfaces:** [Privacy Policy](https://cohvia.com/legal/privacy) · [Formulaire FR](https://cohvia.com/legal/confidentialite) · [Complaints overview (app)](https://app.cohvia.com/legal/privacy-complaints)
 
 ## Privacy contact
 
@@ -15,10 +15,11 @@ Legal entity: **SACS Ecommerce Stores Inc.** (operating as Cohvia), 620 King Str
 
 ## Intake channels
 
-1. **Email** — messages to **privacy@cohvia.com** (must be live and monitored).
-2. **Web form** — embedded at the bottom of `/legal/privacy` and `/legal/confidentialite` on cohvia.com. Submissions are routed to **privacy@cohvia.com** via a Loops transactional email (`privacy-request-intake` Supabase Edge Function).
+1. **Email** — messages to **privacy@cohvia.com** (must be live and monitored). For data-protection complaints about Cohvia as controller, a clear subject line such as **`[Data protection complaint]`** helps triage (COH-113).
+2. **Web form** — embedded at the bottom of `/legal/privacy` and `/legal/confidentialite` on cohvia.com. Submissions are routed to **privacy@cohvia.com** via a Loops transactional email (`privacy-request-intake` Supabase Edge Function). Request type **Data protection complaint** should be used for UK / general controller complaints (COH-113).
+3. **App overview page** — short, login-free summary at **https://app.cohvia.com/legal/privacy-complaints** (ships from the `cohvia` application repo; linked from the Privacy Policy).
 
-Direct email remains valid; the form is an optional convenience.
+Direct email remains valid; the form and app page are optional conveniences.
 
 **Abuse controls:** honeypot field (`leave_blank_honeypot`, plus legacy `companyWebsite` if present), per-IP rate limit (5 submissions/hour), and per-email rate limit. Cloudflare Turnstile can be added later if needed.
 
@@ -80,6 +81,7 @@ Use this checklist for every request. Target response times:
 | Jurisdiction | Acknowledge | Complete |
 |--------------|-------------|----------|
 | GDPR / UK GDPR | Without undue delay | **1 month** (extendable by 2 months if complex) |
+| UK — data protection complaints to controller (DUAA 2025, from 19 June 2026) | Within **30 days** of receipt where the UK statutory timetable applies | Without undue delay; track to resolution |
 | Quebec Law 25 | Promptly | **30 days** |
 | US state laws | As required | Typically **45 days** (varies by state) |
 

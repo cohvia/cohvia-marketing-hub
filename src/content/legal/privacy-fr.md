@@ -1,6 +1,6 @@
 # Politique de confidentialité
 
-**Dernière mise à jour : 8 juin 2026**
+**Dernière mise à jour : 7 juin 2026**
 
 > **Note linguistique.** La présente version française est fournie pour les personnes au Québec et ailleurs au Canada. Une version anglaise est disponible à l'adresse [/legal/privacy](/legal/privacy). Pour les résidents du Québec, la version française prévaut dans la mesure requise par la *Charte de la langue française*.
 
@@ -88,6 +88,8 @@ Selon votre lieu de résidence, vous pouvez avoir le droit : d'accéder à vos r
 
 Pour exercer un droit, écrivez à **privacy@cohvia.com** ou utilisez le formulaire de demande relative à la vie privée au bas de cette page. Nous répondrons dans le délai exigé par la loi applicable (généralement un mois en vertu du RGPD / RGPD du Royaume-Uni; au plus tard 30 jours en vertu de la Loi 25 au Québec). Nous pourrions devoir vérifier votre identité. L'exercice de ces droits est gratuit, sous réserve d'exceptions limitées pour les demandes manifestement infondées ou excessives.
 
+Pour déposer une **plainte relative à la protection des renseignements personnels** concernant notre traitement lorsque nous agissons à titre de **responsable** (y compris les droits au Royaume-Uni décrits à la section 12.1), écrivez à **privacy@cohvia.com** avec l'objet **`[Plainte — protection des données]`**, utilisez le formulaire au bas de cette page et choisissez **Plainte relative à la protection des données**, ou consultez la page d'information **https://app.cohvia.com/legal/privacy-complaints**.
+
 Si vos renseignements personnels se trouvent dans le compte Cohvia d'un client (Données client), le client est le responsable; nous lui transmettrons votre demande et l'aiderons à y répondre.
 
 ---
@@ -125,7 +127,13 @@ Nous maintenons des mesures administratives, techniques et organisationnelles co
 ## 12. Renseignements régionaux
 
 ### 12.1 Espace économique européen, Royaume-Uni et Suisse
-Le responsable, les fondements juridiques, les mécanismes de transfert, la conservation et les droits sont décrits ci-dessus. Vous avez le droit de déposer une plainte auprès de votre autorité de surveillance locale (au Royaume-Uni, l'*Information Commissioner's Office*; en Irlande, la *Data Protection Commission*). **Résidents du Royaume-Uni :** vous pouvez nous adresser une plainte directement, et nous en accuserons réception et y répondrons dans un délai raisonnable.
+Le responsable, les fondements juridiques, les mécanismes de transfert, la conservation et les droits sont décrits ci-dessus.
+
+**EEE et Suisse :** vous avez le droit de déposer une plainte auprès de votre autorité de surveillance locale (par exemple, en Irlande, auprès de la *Data Protection Commission*).
+
+**Royaume-Uni :** vous avez le droit de déposer une plainte auprès de l'*Information Commissioner's Office* (ICO). Vous pouvez également **porter plainte auprès de nous** concernant notre traitement lorsque nous agissons à titre de **responsable** — par exemple, la façon dont nous traitons les renseignements personnels concernant les personnes qui utilisent notre site Web ou administrent un compte Cohvia (cela ne remplace pas les plaintes adressées à l'employeur-client lorsqu'il est le responsable des Données client vous concernant). À compter du **19 juin 2026**, la *Data (Use and Access) Act 2025* du Royaume-Uni prévoit un droit légal explicite pour les personnes concernées de porter plainte auprès du responsable dans ces circonstances.
+
+**Comment porter plainte auprès de nous :** écrivez à **privacy@cohvia.com** avec l'objet **`[Plainte — protection des données]`**, utilisez le formulaire de demande relative à la vie privée au bas de cette page et sélectionnez **Plainte relative à la protection des données**, ou consultez **https://app.cohvia.com/legal/privacy-complaints**. Nous **accuserons réception** de votre plainte sans retard indu et, lorsque la loi du Royaume-Uni l'exige, dans les **30 jours** suivant la réception. Nous enquêterons et chercherons à la résoudre sans retard indu et conserverons une trace interne jusqu'à sa clôture.
 
 ### 12.2 États-Unis — droits étatiques en matière de vie privée
 Selon votre État de résidence (notamment la Californie, la Virginie, le Colorado, le Connecticut, le Texas, l'Oregon, le Montana et d'autres dotés de lois complètes sur la vie privée), vous pourriez avoir le droit de connaître/consulter, de rectifier, de supprimer et d'obtenir une copie transférable de vos renseignements personnels, de refuser la « vente », le « partage »/la publicité ciblée et le profilage, et de limiter l'utilisation de renseignements personnels sensibles, ainsi qu'un droit à la non-discrimination pour avoir exercé ces droits.

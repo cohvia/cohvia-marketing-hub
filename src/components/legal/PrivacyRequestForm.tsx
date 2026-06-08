@@ -71,6 +71,7 @@ const REQUEST_TYPES = [
   "deletion",
   "portability",
   "objection",
+  "complaint",
   "other",
 ] as const;
 
@@ -109,6 +110,7 @@ const copy = {
       deletion: "Delete my data",
       portability: "Data portability export",
       objection: "Object to processing",
+      complaint: "Data protection complaint",
       other: "Other privacy enquiry",
     },
     relationships: {
@@ -142,6 +144,7 @@ const copy = {
       deletion: "Suppression de mes renseignements",
       portability: "Export pour portabilité",
       objection: "Opposition au traitement",
+      complaint: "Plainte relative à la protection des données",
       other: "Autre question relative à la confidentialité",
     },
     relationships: {
