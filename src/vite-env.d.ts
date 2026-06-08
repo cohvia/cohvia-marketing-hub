@@ -15,9 +15,18 @@ declare module "*.md?raw" {
 }
 
 /** Usercentrics Cookiebot CMP (`consent.cookiebot.com/uc.js`). */
+interface CookiebotConsent {
+  necessary: boolean;
+  preferences: boolean;
+  statistics: boolean;
+  marketing: boolean;
+}
+
 interface CookiebotApi {
   renew?: () => void;
   show?: () => void;
+  /** Present once Cookiebot has loaded the visitor’s consent state. */
+  consent?: CookiebotConsent;
 }
 
 interface Window {
