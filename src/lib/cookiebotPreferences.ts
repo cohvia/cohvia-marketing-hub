@@ -29,3 +29,12 @@ export function openCookiebotConsentSettings(): void {
     }
   }, 100);
 }
+
+/**
+ * US state privacy laws (e.g. CPRA) require a clear way to opt out of “sale” / “sharing”
+ * where applicable. We use Cookiebot for consent; this opens the same controls as
+ * **Cookie preferences** (COH-112 — “Do Not Sell or Share My Personal Information”).
+ *
+ * @see https://www.cookiebot.com/en/gpc/
+ */
+export const openDoNotSellOrSharePreferences = openCookiebotConsentSettings;
