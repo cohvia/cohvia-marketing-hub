@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: June 6, 2026**
+**Last updated: June 8, 2026**
 
 This Privacy Policy explains how **SACS Ecommerce Stores Inc.**, operating as "**Cohvia**" ("**we**," "**us**"), handles personal data. It covers two different situations, because Cohvia plays two different roles:
 
@@ -106,7 +106,7 @@ We keep personal data only as long as needed for the purposes described, then de
 
 ## 9. Cookies and similar technologies
 
-We use cookies and similar technologies for essential functionality, security, and analytics. Where required by law (including in the EEA and, for non-essential cookies, the UK), we ask for your consent and provide controls to manage your preferences. You can also control cookies through your browser. See our full [Cookie Policy](/legal/cookies).
+We use cookies and similar technologies for essential functionality, security, and analytics. Where required by law (including in the EEA and, for non-essential cookies, the UK), we ask for your consent and provide controls to manage your preferences. You can also control cookies through your browser. Where supported by our consent management platform, we honour the **Global Privacy Control (GPC)** browser signal for US visitors as described in Section 12.2. See our full [Cookie Policy](/legal/cookies).
 
 ---
 
@@ -133,8 +133,9 @@ Depending on your state of residence (including California, Virginia, Colorado, 
 - **Categories of personal information** we collect, our purposes, and the categories of recipients are described in Sections 2, 3, and 5. We collect identifiers, commercial information, internet/usage activity, and professional information.
 - **Sale/Sharing:** We do **not** sell personal information and do **not** share it for cross-context behavioral advertising.
 - **Sensitive personal information:** We do not use or disclose sensitive personal information for purposes that would trigger the right to limit.
-- **Universal opt-out / Global Privacy Control:** Where required, we honor recognized opt-out preference signals.
-- To exercise rights, contact **privacy@cohvia.com**. You may use an authorized agent. We will verify requests as required by law.
+- **Universal opt-out / Global Privacy Control (GPC):** Where supported by our consent management platform (Cookiebot), we treat a valid **GPC** signal in the browser as a request to opt out of cookies and similar technologies that are not strictly necessary for providing our website — including analytics cookies that could otherwise qualify as “sharing” for targeted advertising under some US state laws. This supplements (and does not replace) the choices you make in our cookie banner.
+- **Do Not Sell or Share My Personal Information:** You may use the **Do Not Sell or Share My Personal Information** link in our website footer (or **Cookie preferences**) at any time to open the same consent tool and withdraw consent for non-essential cookies, or to adjust categories such as analytics, where offered.
+- To exercise other rights, contact **privacy@cohvia.com**. You may use an authorized agent. We will verify requests as required by law.
 
 ### 12.3 Canada (PIPEDA)
 We handle personal information in accordance with Canada's Personal Information Protection and Electronic Documents Act and applicable provincial laws. You may request access to and correction of your personal information and may direct questions or complaints to our privacy contact, and ultimately to the Office of the Privacy Commissioner of Canada.

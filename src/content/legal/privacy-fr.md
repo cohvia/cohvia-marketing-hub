@@ -1,6 +1,6 @@
 # Politique de confidentialité
 
-**Dernière mise à jour : 6 juin 2026**
+**Dernière mise à jour : 8 juin 2026**
 
 > **Note linguistique.** La présente version française est fournie pour les personnes au Québec et ailleurs au Canada. Une version anglaise est disponible à l'adresse [/legal/privacy](/legal/privacy). Pour les résidents du Québec, la version française prévaut dans la mesure requise par la *Charte de la langue française*.
 
@@ -106,7 +106,7 @@ Nous conservons les renseignements personnels uniquement aussi longtemps que né
 
 ## 9. Témoins et technologies semblables
 
-Nous utilisons des témoins et des technologies semblables à des fins de fonctionnalité essentielle, de sécurité et d'analyse. Lorsque la loi l'exige (y compris dans l'EEE et, pour les témoins non essentiels, au Royaume-Uni), nous demandons votre consentement et offrons des contrôles pour gérer vos préférences. Vous pouvez aussi gérer les témoins au moyen de votre navigateur. Consultez notre [Politique relative aux témoins](/legal/cookies) complète.
+Nous utilisons des témoins et des technologies semblables à des fins de fonctionnalité essentielle, de sécurité et d'analyse. Lorsque la loi l'exige (y compris dans l'EEE et, pour les témoins non essentiels, au Royaume-Uni), nous demandons votre consentement et offrons des contrôles pour gérer vos préférences. Vous pouvez aussi gérer les témoins au moyen de votre navigateur. Lorsque notre plateforme de gestion du consentement le permet, nous honorons le signal **Global Privacy Control (GPC)** du navigateur pour les visiteurs aux États-Unis, comme il est décrit à la section 12.2. Consultez notre [Politique relative aux témoins](/legal/cookies) complète.
 
 ---
 
@@ -133,8 +133,9 @@ Selon votre État de résidence (notamment la Californie, la Virginie, le Colora
 - Les **catégories de renseignements personnels** que nous recueillons, nos fins et les catégories de destinataires sont décrites aux sections 2, 3 et 5. Nous recueillons des identifiants, des renseignements commerciaux, de l'activité Internet/d'utilisation et des renseignements professionnels.
 - **Vente/Partage :** nous ne **vendons pas** de renseignements personnels et ne les **partageons pas** aux fins de publicité comportementale intercontextuelle.
 - **Renseignements personnels sensibles :** nous n'utilisons ni ne divulguons de renseignements personnels sensibles à des fins qui déclencheraient le droit de limitation.
-- **Refus universel / Global Privacy Control :** lorsque requis, nous honorons les signaux de préférence de refus reconnus.
-- Pour exercer vos droits, écrivez à **privacy@cohvia.com**. Vous pouvez recourir à un agent autorisé. Nous vérifierons les demandes comme l'exige la loi.
+- **Refus universel / Global Privacy Control (GPC) :** lorsque notre plateforme de gestion du consentement (Cookiebot) le permet, nous traitons un signal **GPC** valide dans le navigateur comme une demande de refus des témoins et technologies similaires qui ne sont pas strictement nécessaires à la prestation de notre site — y compris les témoins d'analyse qui pourraient autrement constituer du « partage » aux fins de publicité ciblée en vertu de certaines lois étatiques américaines. Cela complète (sans remplacer) les choix que vous faites dans notre bannière de consentement.
+- **Ne pas vendre ni partager mes renseignements personnels :** vous pouvez utiliser le lien **Ne pas vendre ni partager mes renseignements personnels** dans le pied de page de notre site (ou **Préférences relatives aux témoins**) à tout moment pour ouvrir le même outil de consentement et retirer votre consentement pour les témoins non essentiels, ou ajuster des catégories telles que l'analyse, le cas échéant.
+- Pour exercer d'autres droits, écrivez à **privacy@cohvia.com**. Vous pouvez recourir à un agent autorisé. Nous vérifierons les demandes comme l'exige la loi.
 
 ### 12.3 Canada (LPRPDE)
 Nous traitons les renseignements personnels conformément à la *Loi sur la protection des renseignements personnels et les documents électroniques* du Canada et aux lois provinciales applicables. Vous pouvez demander l'accès à vos renseignements personnels et leur rectification, et adresser vos questions ou plaintes à notre personne-ressource pour la confidentialité, et ultimement au Commissariat à la protection de la vie privée du Canada.

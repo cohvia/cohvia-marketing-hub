@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import cohviaLogo from "@/assets/cohvia-wordmark-white.svg";
-import { openCookiebotConsentSettings } from "@/lib/cookiebotPreferences";
+import {
+  openCookiebotConsentSettings,
+  openDoNotSellOrSharePreferences,
+} from "@/lib/cookiebotPreferences";
 
 const linkClass =
   "text-sm text-secondary-foreground hover:text-foreground transition-colors";
@@ -69,6 +72,19 @@ const Footer = () => {
                   }}
                 >
                   Cookie preferences
+                </a>
+              </li>
+              <li>
+                <a
+                  id="do-not-sell-or-share"
+                  href="#"
+                  className={linkClass}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openDoNotSellOrSharePreferences();
+                  }}
+                >
+                  Do Not Sell or Share My Personal Information
                 </a>
               </li>
               <li><Link to="/legal/cookies" className={linkClass}>Cookie Policy</Link></li>
