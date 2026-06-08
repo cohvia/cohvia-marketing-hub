@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: June 8, 2026**
+**Last updated: June 7, 2026**
 
 This Privacy Policy explains how **SACS Ecommerce Stores Inc.**, operating as "**Cohvia**" ("**we**," "**us**"), handles personal data. It covers two different situations, because Cohvia plays two different roles:
 
@@ -88,6 +88,8 @@ Depending on where you live, you may have rights to: access your personal data; 
 
 To exercise any right, contact **privacy@cohvia.com** or use the privacy request form at the bottom of this page. We will respond within the timeframe required by applicable law (generally one month under GDPR/UK GDPR). We may need to verify your identity. These rights are free to exercise, subject to limited exceptions for manifestly unfounded or excessive requests.
 
+To raise a **data protection complaint** about our processing when we act as a **controller** (including UK rights described in Section 12.1), email **privacy@cohvia.com** with subject line **`[Data protection complaint]`**, use the privacy request form at the bottom of this page and select **Data protection complaint**, or read the overview at **https://app.cohvia.com/legal/privacy-complaints**.
+
 If your personal data sits within a customer's Cohvia account (Customer Data), the customer is the controller; we will refer your request to them and assist them in responding.
 
 ---
@@ -125,7 +127,13 @@ We maintain administrative, technical, and organizational measures designed to p
 ## 12. Regional disclosures
 
 ### 12.1 European Economic Area, United Kingdom, and Switzerland
-The controller, legal bases, transfer mechanisms, retention, and rights are described above. You have the right to lodge a complaint with your local supervisory authority (in the UK, the Information Commissioner's Office; in Ireland, the Data Protection Commission). **UK residents:** you may make a complaint to us directly, and we will acknowledge it and respond within a reasonable period.
+The controller, legal bases, transfer mechanisms, retention, and rights are described above.
+
+**EEA and Switzerland:** You have the right to lodge a complaint with your local supervisory authority (for example, in Ireland, the Data Protection Commission).
+
+**United Kingdom:** You have the right to lodge a complaint with the Information Commissioner's Office (ICO). You may also make a **complaint to us** about our processing when we act as **controller** — for example, how we handle personal data about people who use our website or administer a Cohvia account (this does not replace complaints to your employer-customer when they are the controller of Customer Data about you). From **19 June 2026**, the **Data (Use and Access) Act 2025** includes an explicit statutory right for data subjects to complain to the controller in those circumstances.
+
+**How to complain to us:** Email **privacy@cohvia.com** with the subject line **`[Data protection complaint]`**, use the privacy request form at the bottom of this page and select **Data protection complaint**, or visit **https://app.cohvia.com/legal/privacy-complaints**. We will **acknowledge** your complaint without undue delay and, where UK law requires, within **30 days** of receipt. We will investigate and pursue resolution without undue delay and keep an internal record until the complaint is closed.
 
 ### 12.2 United States — state privacy rights
 Depending on your state of residence (including California, Virginia, Colorado, Connecticut, Texas, Oregon, Montana, and others with comprehensive privacy laws), you may have rights to know/access, correct, delete, and obtain a portable copy of your personal information, to opt out of "sale," "sharing"/targeted advertising, and profiling, and to limit the use of sensitive personal information, plus a right against discrimination for exercising these rights.

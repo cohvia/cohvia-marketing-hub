@@ -11,6 +11,7 @@ const REQUEST_TYPES = new Set([
   'deletion',
   'portability',
   'objection',
+  'complaint',
   'other',
 ]);
 
@@ -49,6 +50,7 @@ function requestTypeLabel(type: string): string {
     deletion: 'Deletion',
     portability: 'Portability export',
     objection: 'Objection to processing',
+    complaint: 'Data protection complaint',
     other: 'Other',
   };
   return labels[type] ?? type;
