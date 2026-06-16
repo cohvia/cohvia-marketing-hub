@@ -1,7 +1,8 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
 const PRIVACY_INBOX = 'privacy@cohvia.com';
-const LOOPS_TIMEOUT_MS = 8_000;
+const DEFAULT_FROM = 'Cohvia Privacy <privacy@cohvia.com>';
+const RESEND_TIMEOUT_MS = 8_000;
 /** Best-effort per-instance limit for a public intake endpoint. */
 const IP_RATE_LIMIT = { limit: 5, windowMs: 60 * 60 * 1000 };
 
@@ -36,11 +37,26 @@ interface Body {
   locale?: string;
 }
 
+interface ResendSendResponse {
+  id?: string;
+  name?: string;
+  message?: string;
+}
+
 const isEmail = (v: string) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) && v.length <= 255;
 
 function trimField(value: unknown, max: number): string {
   return typeof value === 'string' ? value.trim().slice(0, max) : '';
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
 }
 
 function requestTypeLabel(type: string): string {
@@ -64,6 +80,71 @@ function relationshipLabel(value: string): string {
     other: 'Other',
   };
   return labels[value] ?? value;
+}
+
+function normalizeHeaderValue(value: string): string {
+  return value.replace(/[\r\n]+/g, ' ').trim();
+}
+
+function buildPrivacyIntakeEmail(params: {
+  submitterName: string;
+  submitterEmail: string;
+  requestType: string;
+  relationship: string;
+  organizationName: string;
+  details: string;
+  locale: string;
+  submittedAt: string;
+}): { subject: string; html: string; text: string } {
+  const {
+    submitterName,
+    submitterEmail,
+    requestType,
+    relationship,
+    organizationName,
+    details,
+    locale,
+    submittedAt,
+  } = params;
+
+  const safeSubmitterName = normalizeHeaderValue(submitterName);
+  const subject = `New privacy request from ${safeSubmitterName}`;
+
+  const text = [
+    'A new privacy / data-rights request was submitted on cohvia.com.',
+    '',
+    `Name: ${submitterName}`,
+    `Email: ${submitterEmail}`,
+    `Request type: ${requestType}`,
+    `Relationship: ${relationship}`,
+    `Organization: ${organizationName}`,
+    `Locale: ${locale}`,
+    `Submitted at: ${submittedAt}`,
+    '',
+    'Details:',
+    details,
+    '',
+    `---`,
+    `Reply directly to ${submitterEmail} to respond.`,
+  ].join('\n');
+
+  const html = [
+    '<p>A new privacy / data-rights request was submitted on cohvia.com.</p>',
+    '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse">',
+    `<tr><td style="padding:4px 12px 4px 0;font-weight:600">Name</td><td>${escapeHtml(submitterName)}</td></tr>`,
+    `<tr><td style="padding:4px 12px 4px 0;font-weight:600">Email</td><td>${escapeHtml(submitterEmail)}</td></tr>`,
+    `<tr><td style="padding:4px 12px 4px 0;font-weight:600">Request type</td><td>${escapeHtml(requestType)}</td></tr>`,
+    `<tr><td style="padding:4px 12px 4px 0;font-weight:600">Relationship</td><td>${escapeHtml(relationship)}</td></tr>`,
+    `<tr><td style="padding:4px 12px 4px 0;font-weight:600">Organization</td><td>${escapeHtml(organizationName)}</td></tr>`,
+    `<tr><td style="padding:4px 12px 4px 0;font-weight:600">Locale</td><td>${escapeHtml(locale)}</td></tr>`,
+    `<tr><td style="padding:4px 12px 4px 0;font-weight:600">Submitted at</td><td>${escapeHtml(submittedAt)}</td></tr>`,
+    '</table>',
+    '<p style="font-weight:600;margin-top:16px">Details</p>',
+    `<pre style="white-space:pre-wrap;font-family:inherit;margin:0">${escapeHtml(details)}</pre>`,
+    `<p style="margin-top:16px">Reply directly to <a href="mailto:${escapeHtml(submitterEmail)}">${escapeHtml(submitterEmail)}</a> to respond.</p>`,
+  ].join('');
+
+  return { subject, html, text };
 }
 
 function clientIp(req: Request): string {
@@ -163,11 +244,11 @@ Deno.serve(async (req) => {
       );
     }
 
-    const apiKey = Deno.env.get('LOOPS_API_KEY');
-    const transactionalId = Deno.env.get('LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID');
+    const apiKey = Deno.env.get('RESEND_API_KEY')?.trim();
+    const fromAddress = Deno.env.get('RESEND_PRIVACY_FROM')?.trim() || DEFAULT_FROM;
 
-    if (!(apiKey && transactionalId)) {
-      console.error('privacy-request-intake: Loops not configured (missing LOOPS_API_KEY or LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID)');
+    if (!apiKey) {
+      console.error('privacy-request-intake: Resend not configured (missing RESEND_API_KEY)');
       return new Response(
         JSON.stringify({
           error: 'Privacy request intake is temporarily unavailable. Please email privacy@cohvia.com.',
@@ -176,15 +257,26 @@ Deno.serve(async (req) => {
       );
     }
 
-    console.log('privacy-request-intake: validated, invoking Loops transactional');
+    console.log('privacy-request-intake: validated, invoking Resend');
 
     const submittedAt = new Date().toISOString();
+    const emailContent = buildPrivacyIntakeEmail({
+      submitterName: fullName,
+      submitterEmail: email,
+      requestType: requestTypeLabel(requestType),
+      relationship: relationshipLabel(relationship),
+      organizationName: organizationName || '—',
+      details,
+      locale,
+      submittedAt,
+    });
+
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), LOOPS_TIMEOUT_MS);
+    const timeoutId = setTimeout(() => controller.abort(), RESEND_TIMEOUT_MS);
 
     let response: Response;
     try {
-      response = await fetch('https://app.loops.so/api/v1/transactional', {
+      response = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${apiKey}`,
@@ -192,18 +284,12 @@ Deno.serve(async (req) => {
         },
         signal: controller.signal,
         body: JSON.stringify({
-          transactionalId,
-          email: PRIVACY_INBOX,
-          dataVariables: {
-            submitterName: fullName,
-            submitterEmail: email,
-            requestType: requestTypeLabel(requestType),
-            relationship: relationshipLabel(relationship),
-            organizationName: organizationName || '—',
-            details,
-            locale,
-            submittedAt,
-          },
+          from: fromAddress,
+          to: [PRIVACY_INBOX],
+          reply_to: email,
+          subject: emailContent.subject,
+          html: emailContent.html,
+          text: emailContent.text,
         }),
       });
     } catch (err) {
@@ -218,11 +304,13 @@ Deno.serve(async (req) => {
       clearTimeout(timeoutId);
     }
 
+    const resendPayload = (await response.json().catch(() => null)) as ResendSendResponse | null;
+
     if (!response.ok) {
       console.error(
-        'privacy-request-intake: Loops HTTP error',
+        'privacy-request-intake: Resend HTTP error',
         response.status,
-        response.headers.get('x-request-id') ?? 'no-request-id',
+        resendPayload?.message ?? resendPayload?.name ?? 'no message',
       );
       return new Response(
         JSON.stringify({ error: 'Could not submit your request. Please try again later.' }),
@@ -230,49 +318,24 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Loops: explicit failure, or missing success signal (empty body used to look like "success" here but Loops showed 0 sends).
-    const loopsPayload = (await response.json().catch(() => null)) as {
-      success?: boolean;
-      message?: string;
-      id?: string;
-    } | null;
-
-    if (loopsPayload?.success === false) {
+    if (!resendPayload?.id) {
       console.error(
-        'privacy-request-intake: Loops rejected send',
-        loopsPayload.message ?? 'no message',
+        'privacy-request-intake: Resend response did not confirm send',
+        resendPayload == null ? 'empty or non-json body' : JSON.stringify(resendPayload),
       );
       return new Response(
         JSON.stringify({
           error:
-            'Could not submit your request. If this keeps happening, email privacy@cohvia.com directly.',
+            'Privacy intake could not confirm the notification email was sent. Verify RESEND_API_KEY and the verified sending domain in Resend, then try again — or email privacy@cohvia.com.',
         }),
         { status: 502, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
       );
     }
 
-    const loopsConfirmed =
-      loopsPayload &&
-      (loopsPayload.success === true || typeof loopsPayload.id === 'string');
+    console.log('privacy-request-intake: Resend call finished (confirmed send)', resendPayload.id);
 
-    if (!loopsConfirmed) {
-      console.error(
-        'privacy-request-intake: Loops response did not confirm send',
-        loopsPayload == null ? 'empty or non-json body' : JSON.stringify(loopsPayload),
-      );
-      return new Response(
-        JSON.stringify({
-          error:
-            'Privacy intake could not confirm the notification email was sent. In Loops, verify the transactional template ID matches Supabase secret LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID and the API key’s workspace, then try again — or email privacy@cohvia.com.',
-        }),
-        { status: 502, headers: { ...corsHeaders, 'Content-Type': 'application/json' } },
-      );
-    }
-
-    console.log('privacy-request-intake: Loops call finished (confirmed send)');
-
-    // `delivery` lets you tell honeypot (`{ ok: true }` only) from Loops path in DevTools → Network.
-    return new Response(JSON.stringify({ ok: true, delivery: 'loops' }), {
+    // `delivery` lets you tell honeypot (`{ ok: true }` only) from Resend path in DevTools → Network.
+    return new Response(JSON.stringify({ ok: true, delivery: 'resend' }), {
       status: 200,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });

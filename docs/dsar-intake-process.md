@@ -1,7 +1,7 @@
 # DSAR intake and handling process (COH-110)
 
-**Status:** Form ships with the marketing site; **email delivery is live only after** `privacy@cohvia.com`, Loops template, Supabase secrets, and edge-function deploy are verified (see setup below). Manual fulfilment until COH-105 tooling ships.  
-**Last updated:** June 7, 2026  
+**Status:** Form ships with the marketing site; **email delivery is live only after** `privacy@cohvia.com`, Resend domain verification, `RESEND_API_KEY` in Supabase Edge Function secrets, and edge-function deploy are verified (see setup below). Manual fulfilment until COH-105 tooling ships.  
+**Last updated:** June 15, 2026  
 **Public surfaces:** [Privacy Policy](https://cohvia.com/legal/privacy) · [Formulaire FR](https://cohvia.com/legal/confidentialite) · [Complaints overview (app)](https://app.cohvia.com/legal/privacy-complaints)
 
 ## Privacy contact
@@ -16,14 +16,14 @@ Legal entity: **SACS Ecommerce Stores Inc.** (operating as Cohvia), 620 King Str
 ## Intake channels
 
 1. **Email** — messages to **privacy@cohvia.com** (must be live and monitored). For data-protection complaints about Cohvia as controller, a clear subject line such as **`[Data protection complaint]`** helps triage (COH-113).
-2. **Web form** — embedded at the bottom of `/legal/privacy` and `/legal/confidentialite` on cohvia.com. Submissions are routed to **privacy@cohvia.com** via a Loops transactional email (`privacy-request-intake` Supabase Edge Function). Request type **Data protection complaint** should be used for UK / general controller complaints (COH-113).
+2. **Web form** — embedded at the bottom of `/legal/privacy` and `/legal/confidentialite` on cohvia.com. Submissions are routed to **privacy@cohvia.com** via Resend (`privacy-request-intake` Supabase Edge Function). Request type **Data protection complaint** should be used for UK / general controller complaints (COH-113).
 3. **App overview page** — short, login-free summary at **https://app.cohvia.com/legal/privacy-complaints** (ships from the `cohvia` application repo; linked from the Privacy Policy).
 
 Direct email remains valid; the form and app page are optional conveniences.
 
 **Abuse controls:** honeypot field (`leave_blank_honeypot`, plus legacy `companyWebsite` if present), per-IP rate limit (5 submissions/hour), and per-email rate limit. Cloudflare Turnstile can be added later if needed.
 
-## One-time setup (email + Loops)
+## One-time setup (email + Resend)
 
 ### 1. Create `privacy@cohvia.com`
 
@@ -33,46 +33,35 @@ In your Google Workspace (or email provider for `@cohvia.com`):
 2. Create a group or alias **privacy@cohvia.com** that delivers to Sarah’s monitored inbox (e.g. `sarah@cohvia.com`).
 3. Send a test message to **privacy@cohvia.com** and confirm delivery.
 
-### 2. Loops transactional template
+### 2. Resend domain + API key
 
-In [Loops](https://app.loops.so):
+1. Verify **`cohvia.com`** in [Resend → Domains](https://resend.com/domains) (DNS in Dynadot).
+2. Create an API key with send permissions in Resend → **API Keys**.
 
-1. Create a **transactional email** template (e.g. “Privacy request intake”).
-2. Set the recipient to use the transactional `email` field (the edge function sends to `privacy@cohvia.com`).
-3. Include these **data variables** in the template body:
-   - `submitterName`
-   - `submitterEmail`
-   - `requestType`
-   - `relationship`
-   - `organizationName`
-   - `details`
-   - `locale`
-   - `submittedAt`
-4. Copy the transactional ID.
+The edge function builds the intake email inline (no Resend dashboard template required). Optional secret **`RESEND_PRIVACY_FROM`** overrides the default From address (`Cohvia Privacy <privacy@cohvia.com>`).
 
 ### 3. Supabase Edge Function secrets
 
-For the marketing site Supabase project (same project that hosts `subscribe-subprocessors`):
+For the Cohvia Supabase project (`yawquhkjrgyluqbugwas` — same project that hosts `subscribe-subprocessors`):
 
 ```bash
-supabase secrets set LOOPS_API_KEY=<your-loops-api-key>
-supabase secrets set LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID=<transactional-id>
+supabase secrets set RESEND_API_KEY=<your-resend-api-key>
 supabase functions deploy privacy-request-intake
 ```
 
-`LOOPS_API_KEY` may already be set for the subprocessor subscribe function.
+After cutover is verified, remove deprecated Loops secrets (`LOOPS_API_KEY`, `LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID`) only if nothing else still uses them (subprocessor subscribe may still use Loops until COH-166).
 
 ### 4. Verify end-to-end
 
 1. Open [cohvia.com/legal/privacy](https://cohvia.com/legal/privacy) and scroll to **Submit a privacy request**.
-2. Submit a test request with a throwaway detail line (e.g. “COH-110 test — please ignore”).
-3. Confirm **privacy@cohvia.com** receives the Loops notification.
+2. Submit a test request with a throwaway detail line (e.g. “COH-165 test — please ignore”).
+3. Confirm **privacy@cohvia.com** receives the Resend notification and the send appears in Resend → **Emails**.
 
 **Troubleshooting:** If the form shows “Edge Function returned a non-2xx status code”, the usual cause is **JWT verification** left on for a public form. Anonymous visitors are not signed in to Supabase Auth, so the platform rejects the request before your handler runs. Fix: in `supabase/config.toml` set `verify_jwt = false` for `privacy-request-intake` and `subscribe-subprocessors`, then redeploy those functions (or turn off “Verify JWT” for each function in Supabase Dashboard → Edge Functions → the function → settings).
 
-**No email but the form succeeds:** Often the **honeypot** was tripped (password manager filled a hidden “website” field): the function returned **200** and **never called Loops** — Loops correctly shows **0 sends**. After deploy, check the JSON response: only `{ "ok": true }` (no `delivery`) means honeypot; `{ "ok": true, "delivery": "loops" }` means the Loops branch ran. If the Loops API returns **HTTP 200** without `{ "success": true }` or an `id`, the function now returns **502** with a clear message instead of a false success — fix transactional ID / template / API key workspace alignment. Also check **spam** for `privacy@cohvia.com` and Loops → **Sending** / activity for the send.
+**No email but the form succeeds:** Often the **honeypot** was tripped (password manager filled a hidden “website” field): the function returned **200** and **never called Resend**. After deploy, check the JSON response: only `{ "ok": true }` (no `delivery`) means honeypot; `{ "ok": true, "delivery": "resend" }` means the Resend branch ran. If Resend returns a non-2xx or a body without an `id`, the function returns **502** — verify `RESEND_API_KEY`, domain verification, and From address. Also check **spam** for `privacy@cohvia.com` and Resend → **Emails** for the send.
 
-**Supabase shows POST 200 but you only see `booted` / `shutdown` in Logs:** Use **Edge Functions → _your function_ → Invocations** for status and timing. In the browser **Network** tab, open the `privacy-request-intake` response: **`{ "ok": true, "delivery": "loops" }`** means the handler finished the Loops branch; **`{ "ok": true }` only** means the honeypot path (no Loops call)—often autofill on the hidden field.
+**Supabase shows POST 200 but you only see `booted` / `shutdown` in Logs:** Use **Edge Functions → _your function_ → Invocations** for status and timing. In the browser **Network** tab, open the `privacy-request-intake` response: **`{ "ok": true, "delivery": "resend" }`** means the handler finished the Resend branch; **`{ "ok": true }` only** means the honeypot path (no Resend call)—often autofill on the hidden field.
 
 ## Handling workflow (manual v1)
 
@@ -100,7 +89,7 @@ Use this checklist for every request. Target response times:
 
 **Controller data (our account):**
 
-- [ ] Locate data in Clerk (auth), Supabase (`users`), billing (Dodo), and marketing (Loops) as applicable.
+- [ ] Locate data in Clerk (auth), Supabase (`users`), billing (Dodo), and marketing (Resend intake logs) as applicable.
 - [ ] Export, correct, or delete per the request.
 
 **Processor data (Customer Data in a tenant):**
