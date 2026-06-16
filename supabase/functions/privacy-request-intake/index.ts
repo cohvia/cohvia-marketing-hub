@@ -82,6 +82,10 @@ function relationshipLabel(value: string): string {
   return labels[value] ?? value;
 }
 
+function normalizeHeaderValue(value: string): string {
+  return value.replace(/[\r\n]+/g, ' ').trim();
+}
+
 function buildPrivacyIntakeEmail(params: {
   submitterName: string;
   submitterEmail: string;
@@ -103,7 +107,8 @@ function buildPrivacyIntakeEmail(params: {
     submittedAt,
   } = params;
 
-  const subject = `New privacy request from ${submitterName}`;
+  const safeSubmitterName = normalizeHeaderValue(submitterName);
+  const subject = `New privacy request from ${safeSubmitterName}`;
 
   const text = [
     'A new privacy / data-rights request was submitted on cohvia.com.',
