@@ -1,7 +1,7 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
 const PRIVACY_INBOX = 'privacy@cohvia.com';
-const DEFAULT_FROM = 'Cohvia Privacy <privacy@cohvia.com>';
+const DEFAULT_FROM = 'Cohvia <notifications@mail.cohvia.com>';
 const RESEND_TIMEOUT_MS = 8_000;
 /** Best-effort per-instance limit for a public intake endpoint. */
 const IP_RATE_LIMIT = { limit: 5, windowMs: 60 * 60 * 1000 };

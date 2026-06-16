@@ -35,10 +35,10 @@ In your Google Workspace (or email provider for `@cohvia.com`):
 
 ### 2. Resend domain + API key
 
-1. Verify **`cohvia.com`** in [Resend → Domains](https://resend.com/domains) (DNS in Dynadot).
+1. Verify **`mail.cohvia.com`** in [Resend → Domains](https://resend.com/domains) (DNS in Dynadot).
 2. Create an API key with send permissions in Resend → **API Keys**.
 
-The edge function builds the intake email inline (no Resend dashboard template required). Optional secret **`RESEND_PRIVACY_FROM`** overrides the default From address (`Cohvia Privacy <privacy@cohvia.com>`).
+The edge function builds the intake email inline (no Resend dashboard template required). Default From is `Cohvia <notifications@mail.cohvia.com>`; optional secret **`RESEND_PRIVACY_FROM`** overrides it. Emails still **deliver to** `privacy@cohvia.com`.
 
 ### 3. Supabase Edge Function secrets
 
