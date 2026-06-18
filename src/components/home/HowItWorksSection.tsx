@@ -6,25 +6,25 @@ const steps = [
     icon: Link2,
     title: "Connect your tools",
     description:
-      "Cohvia pulls from your CRM, call recordings, email, and support tickets.",
+      "CRM, calls, email, and support tickets — pulled in automatically.",
   },
   {
     icon: Sparkles,
     title: "AI builds the understanding",
     description:
-      "Each account gets a structured narrative: the context behind the facts, written up and kept current as new calls and emails come in.",
+      "A structured, cited narrative per account, kept current as new signals arrive.",
   },
   {
     icon: UserCheck,
     title: "Your team takes ownership",
     description:
-      "The AI proposes updates as new data comes in, and your CSMs decide what's true. Nothing changes without a human signing off.",
+      "AI proposes updates. CSMs approve. Nothing ships without a human sign-off.",
   },
   {
     icon: Share2,
     title: "Customers see the progress",
     description:
-      "Share plans and goals through a branded portal your customers actually use.",
+      "Plans and goals shared through a branded portal customers actually use.",
   },
 ];
 

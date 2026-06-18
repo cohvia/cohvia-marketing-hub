@@ -153,37 +153,47 @@ const PortalMock = () => (
   </div>
 );
 
-const features: { icon: React.ElementType; label: string; title: string; description: string; visual: React.ReactNode }[] = [
+const features: { icon: React.ElementType; label: string; title: string; bullets: string[]; visual: React.ReactNode }[] = [
   {
     icon: BookOpen,
     label: "The narrative",
     title: "The why behind the what.",
-    description:
-      "A living account narrative that holds the context the CRM can't: why they really stay, and what would make them grow.",
+    bullets: [
+      "A living narrative for every account",
+      "Holds context the CRM can't — why they stay, what would make them grow",
+      "Cited to the calls, emails, and tickets it came from",
+    ],
     visual: <NarrativeMock />,
   },
   {
     icon: ArrowRightLeft,
     label: "Sales handover",
     title: "Zero-gap sales handover.",
-    description:
-      "Everything the AE learned transfers on day one, so the CSM walks in without the Slack-summary scramble or the awkward re-asks at kickoff.",
+    bullets: [
+      "Everything the AE learned transfers on day one",
+      "No Slack-summary scramble before kickoff",
+      "No awkward re-asks of the customer",
+    ],
     visual: <HandoverMock />,
   },
   {
     icon: Database,
     label: "Institutional memory",
     title: "Memory that doesn't walk out the door.",
-    description:
-      "When a CSM takes leave or moves on, the context stays put. It lives in Cohvia, not in one person's head.",
+    bullets: [
+      "Context stays when a CSM takes leave or moves on",
+      "Lives in Cohvia, not in one person's head",
+    ],
     visual: <TeamMemoryMock />,
   },
   {
     icon: Handshake,
     label: "Customer portal",
     title: "Mutual, not one-sided.",
-    description:
-      "Customers see their own progress through a branded portal. The relationship becomes shared.",
+    bullets: [
+      "Customers see their own progress in a branded portal",
+      "Shared goals, milestones, and status — not status reports",
+    ],
     visual: <PortalMock />,
   },
 ];
@@ -231,9 +241,14 @@ const FeatureRow = ({
             <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight tracking-tight">
               {feature.title}
             </h3>
-            <p className="text-base md:text-lg text-secondary-foreground leading-relaxed">
-              {feature.description}
-            </p>
+            <ul className="space-y-2.5 text-base md:text-lg text-secondary-foreground">
+              {feature.bullets.map((b) => (
+                <li key={b} className="flex gap-3">
+                  <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Visual side */}
@@ -266,7 +281,7 @@ const ValuePillarsSection = () => {
             </h2>
           </div>
           <p className="text-base md:text-lg text-secondary-foreground leading-relaxed lg:pb-2 lg:max-w-md lg:justify-self-end">
-            Four capabilities that turn scattered context into a living understanding of every account, from first call to renewal.
+            Four capabilities. One living understanding of every account, from first call to renewal.
           </p>
         </div>
 
