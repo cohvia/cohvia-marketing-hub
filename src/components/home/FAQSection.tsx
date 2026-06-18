@@ -10,32 +10,32 @@ export const homepageFAQs: FAQ[] = [
   {
     question: "What is a Customer Context Platform?",
     answer:
-      "A Customer Context Platform is a new category of B2B SaaS tool that turns scattered signals from calls, emails, tickets, and CRM into a single, AI-generated narrative for every customer relationship. Unlike a traditional Customer Success Platform built around health scores and tasks, a Customer Context Platform is built around understanding: why each customer bought, what success means in their words, and what is quietly putting the relationship at risk.",
+      "A new B2B SaaS category that turns scattered signals — calls, emails, tickets, CRM — into one AI-generated narrative per customer. Where traditional Customer Success Platforms organize tasks and health scores, a Customer Context Platform organizes understanding: why they bought, what success looks like in their words, and where risk is quietly building.",
   },
   {
     question: "What is a Customer Narrative?",
     answer:
-      "A Customer Narrative is a living strategic document that explains the why behind a customer relationship. Cohvia generates one for every account, made of structured sections like why they bought, what success looks like, who the champion is, and where risk is building. Every claim is cited to the source it came from — a Gong call, an email thread, a support ticket — and the narrative updates continuously as new context arrives.",
+      "A living strategic document explaining the why behind an account. Cohvia generates one per customer, with structured sections like why they bought, what success looks like, who the champion is, and where risk is building. Every claim is cited to its source (a Gong call, email, ticket) and updates continuously.",
   },
   {
     question: "How is Cohvia different from a legacy customer success platform?",
     answer:
-      "Legacy customer success platforms like Gainsight or ChurnZero organize the work — health scores, playbooks, tasks. Cohvia organizes the understanding. Instead of asking your team to keep entering structured data, Cohvia reads the calls, emails, and tickets you already have and assembles a cited Customer Narrative for every account. Plans and risk signals are built on top of that understanding, not next to it.",
+      "Gainsight and ChurnZero organize the work — health scores, playbooks, tasks. Cohvia organizes the understanding. Instead of more data entry, it reads what you already have and assembles a cited narrative per account. Plans and risk signals sit on top of that understanding, not next to it.",
   },
   {
     question: "Can AI write a customer success plan?",
     answer:
-      "Yes. Cohvia auto-generates Success Plans from the data captured during the sales cycle and onboarding — calls, emails, contracts — then proposes goals, milestones, and actions grounded in what the customer actually said they wanted. The CSM reviews and edits before activating, and the customer sees a curated version in their branded portal. The AI does the first draft; the human owns the relationship.",
+      "Yes. Cohvia drafts Success Plans from sales and onboarding context — calls, emails, contracts — proposing goals, milestones, and actions grounded in what the customer actually said. The CSM reviews and activates; the customer sees a curated version in their portal. AI does the first draft; the human owns the relationship.",
   },
   {
     question: "What's the difference between a success plan and a playbook?",
     answer:
-      "A playbook is an internal recipe — the steps your team runs for onboarding, QBRs, or renewals. A success plan is a shared, customer-facing artifact: the specific goals, milestones, and actions agreed with one account. Playbooks scale your process across the team. Success plans align you with the customer on what we are accomplishing together and by when. Cohvia gives you both, with the success plan informed by the Customer Narrative.",
+      "A playbook is an internal recipe — the steps your team runs for onboarding, QBRs, or renewals. A success plan is a shared, customer-facing artifact: the specific goals and milestones agreed with one account. Playbooks scale your process; success plans align you with the customer. Cohvia gives you both, with the plan informed by the Customer Narrative.",
   },
   {
     question: "How much does Cohvia cost?",
     answer:
-      "Cohvia is in early access and pricing is being finalized with design partners. Plans will be usage-based on number of customer accounts under management, with tiers for small teams, growing CS organizations, and enterprise. Join the waitlist or visit the pricing page to be notified when public pricing is published.",
+      "Cohvia is in early access; pricing is being finalized with design partners. Plans will be usage-based on accounts under management, with tiers for small teams, growing CS orgs, and enterprise. Join the waitlist or visit the pricing page to be notified.",
   },
 ];
 
