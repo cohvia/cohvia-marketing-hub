@@ -51,7 +51,7 @@ These providers support communications and product operations.
 
 | Subprocessor | Purpose / processing activity | Primary processing location |
 |---|---|---|
-| Loops, Inc. | Transactional and marketing email delivery | United States |
+| Resend, Inc. | Transactional and compliance email delivery | United States |
 
 ---
 
