@@ -1,6 +1,6 @@
 # Subprocessors
 
-**Last updated: May 31, 2026**
+**Last updated: June 21, 2026**
 
 This page lists the third-party subprocessors that **SACS Ecommerce Stores Inc.** (operating as "Cohvia") engages to help provide the Cohvia platform (the "**Service**"). It is incorporated by reference into our [Data Processing Agreement](/legal/dpa) (the "**DPA**") and supports our [Privacy Policy](/legal/privacy).
 
@@ -51,7 +51,7 @@ These providers support communications and product operations.
 
 | Subprocessor | Purpose / processing activity | Primary processing location |
 |---|---|---|
-| Resend, Inc. | Transactional and compliance email delivery | United States |
+| Plus Five Five, Inc. (Resend) | Transactional and compliance email delivery | United States |
 
 ---
 
