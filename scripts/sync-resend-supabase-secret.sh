@@ -41,4 +41,7 @@ echo "Updating Supabase Edge Function secret on $PROJECT_REF..."
 cd "$ROOT"
 npx --yes supabase@2.99.0 secrets set "RESEND_API_KEY=$RESEND_API_KEY" --project-ref "$PROJECT_REF"
 
-echo "Done. Submit the privacy form on cohvia.com/legal/privacy to verify."
+echo "Done. Verify:"
+echo "  - Privacy form: cohvia.com/legal/privacy"
+echo "  - Subprocessor subscribe: cohvia.com/legal/subprocessors (after RESEND_SUBPROCESSOR_SEGMENT_ID is set)"
+echo "  - Runbook: docs/subprocessor-change-notifications.md"

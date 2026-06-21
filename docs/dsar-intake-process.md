@@ -49,7 +49,7 @@ supabase secrets set RESEND_API_KEY=<your-resend-api-key>
 supabase functions deploy privacy-request-intake
 ```
 
-After cutover is verified, remove deprecated Loops secrets (`LOOPS_API_KEY`, `LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID`) only if nothing else still uses them (subprocessor subscribe may still use Loops until COH-166).
+After cutover is verified, remove deprecated Loops secrets (`LOOPS_API_KEY`, `LOOPS_PRIVACY_REQUEST_TRANSACTIONAL_ID`) from Supabase once subprocessor subscribe is on Resend (COH-166). See [subprocessor-change-notifications.md](./subprocessor-change-notifications.md) for segment setup.
 
 ### 4. Verify end-to-end
 
