@@ -25,6 +25,10 @@ interface CookiebotConsent {
 interface CookiebotApi {
   renew?: () => void;
   show?: () => void;
+  /** True after the visitor accepts one or more cookie categories. */
+  consented?: boolean;
+  /** True after the visitor declines non-essential cookies. */
+  declined?: boolean;
   /** Present once Cookiebot has loaded the visitor’s consent state. */
   consent?: CookiebotConsent;
 }
