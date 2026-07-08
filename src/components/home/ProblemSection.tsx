@@ -3,7 +3,6 @@ import { Section, SectionHeader } from "@/components/ui-kit";
 const questions = [
   "Why did they choose you over everyone else?",
   "Why do they keep renewing — or quietly pull away?",
-  "Why does this metric matter to them this quarter?",
 ];
 
 const ProblemSection = () => (

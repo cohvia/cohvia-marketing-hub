@@ -8,6 +8,11 @@ export interface FAQ {
 
 export const homepageFAQs: FAQ[] = [
   {
+    question: "What is Cohvia?",
+    answer:
+      "Cohvia is a Customer Context Platform for B2B SaaS Customer Success. It turns scattered customer signals — calls, emails, tickets, and CRM activity — into a clear, AI-generated Customer Narrative for every account. From that narrative, Cohvia captures why each customer bought, auto-generates Success Plans, surfaces risk signals early, and gives customers a branded portal to track progress.",
+  },
+  {
     question: "What is a Customer Context Platform?",
     answer:
       "A new B2B SaaS category that turns scattered signals — calls, emails, tickets, CRM — into one AI-generated narrative per customer. Where traditional Customer Success Platforms organize tasks and health scores, a Customer Context Platform organizes understanding: why they bought, what success looks like in their words, and where risk is quietly building.",
