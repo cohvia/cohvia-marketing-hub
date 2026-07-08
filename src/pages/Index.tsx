@@ -1,6 +1,5 @@
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/home/HeroSection";
-import DefinitionLead from "@/components/home/DefinitionLead";
 import ProblemSection from "@/components/home/ProblemSection";
 import SharpEdgeSection from "@/components/home/SharpEdgeSection";
 import ValuePillarsSection from "@/components/home/ValuePillarsSection";
@@ -21,7 +20,6 @@ const Index = () => {
         path="/"
       />
       <HeroSection />
-      <DefinitionLead />
       <ProblemSection />
       <SharpEdgeSection />
       <ValuePillarsSection />
