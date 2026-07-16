@@ -29,7 +29,7 @@ const steps = [
 ];
 
 const HowItWorksSection = () => (
-  <Section pad="sm">
+  <Section pad="lg">
     <SectionHeader eyebrow="How it works" title="How Cohvia works" />
     <div className="grid md:grid-cols-4 gap-6">
       {steps.map((step, i) => (
