@@ -1,7 +1,7 @@
 import { Section, SectionHeader } from "@/components/ui-kit";
 
 const FounderSection = () => (
-  <Section pad="md" width="narrow">
+  <Section pad="lg" width="narrow">
     <SectionHeader
       eyebrow="Founder"
       title="Built by someone who's lived this."

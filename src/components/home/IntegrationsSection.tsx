@@ -17,7 +17,7 @@ const integrations = [
 ];
 
 const IntegrationsSection = () => (
-  <Section pad="md" width="default" innerClassName="text-center">
+  <Section pad="lg" width="default" innerClassName="text-center">
     <SectionHeader
       eyebrow="Integrations"
       title="Works with the tools you already use."

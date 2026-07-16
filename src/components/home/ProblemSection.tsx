@@ -7,7 +7,7 @@ const questions = [
 ];
 
 const ProblemSection = () => (
-  <Section tone="tinted" pad="md" width="wide">
+  <Section tone="tinted" pad="lg" width="wide">
     <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center">
       <div>
         <SectionHeader
