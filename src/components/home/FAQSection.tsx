@@ -1,5 +1,8 @@
 import { Section, SectionHeader } from "@/components/ui-kit";
 import { Helmet } from "react-helmet-async";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export interface FAQ {
   question: string;
@@ -57,6 +60,18 @@ const FAQSection = ({
   eyebrow = "FAQ",
   emitSchema = true,
 }: FAQSectionProps) => {
+  const [open, setOpen] = useState<Set<number>>(new Set());
+
+  const toggle = (index: number) => {
+    const next = new Set(open);
+    if (next.has(index)) {
+      next.delete(index);
+    } else {
+      next.add(index);
+    }
+    setOpen(next);
+  };
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -75,15 +90,51 @@ const FAQSection = ({
         </Helmet>
       )}
       <SectionHeader eyebrow={eyebrow} title={title} />
-      <div className="max-w-3xl mx-auto space-y-8">
-        {faqs.map((f) => (
-          <article key={f.question}>
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-foreground">
-              {f.question}
-            </h3>
-            <p className="text-secondary-foreground leading-relaxed">{f.answer}</p>
-          </article>
-        ))}
+      <div className="max-w-3xl mx-auto space-y-4">
+        {faqs.map((f, i) => {
+          const isOpen = open.has(i);
+          return (
+            <article
+              key={f.question}
+              className="surface-card rounded-xl overflow-hidden"
+            >
+              <h3>
+                <button
+                  type="button"
+                  onClick={() => toggle(i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${i}`}
+                  className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left"
+                >
+                  <span className="text-lg md:text-xl font-semibold text-foreground">
+                    {f.question}
+                  </span>
+                  <span
+                    className={cn(
+                      "shrink-0 w-8 h-8 rounded-lg bg-secondary flex items-center justify-center transition-transform duration-300",
+                      isOpen && "rotate-180",
+                    )}
+                  >
+                    <ChevronDown size={18} className="text-primary" />
+                  </span>
+                </button>
+              </h3>
+              <div
+                id={`faq-answer-${i}`}
+                className={cn(
+                  "grid transition-all duration-300 ease-in-out",
+                  isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                )}
+              >
+                <div className="overflow-hidden">
+                  <p className="px-5 md:px-6 pb-5 md:pb-6 text-secondary-foreground leading-relaxed">
+                    {f.answer}
+                  </p>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </Section>
   );
