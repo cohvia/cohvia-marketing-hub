@@ -1,9 +1,9 @@
+import { Section } from "@/components/ui-kit";
 import { User, Mail, Phone, Building2, Calendar, Sparkles } from "lucide-react";
 
 const SharpEdgeSection = () => (
-  <section className="pt-10 pb-10 md:pt-12 md:pb-12 relative overflow-hidden">
-    <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
-    <div className="mx-auto max-w-6xl px-6 relative">
+  <Section tone="glow" pad="lg" width="wide">
+    <div className="relative">
       <div className="text-center mb-8 md:mb-10 max-w-3xl mx-auto">
         <p className="text-xs font-medium text-primary uppercase tracking-[0.2em] mb-4">
           The sharp edge
@@ -120,7 +120,7 @@ const SharpEdgeSection = () => (
         <span className="text-foreground font-medium">relationship</span>.
       </p>
     </div>
-  </section>
+  </Section>
 );
 
 export default SharpEdgeSection;

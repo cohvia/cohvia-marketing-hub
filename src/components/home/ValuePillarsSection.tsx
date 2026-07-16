@@ -7,6 +7,7 @@ import {
   Sparkles,
   Circle,
 } from "lucide-react";
+import { Section } from "@/components/ui-kit";
 
 const NarrativeMock = () => (
   <div className="surface-card rounded-xl overflow-hidden">
@@ -263,9 +264,8 @@ const FeatureRow = ({
 
 const ValuePillarsSection = () => {
   return (
-    <section className="pt-10 pb-10 md:pt-12 md:pb-12 relative">
-      <div className="gradient-teal-glow absolute inset-0 pointer-events-none" />
-      <div className="mx-auto max-w-6xl px-6 relative">
+    <Section tone="glow" pad="lg" width="wide">
+      <div className="relative">
         {/* Section header */}
         <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-end mb-10 md:mb-12">
           <div className="max-w-xl">
@@ -340,7 +340,7 @@ const ValuePillarsSection = () => {
           </blockquote>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

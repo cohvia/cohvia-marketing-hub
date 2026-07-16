@@ -1,11 +1,11 @@
 import { X, Check } from "lucide-react";
+import { Section } from "@/components/ui-kit";
 
 const WhyNowSection = () => (
-  <section className="relative pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden border-y border-border">
-    <div className="absolute inset-0 bg-secondary/20 pointer-events-none" />
+  <Section tone="bordered" pad="lg" width="wide">
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(var(--primary)/0.08),transparent_60%)] pointer-events-none" />
 
-    <div className="mx-auto max-w-6xl px-6 relative">
+    <div className="relative">
       {/* Eyebrow */}
       <div className="flex items-center gap-3 mb-6 md:mb-8">
         <span className="h-px w-8 bg-primary/60" />
@@ -94,7 +94,7 @@ const WhyNowSection = () => (
         </article>
       </div>
     </div>
-  </section>
+  </Section>
 );
 
 export default WhyNowSection;
